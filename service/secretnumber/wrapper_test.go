@@ -5,8 +5,8 @@ import (
 )
 
 const (
-	testAk = "AKLTMDhhMjA5NDdmNWNmNDVhOTgyZmZlNGM3NGRiMjYxZDU"
-	testSk = "T1RCbU0ySXhZVEl3TmpZMk5EazNOR0psTlRkaVlUTTBOalEyT0RWbFpqQQ=="
+	testAk = "testAk"
+	testSk = "testSk"
 )
 
 func init() {
