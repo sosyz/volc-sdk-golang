@@ -5,6 +5,10 @@ import (
 )
 
 func NewClientWithEnv() Client {
+	os.Setenv("LOG_SERVICE_ENDPOINT", "http://127.0.0.1:6080")
+	os.Setenv("LOG_SERVICE_AK", "AKLTOWNiMThlNDg3NzgzNDRjNWI0MTU0MDJiMDM4YTQyYzg")
+	os.Setenv("LOG_SERVICE_SK", "TUdZMlpUZG1aR0kyWm1VNE5ERXpPR0prWm1SbU1qWmtaV1kzTURkaU5Eaw==")
+	os.Setenv("LOG_SERVICE_REGION", "cn-north-3")
 	return NewClient(os.Getenv("LOG_SERVICE_ENDPOINT"), os.Getenv("LOG_SERVICE_AK"),
 		os.Getenv("LOG_SERVICE_SK"), "", os.Getenv("LOG_SERVICE_REGION"))
 }
