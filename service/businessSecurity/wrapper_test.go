@@ -6,8 +6,8 @@ import (
 )
 
 const (
-	Ak = "AKLTNGI4OWZjYTBkZjZjNGE4OGExNDE2YzliYWI4MDRmMmI"              // write your access key
-	Sk = "WmpjM1ptRmlOMlUxWmpReU5HWTBNMkUyTkdFMk9UVXdOakkwWXpSaU1XRQ==" // write your secret key
+	Ak = "AK" // write your access key
+	Sk = "SK" // write your secret key
 )
 
 func init() {
