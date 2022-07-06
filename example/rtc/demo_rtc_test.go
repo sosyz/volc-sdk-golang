@@ -17,9 +17,9 @@ import (
 
 const (
 	// ak/sk 获取方式参考:https://www.volcengine.com/docs/6348/69828
-	appId  = "61e1205d2ffc00009ee247d0"
-	testAk = "AKLTMzZmNjBlNDdkZjA0NDc1MmI4ZTM4NjYyOTcwZmVmZmM"
-	testSk = "TnpZM09UazBOR0V3TVROa05EQmtPV0ppWWpGa09UUTBOMlJsTkROak9HSQ=="
+	appId  = ""
+	testAk = ""
+	testSk = ""
 )
 
 func TestListRooms(t *testing.T) {
