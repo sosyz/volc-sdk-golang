@@ -285,12 +285,13 @@ type ImageContentRiskResp struct {
 }
 
 type ImageContentRiskTag struct {
-	Label    string               `json:"Label"`
-	SubLabel string               `json:"SubLabel"`
-	Decision string               `json:"Decision"`
-	Score    float64              `json:"score"`
-	Detail   interface{}          `json:"Detail"`
-	Frames   []*ImageContentFrame `json:"Frames"`
+	Label           string               `json:"Label"`
+	SubLabel        string               `json:"SubLabel"`
+	Decision        string               `json:"Decision"`
+	Score           float64              `json:"score"`
+	Detail          interface{}          `json:"Detail"`
+	Frames          []*ImageContentFrame `json:"Frames"`
+	DecisionOutputs []*DecisionOutput    `json:"DecisionOutputs"`
 }
 type ImageContentFrame struct {
 	Id  float64 `json:"id"`
@@ -412,10 +413,11 @@ func (resp *TextSliceResultResponse) String() string {
 }
 
 type Label struct {
-	Label    string    `json:"Label"`
-	SubLabel string    `json:"SubLabel"`
-	Decision string    `json:"Decision"`
-	Contexts []Context `json:"Contexts"`
+	Label           string            `json:"Label"`
+	SubLabel        string            `json:"SubLabel"`
+	Decision        string            `json:"Decision"`
+	Contexts        []Context         `json:"Contexts"`
+	DecisionOutputs []*DecisionOutput `json:"DecisionOutputs"`
 }
 
 type Context struct {
