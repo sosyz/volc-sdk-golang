@@ -1355,6 +1355,116 @@ func (x *VodUpdateMediaStorageClassResponse) GetResult() *business.VodUpdateMedi
 	return nil
 }
 
+type VodRestoreColdArchiveVideoResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	ResponseMetadata *base.ResponseMetadata                   `protobuf:"bytes,1,opt,name=ResponseMetadata,proto3" json:"ResponseMetadata,omitempty"` //响应通用信息
+	Result           *business.VodRestoreColdArchiveVideoData `protobuf:"bytes,2,opt,name=Result,proto3" json:"Result,omitempty"`                     //响应结果
+}
+
+func (x *VodRestoreColdArchiveVideoResponse) Reset() {
+	*x = VodRestoreColdArchiveVideoResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[24]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *VodRestoreColdArchiveVideoResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*VodRestoreColdArchiveVideoResponse) ProtoMessage() {}
+
+func (x *VodRestoreColdArchiveVideoResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[24]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use VodRestoreColdArchiveVideoResponse.ProtoReflect.Descriptor instead.
+func (*VodRestoreColdArchiveVideoResponse) Descriptor() ([]byte, []int) {
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{24}
+}
+
+func (x *VodRestoreColdArchiveVideoResponse) GetResponseMetadata() *base.ResponseMetadata {
+	if x != nil {
+		return x.ResponseMetadata
+	}
+	return nil
+}
+
+func (x *VodRestoreColdArchiveVideoResponse) GetResult() *business.VodRestoreColdArchiveVideoData {
+	if x != nil {
+		return x.Result
+	}
+	return nil
+}
+
+type VodGetRestoreVideoStatusResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	ResponseMetadata *base.ResponseMetadata                 `protobuf:"bytes,1,opt,name=ResponseMetadata,proto3" json:"ResponseMetadata,omitempty"` //响应通用信息
+	Result           *business.VodGetRestoreVideoStatusData `protobuf:"bytes,2,opt,name=Result,proto3" json:"Result,omitempty"`                     //响应结果
+}
+
+func (x *VodGetRestoreVideoStatusResponse) Reset() {
+	*x = VodGetRestoreVideoStatusResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[25]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *VodGetRestoreVideoStatusResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*VodGetRestoreVideoStatusResponse) ProtoMessage() {}
+
+func (x *VodGetRestoreVideoStatusResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[25]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use VodGetRestoreVideoStatusResponse.ProtoReflect.Descriptor instead.
+func (*VodGetRestoreVideoStatusResponse) Descriptor() ([]byte, []int) {
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{25}
+}
+
+func (x *VodGetRestoreVideoStatusResponse) GetResponseMetadata() *base.ResponseMetadata {
+	if x != nil {
+		return x.ResponseMetadata
+	}
+	return nil
+}
+
+func (x *VodGetRestoreVideoStatusResponse) GetResult() *business.VodGetRestoreVideoStatusData {
+	if x != nil {
+		return x.Result
+	}
+	return nil
+}
+
 type VodDeleteMediaResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1367,7 +1477,7 @@ type VodDeleteMediaResponse struct {
 func (x *VodDeleteMediaResponse) Reset() {
 	*x = VodDeleteMediaResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[24]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[26]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1380,7 +1490,7 @@ func (x *VodDeleteMediaResponse) String() string {
 func (*VodDeleteMediaResponse) ProtoMessage() {}
 
 func (x *VodDeleteMediaResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[24]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[26]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1393,7 +1503,7 @@ func (x *VodDeleteMediaResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodDeleteMediaResponse.ProtoReflect.Descriptor instead.
 func (*VodDeleteMediaResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{24}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{26}
 }
 
 func (x *VodDeleteMediaResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -1421,7 +1531,7 @@ type VodDeleteMaterialResponse struct {
 func (x *VodDeleteMaterialResponse) Reset() {
 	*x = VodDeleteMaterialResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[25]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[27]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1434,7 +1544,7 @@ func (x *VodDeleteMaterialResponse) String() string {
 func (*VodDeleteMaterialResponse) ProtoMessage() {}
 
 func (x *VodDeleteMaterialResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[25]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[27]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1447,7 +1557,7 @@ func (x *VodDeleteMaterialResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodDeleteMaterialResponse.ProtoReflect.Descriptor instead.
 func (*VodDeleteMaterialResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{25}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{27}
 }
 
 func (x *VodDeleteMaterialResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -1469,7 +1579,7 @@ type VodDeleteTranscodesResponse struct {
 func (x *VodDeleteTranscodesResponse) Reset() {
 	*x = VodDeleteTranscodesResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[26]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[28]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1482,7 +1592,7 @@ func (x *VodDeleteTranscodesResponse) String() string {
 func (*VodDeleteTranscodesResponse) ProtoMessage() {}
 
 func (x *VodDeleteTranscodesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[26]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[28]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1495,7 +1605,7 @@ func (x *VodDeleteTranscodesResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodDeleteTranscodesResponse.ProtoReflect.Descriptor instead.
 func (*VodDeleteTranscodesResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{26}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{28}
 }
 
 func (x *VodDeleteTranscodesResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -1524,7 +1634,7 @@ type VodDeleteMediaTosFileResponse struct {
 func (x *VodDeleteMediaTosFileResponse) Reset() {
 	*x = VodDeleteMediaTosFileResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[27]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[29]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1537,7 +1647,7 @@ func (x *VodDeleteMediaTosFileResponse) String() string {
 func (*VodDeleteMediaTosFileResponse) ProtoMessage() {}
 
 func (x *VodDeleteMediaTosFileResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[27]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[29]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1550,7 +1660,7 @@ func (x *VodDeleteMediaTosFileResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodDeleteMediaTosFileResponse.ProtoReflect.Descriptor instead.
 func (*VodDeleteMediaTosFileResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{27}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{29}
 }
 
 func (x *VodDeleteMediaTosFileResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -1579,7 +1689,7 @@ type VodGetMediaListResponse struct {
 func (x *VodGetMediaListResponse) Reset() {
 	*x = VodGetMediaListResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[28]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[30]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1592,7 +1702,7 @@ func (x *VodGetMediaListResponse) String() string {
 func (*VodGetMediaListResponse) ProtoMessage() {}
 
 func (x *VodGetMediaListResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[28]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[30]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1605,7 +1715,7 @@ func (x *VodGetMediaListResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetMediaListResponse.ProtoReflect.Descriptor instead.
 func (*VodGetMediaListResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{28}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{30}
 }
 
 func (x *VodGetMediaListResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -1634,7 +1744,7 @@ type VodGetSubtitleInfoListResponse struct {
 func (x *VodGetSubtitleInfoListResponse) Reset() {
 	*x = VodGetSubtitleInfoListResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[29]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[31]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1647,7 +1757,7 @@ func (x *VodGetSubtitleInfoListResponse) String() string {
 func (*VodGetSubtitleInfoListResponse) ProtoMessage() {}
 
 func (x *VodGetSubtitleInfoListResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[29]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[31]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1660,7 +1770,7 @@ func (x *VodGetSubtitleInfoListResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetSubtitleInfoListResponse.ProtoReflect.Descriptor instead.
 func (*VodGetSubtitleInfoListResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{29}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{31}
 }
 
 func (x *VodGetSubtitleInfoListResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -1689,7 +1799,7 @@ type VodUpdateSubtitleStatusResponse struct {
 func (x *VodUpdateSubtitleStatusResponse) Reset() {
 	*x = VodUpdateSubtitleStatusResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[30]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[32]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1702,7 +1812,7 @@ func (x *VodUpdateSubtitleStatusResponse) String() string {
 func (*VodUpdateSubtitleStatusResponse) ProtoMessage() {}
 
 func (x *VodUpdateSubtitleStatusResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[30]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[32]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1715,7 +1825,7 @@ func (x *VodUpdateSubtitleStatusResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodUpdateSubtitleStatusResponse.ProtoReflect.Descriptor instead.
 func (*VodUpdateSubtitleStatusResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{30}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{32}
 }
 
 func (x *VodUpdateSubtitleStatusResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -1743,7 +1853,7 @@ type VodUpdateSubtitleInfoResponse struct {
 func (x *VodUpdateSubtitleInfoResponse) Reset() {
 	*x = VodUpdateSubtitleInfoResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[31]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[33]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1756,7 +1866,7 @@ func (x *VodUpdateSubtitleInfoResponse) String() string {
 func (*VodUpdateSubtitleInfoResponse) ProtoMessage() {}
 
 func (x *VodUpdateSubtitleInfoResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[31]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[33]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1769,7 +1879,7 @@ func (x *VodUpdateSubtitleInfoResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodUpdateSubtitleInfoResponse.ProtoReflect.Descriptor instead.
 func (*VodUpdateSubtitleInfoResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{31}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{33}
 }
 
 func (x *VodUpdateSubtitleInfoResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -1791,7 +1901,7 @@ type VodGetAuditFramesForAuditResponse struct {
 func (x *VodGetAuditFramesForAuditResponse) Reset() {
 	*x = VodGetAuditFramesForAuditResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[32]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[34]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1804,7 +1914,7 @@ func (x *VodGetAuditFramesForAuditResponse) String() string {
 func (*VodGetAuditFramesForAuditResponse) ProtoMessage() {}
 
 func (x *VodGetAuditFramesForAuditResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[32]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[34]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1817,7 +1927,7 @@ func (x *VodGetAuditFramesForAuditResponse) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use VodGetAuditFramesForAuditResponse.ProtoReflect.Descriptor instead.
 func (*VodGetAuditFramesForAuditResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{32}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{34}
 }
 
 func (x *VodGetAuditFramesForAuditResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -1846,7 +1956,7 @@ type VodGetMLFramesForAuditResponse struct {
 func (x *VodGetMLFramesForAuditResponse) Reset() {
 	*x = VodGetMLFramesForAuditResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[33]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[35]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1859,7 +1969,7 @@ func (x *VodGetMLFramesForAuditResponse) String() string {
 func (*VodGetMLFramesForAuditResponse) ProtoMessage() {}
 
 func (x *VodGetMLFramesForAuditResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[33]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[35]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1872,7 +1982,7 @@ func (x *VodGetMLFramesForAuditResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetMLFramesForAuditResponse.ProtoReflect.Descriptor instead.
 func (*VodGetMLFramesForAuditResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{33}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{35}
 }
 
 func (x *VodGetMLFramesForAuditResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -1901,7 +2011,7 @@ type VodGetBetterFramesForAuditResponse struct {
 func (x *VodGetBetterFramesForAuditResponse) Reset() {
 	*x = VodGetBetterFramesForAuditResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[34]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[36]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1914,7 +2024,7 @@ func (x *VodGetBetterFramesForAuditResponse) String() string {
 func (*VodGetBetterFramesForAuditResponse) ProtoMessage() {}
 
 func (x *VodGetBetterFramesForAuditResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[34]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[36]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1927,7 +2037,7 @@ func (x *VodGetBetterFramesForAuditResponse) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use VodGetBetterFramesForAuditResponse.ProtoReflect.Descriptor instead.
 func (*VodGetBetterFramesForAuditResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{34}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{36}
 }
 
 func (x *VodGetBetterFramesForAuditResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -1956,7 +2066,7 @@ type VodGetAudioInfoForAuditResponse struct {
 func (x *VodGetAudioInfoForAuditResponse) Reset() {
 	*x = VodGetAudioInfoForAuditResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[35]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[37]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1969,7 +2079,7 @@ func (x *VodGetAudioInfoForAuditResponse) String() string {
 func (*VodGetAudioInfoForAuditResponse) ProtoMessage() {}
 
 func (x *VodGetAudioInfoForAuditResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[35]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[37]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1982,7 +2092,7 @@ func (x *VodGetAudioInfoForAuditResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetAudioInfoForAuditResponse.ProtoReflect.Descriptor instead.
 func (*VodGetAudioInfoForAuditResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{35}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{37}
 }
 
 func (x *VodGetAudioInfoForAuditResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2011,7 +2121,7 @@ type VodGetAutomaticSpeechRecognitionForAuditResponse struct {
 func (x *VodGetAutomaticSpeechRecognitionForAuditResponse) Reset() {
 	*x = VodGetAutomaticSpeechRecognitionForAuditResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[36]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[38]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2024,7 +2134,7 @@ func (x *VodGetAutomaticSpeechRecognitionForAuditResponse) String() string {
 func (*VodGetAutomaticSpeechRecognitionForAuditResponse) ProtoMessage() {}
 
 func (x *VodGetAutomaticSpeechRecognitionForAuditResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[36]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[38]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2037,7 +2147,7 @@ func (x *VodGetAutomaticSpeechRecognitionForAuditResponse) ProtoReflect() protor
 
 // Deprecated: Use VodGetAutomaticSpeechRecognitionForAuditResponse.ProtoReflect.Descriptor instead.
 func (*VodGetAutomaticSpeechRecognitionForAuditResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{36}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{38}
 }
 
 func (x *VodGetAutomaticSpeechRecognitionForAuditResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2066,7 +2176,7 @@ type VodGetAudioEventDetectionForAuditResponse struct {
 func (x *VodGetAudioEventDetectionForAuditResponse) Reset() {
 	*x = VodGetAudioEventDetectionForAuditResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[37]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[39]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2079,7 +2189,7 @@ func (x *VodGetAudioEventDetectionForAuditResponse) String() string {
 func (*VodGetAudioEventDetectionForAuditResponse) ProtoMessage() {}
 
 func (x *VodGetAudioEventDetectionForAuditResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[37]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[39]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2092,7 +2202,7 @@ func (x *VodGetAudioEventDetectionForAuditResponse) ProtoReflect() protoreflect.
 
 // Deprecated: Use VodGetAudioEventDetectionForAuditResponse.ProtoReflect.Descriptor instead.
 func (*VodGetAudioEventDetectionForAuditResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{37}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{39}
 }
 
 func (x *VodGetAudioEventDetectionForAuditResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2121,7 +2231,7 @@ type VodCreateVideoClassificationResponse struct {
 func (x *VodCreateVideoClassificationResponse) Reset() {
 	*x = VodCreateVideoClassificationResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[38]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[40]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2134,7 +2244,7 @@ func (x *VodCreateVideoClassificationResponse) String() string {
 func (*VodCreateVideoClassificationResponse) ProtoMessage() {}
 
 func (x *VodCreateVideoClassificationResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[38]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[40]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2147,7 +2257,7 @@ func (x *VodCreateVideoClassificationResponse) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use VodCreateVideoClassificationResponse.ProtoReflect.Descriptor instead.
 func (*VodCreateVideoClassificationResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{38}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{40}
 }
 
 func (x *VodCreateVideoClassificationResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2175,7 +2285,7 @@ type VodUpdateVideoClassificationResponse struct {
 func (x *VodUpdateVideoClassificationResponse) Reset() {
 	*x = VodUpdateVideoClassificationResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[39]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[41]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2188,7 +2298,7 @@ func (x *VodUpdateVideoClassificationResponse) String() string {
 func (*VodUpdateVideoClassificationResponse) ProtoMessage() {}
 
 func (x *VodUpdateVideoClassificationResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[39]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[41]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2201,7 +2311,7 @@ func (x *VodUpdateVideoClassificationResponse) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use VodUpdateVideoClassificationResponse.ProtoReflect.Descriptor instead.
 func (*VodUpdateVideoClassificationResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{39}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{41}
 }
 
 func (x *VodUpdateVideoClassificationResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2222,7 +2332,7 @@ type VodDeleteVideoClassificationResponse struct {
 func (x *VodDeleteVideoClassificationResponse) Reset() {
 	*x = VodDeleteVideoClassificationResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[40]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[42]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2235,7 +2345,7 @@ func (x *VodDeleteVideoClassificationResponse) String() string {
 func (*VodDeleteVideoClassificationResponse) ProtoMessage() {}
 
 func (x *VodDeleteVideoClassificationResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[40]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[42]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2248,7 +2358,7 @@ func (x *VodDeleteVideoClassificationResponse) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use VodDeleteVideoClassificationResponse.ProtoReflect.Descriptor instead.
 func (*VodDeleteVideoClassificationResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{40}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{42}
 }
 
 func (x *VodDeleteVideoClassificationResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2270,7 +2380,7 @@ type VodListVideoClassificationsResponse struct {
 func (x *VodListVideoClassificationsResponse) Reset() {
 	*x = VodListVideoClassificationsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[41]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[43]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2283,7 +2393,7 @@ func (x *VodListVideoClassificationsResponse) String() string {
 func (*VodListVideoClassificationsResponse) ProtoMessage() {}
 
 func (x *VodListVideoClassificationsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[41]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[43]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2296,7 +2406,7 @@ func (x *VodListVideoClassificationsResponse) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use VodListVideoClassificationsResponse.ProtoReflect.Descriptor instead.
 func (*VodListVideoClassificationsResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{41}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{43}
 }
 
 func (x *VodListVideoClassificationsResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2325,7 +2435,7 @@ type VodListSnapshotsResponse struct {
 func (x *VodListSnapshotsResponse) Reset() {
 	*x = VodListSnapshotsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[42]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[44]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2338,7 +2448,7 @@ func (x *VodListSnapshotsResponse) String() string {
 func (*VodListSnapshotsResponse) ProtoMessage() {}
 
 func (x *VodListSnapshotsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[42]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[44]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2351,7 +2461,7 @@ func (x *VodListSnapshotsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodListSnapshotsResponse.ProtoReflect.Descriptor instead.
 func (*VodListSnapshotsResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{42}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{44}
 }
 
 func (x *VodListSnapshotsResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2380,7 +2490,7 @@ type VodGetFileListResponse struct {
 func (x *VodGetFileListResponse) Reset() {
 	*x = VodGetFileListResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[43]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[45]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2393,7 +2503,7 @@ func (x *VodGetFileListResponse) String() string {
 func (*VodGetFileListResponse) ProtoMessage() {}
 
 func (x *VodGetFileListResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[43]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[45]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2406,7 +2516,7 @@ func (x *VodGetFileListResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetFileListResponse.ProtoReflect.Descriptor instead.
 func (*VodGetFileListResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{43}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{45}
 }
 
 func (x *VodGetFileListResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2435,7 +2545,7 @@ type VodGetFileInfosResponse struct {
 func (x *VodGetFileInfosResponse) Reset() {
 	*x = VodGetFileInfosResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[44]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[46]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2448,7 +2558,7 @@ func (x *VodGetFileInfosResponse) String() string {
 func (*VodGetFileInfosResponse) ProtoMessage() {}
 
 func (x *VodGetFileInfosResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[44]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[46]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2461,7 +2571,7 @@ func (x *VodGetFileInfosResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetFileInfosResponse.ProtoReflect.Descriptor instead.
 func (*VodGetFileInfosResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{44}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{46}
 }
 
 func (x *VodGetFileInfosResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2490,7 +2600,7 @@ type VodUpdateFileStorageClassResponse struct {
 func (x *VodUpdateFileStorageClassResponse) Reset() {
 	*x = VodUpdateFileStorageClassResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[45]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[47]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2503,7 +2613,7 @@ func (x *VodUpdateFileStorageClassResponse) String() string {
 func (*VodUpdateFileStorageClassResponse) ProtoMessage() {}
 
 func (x *VodUpdateFileStorageClassResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[45]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[47]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2516,7 +2626,7 @@ func (x *VodUpdateFileStorageClassResponse) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use VodUpdateFileStorageClassResponse.ProtoReflect.Descriptor instead.
 func (*VodUpdateFileStorageClassResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{45}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{47}
 }
 
 func (x *VodUpdateFileStorageClassResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2545,7 +2655,7 @@ type VodGetInnerAuditURLsResponse struct {
 func (x *VodGetInnerAuditURLsResponse) Reset() {
 	*x = VodGetInnerAuditURLsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[46]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[48]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2558,7 +2668,7 @@ func (x *VodGetInnerAuditURLsResponse) String() string {
 func (*VodGetInnerAuditURLsResponse) ProtoMessage() {}
 
 func (x *VodGetInnerAuditURLsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[46]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[48]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2571,7 +2681,7 @@ func (x *VodGetInnerAuditURLsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetInnerAuditURLsResponse.ProtoReflect.Descriptor instead.
 func (*VodGetInnerAuditURLsResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{46}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{48}
 }
 
 func (x *VodGetInnerAuditURLsResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2600,7 +2710,7 @@ type VodGetAdAuditResultByVidResponse struct {
 func (x *VodGetAdAuditResultByVidResponse) Reset() {
 	*x = VodGetAdAuditResultByVidResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[47]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[49]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2613,7 +2723,7 @@ func (x *VodGetAdAuditResultByVidResponse) String() string {
 func (*VodGetAdAuditResultByVidResponse) ProtoMessage() {}
 
 func (x *VodGetAdAuditResultByVidResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[47]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[49]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2626,7 +2736,7 @@ func (x *VodGetAdAuditResultByVidResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetAdAuditResultByVidResponse.ProtoReflect.Descriptor instead.
 func (*VodGetAdAuditResultByVidResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{47}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{49}
 }
 
 func (x *VodGetAdAuditResultByVidResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2654,7 +2764,7 @@ type VodExtractMediaMetaTaskResponse struct {
 func (x *VodExtractMediaMetaTaskResponse) Reset() {
 	*x = VodExtractMediaMetaTaskResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[48]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[50]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2667,7 +2777,7 @@ func (x *VodExtractMediaMetaTaskResponse) String() string {
 func (*VodExtractMediaMetaTaskResponse) ProtoMessage() {}
 
 func (x *VodExtractMediaMetaTaskResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[48]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[50]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2680,7 +2790,7 @@ func (x *VodExtractMediaMetaTaskResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodExtractMediaMetaTaskResponse.ProtoReflect.Descriptor instead.
 func (*VodExtractMediaMetaTaskResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{48}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{50}
 }
 
 func (x *VodExtractMediaMetaTaskResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2705,7 +2815,7 @@ type VodStartWorkflowResponse struct {
 func (x *VodStartWorkflowResponse) Reset() {
 	*x = VodStartWorkflowResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[49]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[51]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2718,7 +2828,7 @@ func (x *VodStartWorkflowResponse) String() string {
 func (*VodStartWorkflowResponse) ProtoMessage() {}
 
 func (x *VodStartWorkflowResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[49]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[51]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2731,7 +2841,7 @@ func (x *VodStartWorkflowResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodStartWorkflowResponse.ProtoReflect.Descriptor instead.
 func (*VodStartWorkflowResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{49}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{51}
 }
 
 func (x *VodStartWorkflowResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2760,7 +2870,7 @@ type VodRetrieveTranscodeResultResponse struct {
 func (x *VodRetrieveTranscodeResultResponse) Reset() {
 	*x = VodRetrieveTranscodeResultResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[50]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[52]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2773,7 +2883,7 @@ func (x *VodRetrieveTranscodeResultResponse) String() string {
 func (*VodRetrieveTranscodeResultResponse) ProtoMessage() {}
 
 func (x *VodRetrieveTranscodeResultResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[50]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[52]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2786,7 +2896,7 @@ func (x *VodRetrieveTranscodeResultResponse) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use VodRetrieveTranscodeResultResponse.ProtoReflect.Descriptor instead.
 func (*VodRetrieveTranscodeResultResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{50}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{52}
 }
 
 func (x *VodRetrieveTranscodeResultResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2815,7 +2925,7 @@ type VodListWorkflowExecutionResponse struct {
 func (x *VodListWorkflowExecutionResponse) Reset() {
 	*x = VodListWorkflowExecutionResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[51]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[53]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2828,7 +2938,7 @@ func (x *VodListWorkflowExecutionResponse) String() string {
 func (*VodListWorkflowExecutionResponse) ProtoMessage() {}
 
 func (x *VodListWorkflowExecutionResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[51]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[53]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2841,7 +2951,7 @@ func (x *VodListWorkflowExecutionResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodListWorkflowExecutionResponse.ProtoReflect.Descriptor instead.
 func (*VodListWorkflowExecutionResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{51}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{53}
 }
 
 func (x *VodListWorkflowExecutionResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2870,7 +2980,7 @@ type VodGetWorkflowExecutionDetailResponse struct {
 func (x *VodGetWorkflowExecutionDetailResponse) Reset() {
 	*x = VodGetWorkflowExecutionDetailResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[52]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[54]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2883,7 +2993,7 @@ func (x *VodGetWorkflowExecutionDetailResponse) String() string {
 func (*VodGetWorkflowExecutionDetailResponse) ProtoMessage() {}
 
 func (x *VodGetWorkflowExecutionDetailResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[52]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[54]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2896,7 +3006,7 @@ func (x *VodGetWorkflowExecutionDetailResponse) ProtoReflect() protoreflect.Mess
 
 // Deprecated: Use VodGetWorkflowExecutionDetailResponse.ProtoReflect.Descriptor instead.
 func (*VodGetWorkflowExecutionDetailResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{52}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{54}
 }
 
 func (x *VodGetWorkflowExecutionDetailResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2925,7 +3035,7 @@ type VodGetWorkflowExecutionStatusResponse struct {
 func (x *VodGetWorkflowExecutionStatusResponse) Reset() {
 	*x = VodGetWorkflowExecutionStatusResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[53]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[55]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2938,7 +3048,7 @@ func (x *VodGetWorkflowExecutionStatusResponse) String() string {
 func (*VodGetWorkflowExecutionStatusResponse) ProtoMessage() {}
 
 func (x *VodGetWorkflowExecutionStatusResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[53]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[55]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2951,7 +3061,7 @@ func (x *VodGetWorkflowExecutionStatusResponse) ProtoReflect() protoreflect.Mess
 
 // Deprecated: Use VodGetWorkflowExecutionStatusResponse.ProtoReflect.Descriptor instead.
 func (*VodGetWorkflowExecutionStatusResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{53}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{55}
 }
 
 func (x *VodGetWorkflowExecutionStatusResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -2980,7 +3090,7 @@ type VodGetWorkflowResultResponse struct {
 func (x *VodGetWorkflowResultResponse) Reset() {
 	*x = VodGetWorkflowResultResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[54]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[56]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2993,7 +3103,7 @@ func (x *VodGetWorkflowResultResponse) String() string {
 func (*VodGetWorkflowResultResponse) ProtoMessage() {}
 
 func (x *VodGetWorkflowResultResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[54]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[56]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3006,7 +3116,7 @@ func (x *VodGetWorkflowResultResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetWorkflowResultResponse.ProtoReflect.Descriptor instead.
 func (*VodGetWorkflowResultResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{54}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{56}
 }
 
 func (x *VodGetWorkflowResultResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3035,7 +3145,7 @@ type VodCreateTaskTemplateResponse struct {
 func (x *VodCreateTaskTemplateResponse) Reset() {
 	*x = VodCreateTaskTemplateResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[55]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[57]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3048,7 +3158,7 @@ func (x *VodCreateTaskTemplateResponse) String() string {
 func (*VodCreateTaskTemplateResponse) ProtoMessage() {}
 
 func (x *VodCreateTaskTemplateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[55]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[57]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3061,7 +3171,7 @@ func (x *VodCreateTaskTemplateResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodCreateTaskTemplateResponse.ProtoReflect.Descriptor instead.
 func (*VodCreateTaskTemplateResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{55}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{57}
 }
 
 func (x *VodCreateTaskTemplateResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3090,7 +3200,7 @@ type VodUpdateTaskTemplateResponse struct {
 func (x *VodUpdateTaskTemplateResponse) Reset() {
 	*x = VodUpdateTaskTemplateResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[56]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[58]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3103,7 +3213,7 @@ func (x *VodUpdateTaskTemplateResponse) String() string {
 func (*VodUpdateTaskTemplateResponse) ProtoMessage() {}
 
 func (x *VodUpdateTaskTemplateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[56]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[58]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3116,7 +3226,7 @@ func (x *VodUpdateTaskTemplateResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodUpdateTaskTemplateResponse.ProtoReflect.Descriptor instead.
 func (*VodUpdateTaskTemplateResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{56}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{58}
 }
 
 func (x *VodUpdateTaskTemplateResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3145,7 +3255,7 @@ type VodDeleteTaskTemplateResponse struct {
 func (x *VodDeleteTaskTemplateResponse) Reset() {
 	*x = VodDeleteTaskTemplateResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[57]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[59]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3158,7 +3268,7 @@ func (x *VodDeleteTaskTemplateResponse) String() string {
 func (*VodDeleteTaskTemplateResponse) ProtoMessage() {}
 
 func (x *VodDeleteTaskTemplateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[57]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[59]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3171,7 +3281,7 @@ func (x *VodDeleteTaskTemplateResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodDeleteTaskTemplateResponse.ProtoReflect.Descriptor instead.
 func (*VodDeleteTaskTemplateResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{57}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{59}
 }
 
 func (x *VodDeleteTaskTemplateResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3200,7 +3310,7 @@ type VodGetTaskTemplateResponse struct {
 func (x *VodGetTaskTemplateResponse) Reset() {
 	*x = VodGetTaskTemplateResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[58]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[60]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3213,7 +3323,7 @@ func (x *VodGetTaskTemplateResponse) String() string {
 func (*VodGetTaskTemplateResponse) ProtoMessage() {}
 
 func (x *VodGetTaskTemplateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[58]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[60]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3226,7 +3336,7 @@ func (x *VodGetTaskTemplateResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetTaskTemplateResponse.ProtoReflect.Descriptor instead.
 func (*VodGetTaskTemplateResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{58}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{60}
 }
 
 func (x *VodGetTaskTemplateResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3255,7 +3365,7 @@ type VodListTaskTemplateResponse struct {
 func (x *VodListTaskTemplateResponse) Reset() {
 	*x = VodListTaskTemplateResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[59]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[61]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3268,7 +3378,7 @@ func (x *VodListTaskTemplateResponse) String() string {
 func (*VodListTaskTemplateResponse) ProtoMessage() {}
 
 func (x *VodListTaskTemplateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[59]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[61]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3281,7 +3391,7 @@ func (x *VodListTaskTemplateResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodListTaskTemplateResponse.ProtoReflect.Descriptor instead.
 func (*VodListTaskTemplateResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{59}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{61}
 }
 
 func (x *VodListTaskTemplateResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3310,7 +3420,7 @@ type VodCreateWorkflowTemplateResponse struct {
 func (x *VodCreateWorkflowTemplateResponse) Reset() {
 	*x = VodCreateWorkflowTemplateResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[60]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[62]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3323,7 +3433,7 @@ func (x *VodCreateWorkflowTemplateResponse) String() string {
 func (*VodCreateWorkflowTemplateResponse) ProtoMessage() {}
 
 func (x *VodCreateWorkflowTemplateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[60]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[62]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3336,7 +3446,7 @@ func (x *VodCreateWorkflowTemplateResponse) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use VodCreateWorkflowTemplateResponse.ProtoReflect.Descriptor instead.
 func (*VodCreateWorkflowTemplateResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{60}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{62}
 }
 
 func (x *VodCreateWorkflowTemplateResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3364,7 +3474,7 @@ type VodUpdateWorkflowTemplateResponse struct {
 func (x *VodUpdateWorkflowTemplateResponse) Reset() {
 	*x = VodUpdateWorkflowTemplateResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[61]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[63]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3377,7 +3487,7 @@ func (x *VodUpdateWorkflowTemplateResponse) String() string {
 func (*VodUpdateWorkflowTemplateResponse) ProtoMessage() {}
 
 func (x *VodUpdateWorkflowTemplateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[61]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[63]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3390,7 +3500,7 @@ func (x *VodUpdateWorkflowTemplateResponse) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use VodUpdateWorkflowTemplateResponse.ProtoReflect.Descriptor instead.
 func (*VodUpdateWorkflowTemplateResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{61}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{63}
 }
 
 func (x *VodUpdateWorkflowTemplateResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3411,7 +3521,7 @@ type VodDeleteWorkflowTemplateResponse struct {
 func (x *VodDeleteWorkflowTemplateResponse) Reset() {
 	*x = VodDeleteWorkflowTemplateResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[62]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[64]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3424,7 +3534,7 @@ func (x *VodDeleteWorkflowTemplateResponse) String() string {
 func (*VodDeleteWorkflowTemplateResponse) ProtoMessage() {}
 
 func (x *VodDeleteWorkflowTemplateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[62]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[64]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3437,7 +3547,7 @@ func (x *VodDeleteWorkflowTemplateResponse) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use VodDeleteWorkflowTemplateResponse.ProtoReflect.Descriptor instead.
 func (*VodDeleteWorkflowTemplateResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{62}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{64}
 }
 
 func (x *VodDeleteWorkflowTemplateResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3459,7 +3569,7 @@ type VodGetWorkflowTemplateResponse struct {
 func (x *VodGetWorkflowTemplateResponse) Reset() {
 	*x = VodGetWorkflowTemplateResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[63]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[65]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3472,7 +3582,7 @@ func (x *VodGetWorkflowTemplateResponse) String() string {
 func (*VodGetWorkflowTemplateResponse) ProtoMessage() {}
 
 func (x *VodGetWorkflowTemplateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[63]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[65]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3485,7 +3595,7 @@ func (x *VodGetWorkflowTemplateResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetWorkflowTemplateResponse.ProtoReflect.Descriptor instead.
 func (*VodGetWorkflowTemplateResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{63}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{65}
 }
 
 func (x *VodGetWorkflowTemplateResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3514,7 +3624,7 @@ type VodListWorkflowTemplateResponse struct {
 func (x *VodListWorkflowTemplateResponse) Reset() {
 	*x = VodListWorkflowTemplateResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[64]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[66]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3527,7 +3637,7 @@ func (x *VodListWorkflowTemplateResponse) String() string {
 func (*VodListWorkflowTemplateResponse) ProtoMessage() {}
 
 func (x *VodListWorkflowTemplateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[64]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[66]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3540,7 +3650,7 @@ func (x *VodListWorkflowTemplateResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodListWorkflowTemplateResponse.ProtoReflect.Descriptor instead.
 func (*VodListWorkflowTemplateResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{64}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{66}
 }
 
 func (x *VodListWorkflowTemplateResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3569,7 +3679,7 @@ type VodCreateWatermarkResponse struct {
 func (x *VodCreateWatermarkResponse) Reset() {
 	*x = VodCreateWatermarkResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[65]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[67]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3582,7 +3692,7 @@ func (x *VodCreateWatermarkResponse) String() string {
 func (*VodCreateWatermarkResponse) ProtoMessage() {}
 
 func (x *VodCreateWatermarkResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[65]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[67]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3595,7 +3705,7 @@ func (x *VodCreateWatermarkResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodCreateWatermarkResponse.ProtoReflect.Descriptor instead.
 func (*VodCreateWatermarkResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{65}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{67}
 }
 
 func (x *VodCreateWatermarkResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3623,7 +3733,7 @@ type VodUpdateWatermarkResponse struct {
 func (x *VodUpdateWatermarkResponse) Reset() {
 	*x = VodUpdateWatermarkResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[66]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[68]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3636,7 +3746,7 @@ func (x *VodUpdateWatermarkResponse) String() string {
 func (*VodUpdateWatermarkResponse) ProtoMessage() {}
 
 func (x *VodUpdateWatermarkResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[66]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[68]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3649,7 +3759,7 @@ func (x *VodUpdateWatermarkResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodUpdateWatermarkResponse.ProtoReflect.Descriptor instead.
 func (*VodUpdateWatermarkResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{66}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{68}
 }
 
 func (x *VodUpdateWatermarkResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3670,7 +3780,7 @@ type VodDeleteWatermarkResponse struct {
 func (x *VodDeleteWatermarkResponse) Reset() {
 	*x = VodDeleteWatermarkResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[67]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[69]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3683,7 +3793,7 @@ func (x *VodDeleteWatermarkResponse) String() string {
 func (*VodDeleteWatermarkResponse) ProtoMessage() {}
 
 func (x *VodDeleteWatermarkResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[67]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[69]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3696,7 +3806,7 @@ func (x *VodDeleteWatermarkResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodDeleteWatermarkResponse.ProtoReflect.Descriptor instead.
 func (*VodDeleteWatermarkResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{67}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{69}
 }
 
 func (x *VodDeleteWatermarkResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3718,7 +3828,7 @@ type VodGetWatermarkResponse struct {
 func (x *VodGetWatermarkResponse) Reset() {
 	*x = VodGetWatermarkResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[68]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[70]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3731,7 +3841,7 @@ func (x *VodGetWatermarkResponse) String() string {
 func (*VodGetWatermarkResponse) ProtoMessage() {}
 
 func (x *VodGetWatermarkResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[68]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[70]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3744,7 +3854,7 @@ func (x *VodGetWatermarkResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetWatermarkResponse.ProtoReflect.Descriptor instead.
 func (*VodGetWatermarkResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{68}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{70}
 }
 
 func (x *VodGetWatermarkResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3773,7 +3883,7 @@ type VodListWatermarkResponse struct {
 func (x *VodListWatermarkResponse) Reset() {
 	*x = VodListWatermarkResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[69]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[71]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3786,7 +3896,7 @@ func (x *VodListWatermarkResponse) String() string {
 func (*VodListWatermarkResponse) ProtoMessage() {}
 
 func (x *VodListWatermarkResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[69]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[71]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3799,7 +3909,7 @@ func (x *VodListWatermarkResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodListWatermarkResponse.ProtoReflect.Descriptor instead.
 func (*VodListWatermarkResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{69}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{71}
 }
 
 func (x *VodListWatermarkResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3831,7 +3941,7 @@ type VodSubmitDirectEditTaskAsyncResponse struct {
 func (x *VodSubmitDirectEditTaskAsyncResponse) Reset() {
 	*x = VodSubmitDirectEditTaskAsyncResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[70]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[72]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3844,7 +3954,7 @@ func (x *VodSubmitDirectEditTaskAsyncResponse) String() string {
 func (*VodSubmitDirectEditTaskAsyncResponse) ProtoMessage() {}
 
 func (x *VodSubmitDirectEditTaskAsyncResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[70]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[72]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3857,7 +3967,7 @@ func (x *VodSubmitDirectEditTaskAsyncResponse) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use VodSubmitDirectEditTaskAsyncResponse.ProtoReflect.Descriptor instead.
 func (*VodSubmitDirectEditTaskAsyncResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{70}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{72}
 }
 
 func (x *VodSubmitDirectEditTaskAsyncResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3886,7 +3996,7 @@ type VodSubmitDirectEditTaskSyncResponse struct {
 func (x *VodSubmitDirectEditTaskSyncResponse) Reset() {
 	*x = VodSubmitDirectEditTaskSyncResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[71]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[73]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3899,7 +4009,7 @@ func (x *VodSubmitDirectEditTaskSyncResponse) String() string {
 func (*VodSubmitDirectEditTaskSyncResponse) ProtoMessage() {}
 
 func (x *VodSubmitDirectEditTaskSyncResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[71]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[73]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3912,7 +4022,7 @@ func (x *VodSubmitDirectEditTaskSyncResponse) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use VodSubmitDirectEditTaskSyncResponse.ProtoReflect.Descriptor instead.
 func (*VodSubmitDirectEditTaskSyncResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{71}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{73}
 }
 
 func (x *VodSubmitDirectEditTaskSyncResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3941,7 +4051,7 @@ type VodGetDirectEditProgressResponse struct {
 func (x *VodGetDirectEditProgressResponse) Reset() {
 	*x = VodGetDirectEditProgressResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[72]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[74]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3954,7 +4064,7 @@ func (x *VodGetDirectEditProgressResponse) String() string {
 func (*VodGetDirectEditProgressResponse) ProtoMessage() {}
 
 func (x *VodGetDirectEditProgressResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[72]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[74]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3967,7 +4077,7 @@ func (x *VodGetDirectEditProgressResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetDirectEditProgressResponse.ProtoReflect.Descriptor instead.
 func (*VodGetDirectEditProgressResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{72}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{74}
 }
 
 func (x *VodGetDirectEditProgressResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -3996,7 +4106,7 @@ type VodGetDirectEditResultResponse struct {
 func (x *VodGetDirectEditResultResponse) Reset() {
 	*x = VodGetDirectEditResultResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[73]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[75]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4009,7 +4119,7 @@ func (x *VodGetDirectEditResultResponse) String() string {
 func (*VodGetDirectEditResultResponse) ProtoMessage() {}
 
 func (x *VodGetDirectEditResultResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[73]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[75]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4022,7 +4132,7 @@ func (x *VodGetDirectEditResultResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetDirectEditResultResponse.ProtoReflect.Descriptor instead.
 func (*VodGetDirectEditResultResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{73}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{75}
 }
 
 func (x *VodGetDirectEditResultResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4051,7 +4161,7 @@ type VodCancelDirectEditTaskResponse struct {
 func (x *VodCancelDirectEditTaskResponse) Reset() {
 	*x = VodCancelDirectEditTaskResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[74]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[76]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4064,7 +4174,7 @@ func (x *VodCancelDirectEditTaskResponse) String() string {
 func (*VodCancelDirectEditTaskResponse) ProtoMessage() {}
 
 func (x *VodCancelDirectEditTaskResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[74]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[76]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4077,7 +4187,7 @@ func (x *VodCancelDirectEditTaskResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodCancelDirectEditTaskResponse.ProtoReflect.Descriptor instead.
 func (*VodCancelDirectEditTaskResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{74}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{76}
 }
 
 func (x *VodCancelDirectEditTaskResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4109,7 +4219,7 @@ type VodAsyncVCreativeTaskResponse struct {
 func (x *VodAsyncVCreativeTaskResponse) Reset() {
 	*x = VodAsyncVCreativeTaskResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[75]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[77]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4122,7 +4232,7 @@ func (x *VodAsyncVCreativeTaskResponse) String() string {
 func (*VodAsyncVCreativeTaskResponse) ProtoMessage() {}
 
 func (x *VodAsyncVCreativeTaskResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[75]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[77]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4135,7 +4245,7 @@ func (x *VodAsyncVCreativeTaskResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodAsyncVCreativeTaskResponse.ProtoReflect.Descriptor instead.
 func (*VodAsyncVCreativeTaskResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{75}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{77}
 }
 
 func (x *VodAsyncVCreativeTaskResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4164,7 +4274,7 @@ type VodGetVCreativeTaskResultResponse struct {
 func (x *VodGetVCreativeTaskResultResponse) Reset() {
 	*x = VodGetVCreativeTaskResultResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[76]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[78]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4177,7 +4287,7 @@ func (x *VodGetVCreativeTaskResultResponse) String() string {
 func (*VodGetVCreativeTaskResultResponse) ProtoMessage() {}
 
 func (x *VodGetVCreativeTaskResultResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[76]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[78]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4190,7 +4300,7 @@ func (x *VodGetVCreativeTaskResultResponse) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use VodGetVCreativeTaskResultResponse.ProtoReflect.Descriptor instead.
 func (*VodGetVCreativeTaskResultResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{76}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{78}
 }
 
 func (x *VodGetVCreativeTaskResultResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4221,7 +4331,7 @@ type VodCreateSpaceResponse struct {
 func (x *VodCreateSpaceResponse) Reset() {
 	*x = VodCreateSpaceResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[77]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[79]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4234,7 +4344,7 @@ func (x *VodCreateSpaceResponse) String() string {
 func (*VodCreateSpaceResponse) ProtoMessage() {}
 
 func (x *VodCreateSpaceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[77]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[79]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4247,7 +4357,7 @@ func (x *VodCreateSpaceResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodCreateSpaceResponse.ProtoReflect.Descriptor instead.
 func (*VodCreateSpaceResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{77}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{79}
 }
 
 func (x *VodCreateSpaceResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4268,7 +4378,7 @@ type VodDeleteSpaceResponse struct {
 func (x *VodDeleteSpaceResponse) Reset() {
 	*x = VodDeleteSpaceResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[78]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[80]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4281,7 +4391,7 @@ func (x *VodDeleteSpaceResponse) String() string {
 func (*VodDeleteSpaceResponse) ProtoMessage() {}
 
 func (x *VodDeleteSpaceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[78]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[80]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4294,7 +4404,7 @@ func (x *VodDeleteSpaceResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodDeleteSpaceResponse.ProtoReflect.Descriptor instead.
 func (*VodDeleteSpaceResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{78}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{80}
 }
 
 func (x *VodDeleteSpaceResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4316,7 +4426,7 @@ type VodListSpaceResponse struct {
 func (x *VodListSpaceResponse) Reset() {
 	*x = VodListSpaceResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[79]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[81]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4329,7 +4439,7 @@ func (x *VodListSpaceResponse) String() string {
 func (*VodListSpaceResponse) ProtoMessage() {}
 
 func (x *VodListSpaceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[79]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[81]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4342,7 +4452,7 @@ func (x *VodListSpaceResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodListSpaceResponse.ProtoReflect.Descriptor instead.
 func (*VodListSpaceResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{79}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{81}
 }
 
 func (x *VodListSpaceResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4371,7 +4481,7 @@ type VodGetSpaceDetailResponse struct {
 func (x *VodGetSpaceDetailResponse) Reset() {
 	*x = VodGetSpaceDetailResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[80]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[82]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4384,7 +4494,7 @@ func (x *VodGetSpaceDetailResponse) String() string {
 func (*VodGetSpaceDetailResponse) ProtoMessage() {}
 
 func (x *VodGetSpaceDetailResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[80]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[82]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4397,7 +4507,7 @@ func (x *VodGetSpaceDetailResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetSpaceDetailResponse.ProtoReflect.Descriptor instead.
 func (*VodGetSpaceDetailResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{80}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{82}
 }
 
 func (x *VodGetSpaceDetailResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4425,7 +4535,7 @@ type VodUpdateSpaceResponse struct {
 func (x *VodUpdateSpaceResponse) Reset() {
 	*x = VodUpdateSpaceResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[81]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[83]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4438,7 +4548,7 @@ func (x *VodUpdateSpaceResponse) String() string {
 func (*VodUpdateSpaceResponse) ProtoMessage() {}
 
 func (x *VodUpdateSpaceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[81]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[83]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4451,7 +4561,7 @@ func (x *VodUpdateSpaceResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodUpdateSpaceResponse.ProtoReflect.Descriptor instead.
 func (*VodUpdateSpaceResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{81}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{83}
 }
 
 func (x *VodUpdateSpaceResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4472,7 +4582,7 @@ type VodUpdateSpaceUploadConfigResponse struct {
 func (x *VodUpdateSpaceUploadConfigResponse) Reset() {
 	*x = VodUpdateSpaceUploadConfigResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[82]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[84]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4485,7 +4595,7 @@ func (x *VodUpdateSpaceUploadConfigResponse) String() string {
 func (*VodUpdateSpaceUploadConfigResponse) ProtoMessage() {}
 
 func (x *VodUpdateSpaceUploadConfigResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[82]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[84]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4498,7 +4608,7 @@ func (x *VodUpdateSpaceUploadConfigResponse) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use VodUpdateSpaceUploadConfigResponse.ProtoReflect.Descriptor instead.
 func (*VodUpdateSpaceUploadConfigResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{82}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{84}
 }
 
 func (x *VodUpdateSpaceUploadConfigResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4520,7 +4630,7 @@ type VodDescribeUploadSpaceConfigResponse struct {
 func (x *VodDescribeUploadSpaceConfigResponse) Reset() {
 	*x = VodDescribeUploadSpaceConfigResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[83]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[85]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4533,7 +4643,7 @@ func (x *VodDescribeUploadSpaceConfigResponse) String() string {
 func (*VodDescribeUploadSpaceConfigResponse) ProtoMessage() {}
 
 func (x *VodDescribeUploadSpaceConfigResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[83]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[85]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4546,7 +4656,7 @@ func (x *VodDescribeUploadSpaceConfigResponse) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use VodDescribeUploadSpaceConfigResponse.ProtoReflect.Descriptor instead.
 func (*VodDescribeUploadSpaceConfigResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{83}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{85}
 }
 
 func (x *VodDescribeUploadSpaceConfigResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4574,7 +4684,7 @@ type VodUpdateUploadSpaceConfigResponse struct {
 func (x *VodUpdateUploadSpaceConfigResponse) Reset() {
 	*x = VodUpdateUploadSpaceConfigResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[84]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[86]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4587,7 +4697,7 @@ func (x *VodUpdateUploadSpaceConfigResponse) String() string {
 func (*VodUpdateUploadSpaceConfigResponse) ProtoMessage() {}
 
 func (x *VodUpdateUploadSpaceConfigResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[84]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[86]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4600,7 +4710,7 @@ func (x *VodUpdateUploadSpaceConfigResponse) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use VodUpdateUploadSpaceConfigResponse.ProtoReflect.Descriptor instead.
 func (*VodUpdateUploadSpaceConfigResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{84}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{86}
 }
 
 func (x *VodUpdateUploadSpaceConfigResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4622,7 +4732,7 @@ type VodDescribeVodSpaceStorageDataResponse struct {
 func (x *VodDescribeVodSpaceStorageDataResponse) Reset() {
 	*x = VodDescribeVodSpaceStorageDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[85]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[87]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4635,7 +4745,7 @@ func (x *VodDescribeVodSpaceStorageDataResponse) String() string {
 func (*VodDescribeVodSpaceStorageDataResponse) ProtoMessage() {}
 
 func (x *VodDescribeVodSpaceStorageDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[85]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[87]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4648,7 +4758,7 @@ func (x *VodDescribeVodSpaceStorageDataResponse) ProtoReflect() protoreflect.Mes
 
 // Deprecated: Use VodDescribeVodSpaceStorageDataResponse.ProtoReflect.Descriptor instead.
 func (*VodDescribeVodSpaceStorageDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{85}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{87}
 }
 
 func (x *VodDescribeVodSpaceStorageDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4676,7 +4786,7 @@ type VodUpdateDomainPlayRuleResponse struct {
 func (x *VodUpdateDomainPlayRuleResponse) Reset() {
 	*x = VodUpdateDomainPlayRuleResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[86]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[88]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4689,7 +4799,7 @@ func (x *VodUpdateDomainPlayRuleResponse) String() string {
 func (*VodUpdateDomainPlayRuleResponse) ProtoMessage() {}
 
 func (x *VodUpdateDomainPlayRuleResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[86]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[88]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4702,7 +4812,7 @@ func (x *VodUpdateDomainPlayRuleResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodUpdateDomainPlayRuleResponse.ProtoReflect.Descriptor instead.
 func (*VodUpdateDomainPlayRuleResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{86}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{88}
 }
 
 func (x *VodUpdateDomainPlayRuleResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4723,7 +4833,7 @@ type VodAddDomainToSchedulerResponse struct {
 func (x *VodAddDomainToSchedulerResponse) Reset() {
 	*x = VodAddDomainToSchedulerResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[87]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[89]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4736,7 +4846,7 @@ func (x *VodAddDomainToSchedulerResponse) String() string {
 func (*VodAddDomainToSchedulerResponse) ProtoMessage() {}
 
 func (x *VodAddDomainToSchedulerResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[87]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[89]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4749,7 +4859,7 @@ func (x *VodAddDomainToSchedulerResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodAddDomainToSchedulerResponse.ProtoReflect.Descriptor instead.
 func (*VodAddDomainToSchedulerResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{87}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{89}
 }
 
 func (x *VodAddDomainToSchedulerResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4770,7 +4880,7 @@ type VodRemoveDomainFromSchedulerResponse struct {
 func (x *VodRemoveDomainFromSchedulerResponse) Reset() {
 	*x = VodRemoveDomainFromSchedulerResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[88]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[90]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4783,7 +4893,7 @@ func (x *VodRemoveDomainFromSchedulerResponse) String() string {
 func (*VodRemoveDomainFromSchedulerResponse) ProtoMessage() {}
 
 func (x *VodRemoveDomainFromSchedulerResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[88]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[90]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4796,7 +4906,7 @@ func (x *VodRemoveDomainFromSchedulerResponse) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use VodRemoveDomainFromSchedulerResponse.ProtoReflect.Descriptor instead.
 func (*VodRemoveDomainFromSchedulerResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{88}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{90}
 }
 
 func (x *VodRemoveDomainFromSchedulerResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4817,7 +4927,7 @@ type VodDeleteDomainResponse struct {
 func (x *VodDeleteDomainResponse) Reset() {
 	*x = VodDeleteDomainResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[89]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[91]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4830,7 +4940,7 @@ func (x *VodDeleteDomainResponse) String() string {
 func (*VodDeleteDomainResponse) ProtoMessage() {}
 
 func (x *VodDeleteDomainResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[89]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[91]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4843,7 +4953,7 @@ func (x *VodDeleteDomainResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodDeleteDomainResponse.ProtoReflect.Descriptor instead.
 func (*VodDeleteDomainResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{89}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{91}
 }
 
 func (x *VodDeleteDomainResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4864,7 +4974,7 @@ type VodStartDomainResponse struct {
 func (x *VodStartDomainResponse) Reset() {
 	*x = VodStartDomainResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[90]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[92]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4877,7 +4987,7 @@ func (x *VodStartDomainResponse) String() string {
 func (*VodStartDomainResponse) ProtoMessage() {}
 
 func (x *VodStartDomainResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[90]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[92]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4890,7 +5000,7 @@ func (x *VodStartDomainResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodStartDomainResponse.ProtoReflect.Descriptor instead.
 func (*VodStartDomainResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{90}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{92}
 }
 
 func (x *VodStartDomainResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4911,7 +5021,7 @@ type VodStopDomainResponse struct {
 func (x *VodStopDomainResponse) Reset() {
 	*x = VodStopDomainResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[91]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[93]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4924,7 +5034,7 @@ func (x *VodStopDomainResponse) String() string {
 func (*VodStopDomainResponse) ProtoMessage() {}
 
 func (x *VodStopDomainResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[91]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[93]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4937,7 +5047,7 @@ func (x *VodStopDomainResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodStopDomainResponse.ProtoReflect.Descriptor instead.
 func (*VodStopDomainResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{91}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{93}
 }
 
 func (x *VodStopDomainResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -4959,7 +5069,7 @@ type VodListDomainResponse struct {
 func (x *VodListDomainResponse) Reset() {
 	*x = VodListDomainResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[92]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[94]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -4972,7 +5082,7 @@ func (x *VodListDomainResponse) String() string {
 func (*VodListDomainResponse) ProtoMessage() {}
 
 func (x *VodListDomainResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[92]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[94]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -4985,7 +5095,7 @@ func (x *VodListDomainResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodListDomainResponse.ProtoReflect.Descriptor instead.
 func (*VodListDomainResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{92}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{94}
 }
 
 func (x *VodListDomainResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -5014,7 +5124,7 @@ type VodCreateCdnRefreshTaskResponse struct {
 func (x *VodCreateCdnRefreshTaskResponse) Reset() {
 	*x = VodCreateCdnRefreshTaskResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[93]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[95]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5027,7 +5137,7 @@ func (x *VodCreateCdnRefreshTaskResponse) String() string {
 func (*VodCreateCdnRefreshTaskResponse) ProtoMessage() {}
 
 func (x *VodCreateCdnRefreshTaskResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[93]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[95]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5040,7 +5150,7 @@ func (x *VodCreateCdnRefreshTaskResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodCreateCdnRefreshTaskResponse.ProtoReflect.Descriptor instead.
 func (*VodCreateCdnRefreshTaskResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{93}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{95}
 }
 
 func (x *VodCreateCdnRefreshTaskResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -5069,7 +5179,7 @@ type VodCreateCdnPreloadTaskResponse struct {
 func (x *VodCreateCdnPreloadTaskResponse) Reset() {
 	*x = VodCreateCdnPreloadTaskResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[94]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[96]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5082,7 +5192,7 @@ func (x *VodCreateCdnPreloadTaskResponse) String() string {
 func (*VodCreateCdnPreloadTaskResponse) ProtoMessage() {}
 
 func (x *VodCreateCdnPreloadTaskResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[94]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[96]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5095,7 +5205,7 @@ func (x *VodCreateCdnPreloadTaskResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodCreateCdnPreloadTaskResponse.ProtoReflect.Descriptor instead.
 func (*VodCreateCdnPreloadTaskResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{94}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{96}
 }
 
 func (x *VodCreateCdnPreloadTaskResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -5124,7 +5234,7 @@ type VodListCdnTasksResponse struct {
 func (x *VodListCdnTasksResponse) Reset() {
 	*x = VodListCdnTasksResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[95]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[97]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5137,7 +5247,7 @@ func (x *VodListCdnTasksResponse) String() string {
 func (*VodListCdnTasksResponse) ProtoMessage() {}
 
 func (x *VodListCdnTasksResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[95]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[97]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5150,7 +5260,7 @@ func (x *VodListCdnTasksResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodListCdnTasksResponse.ProtoReflect.Descriptor instead.
 func (*VodListCdnTasksResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{95}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{97}
 }
 
 func (x *VodListCdnTasksResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -5179,7 +5289,7 @@ type VodListCdnAccessLogResponse struct {
 func (x *VodListCdnAccessLogResponse) Reset() {
 	*x = VodListCdnAccessLogResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[96]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[98]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5192,7 +5302,7 @@ func (x *VodListCdnAccessLogResponse) String() string {
 func (*VodListCdnAccessLogResponse) ProtoMessage() {}
 
 func (x *VodListCdnAccessLogResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[96]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[98]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5205,7 +5315,7 @@ func (x *VodListCdnAccessLogResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodListCdnAccessLogResponse.ProtoReflect.Descriptor instead.
 func (*VodListCdnAccessLogResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{96}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{98}
 }
 
 func (x *VodListCdnAccessLogResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -5234,7 +5344,7 @@ type VodListCdnTopAccessUrlResponse struct {
 func (x *VodListCdnTopAccessUrlResponse) Reset() {
 	*x = VodListCdnTopAccessUrlResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[97]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[99]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5247,7 +5357,7 @@ func (x *VodListCdnTopAccessUrlResponse) String() string {
 func (*VodListCdnTopAccessUrlResponse) ProtoMessage() {}
 
 func (x *VodListCdnTopAccessUrlResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[97]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[99]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5260,7 +5370,7 @@ func (x *VodListCdnTopAccessUrlResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodListCdnTopAccessUrlResponse.ProtoReflect.Descriptor instead.
 func (*VodListCdnTopAccessUrlResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{97}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{99}
 }
 
 func (x *VodListCdnTopAccessUrlResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -5289,7 +5399,7 @@ type VodListCdnTopAccessResponse struct {
 func (x *VodListCdnTopAccessResponse) Reset() {
 	*x = VodListCdnTopAccessResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[98]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[100]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5302,7 +5412,7 @@ func (x *VodListCdnTopAccessResponse) String() string {
 func (*VodListCdnTopAccessResponse) ProtoMessage() {}
 
 func (x *VodListCdnTopAccessResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[98]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[100]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5315,7 +5425,7 @@ func (x *VodListCdnTopAccessResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodListCdnTopAccessResponse.ProtoReflect.Descriptor instead.
 func (*VodListCdnTopAccessResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{98}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{100}
 }
 
 func (x *VodListCdnTopAccessResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -5344,7 +5454,7 @@ type VodDescribeVodDomainBandwidthDataResponse struct {
 func (x *VodDescribeVodDomainBandwidthDataResponse) Reset() {
 	*x = VodDescribeVodDomainBandwidthDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[99]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[101]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5357,7 +5467,7 @@ func (x *VodDescribeVodDomainBandwidthDataResponse) String() string {
 func (*VodDescribeVodDomainBandwidthDataResponse) ProtoMessage() {}
 
 func (x *VodDescribeVodDomainBandwidthDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[99]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[101]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5370,7 +5480,7 @@ func (x *VodDescribeVodDomainBandwidthDataResponse) ProtoReflect() protoreflect.
 
 // Deprecated: Use VodDescribeVodDomainBandwidthDataResponse.ProtoReflect.Descriptor instead.
 func (*VodDescribeVodDomainBandwidthDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{99}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{101}
 }
 
 func (x *VodDescribeVodDomainBandwidthDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -5399,7 +5509,7 @@ type VodCdnStatisticsCommonResponse struct {
 func (x *VodCdnStatisticsCommonResponse) Reset() {
 	*x = VodCdnStatisticsCommonResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[100]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[102]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5412,7 +5522,7 @@ func (x *VodCdnStatisticsCommonResponse) String() string {
 func (*VodCdnStatisticsCommonResponse) ProtoMessage() {}
 
 func (x *VodCdnStatisticsCommonResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[100]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[102]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5425,7 +5535,7 @@ func (x *VodCdnStatisticsCommonResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodCdnStatisticsCommonResponse.ProtoReflect.Descriptor instead.
 func (*VodCdnStatisticsCommonResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{100}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{102}
 }
 
 func (x *VodCdnStatisticsCommonResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -5454,7 +5564,7 @@ type VodDescribeIPInfoResponse struct {
 func (x *VodDescribeIPInfoResponse) Reset() {
 	*x = VodDescribeIPInfoResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[101]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[103]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5467,7 +5577,7 @@ func (x *VodDescribeIPInfoResponse) String() string {
 func (*VodDescribeIPInfoResponse) ProtoMessage() {}
 
 func (x *VodDescribeIPInfoResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[101]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[103]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5480,7 +5590,7 @@ func (x *VodDescribeIPInfoResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodDescribeIPInfoResponse.ProtoReflect.Descriptor instead.
 func (*VodDescribeIPInfoResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{101}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{103}
 }
 
 func (x *VodDescribeIPInfoResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -5509,7 +5619,7 @@ type VodDescribeVodDomainTrafficDataResponse struct {
 func (x *VodDescribeVodDomainTrafficDataResponse) Reset() {
 	*x = VodDescribeVodDomainTrafficDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[102]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[104]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5522,7 +5632,7 @@ func (x *VodDescribeVodDomainTrafficDataResponse) String() string {
 func (*VodDescribeVodDomainTrafficDataResponse) ProtoMessage() {}
 
 func (x *VodDescribeVodDomainTrafficDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[102]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[104]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5535,7 +5645,7 @@ func (x *VodDescribeVodDomainTrafficDataResponse) ProtoReflect() protoreflect.Me
 
 // Deprecated: Use VodDescribeVodDomainTrafficDataResponse.ProtoReflect.Descriptor instead.
 func (*VodDescribeVodDomainTrafficDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{102}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{104}
 }
 
 func (x *VodDescribeVodDomainTrafficDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -5564,7 +5674,7 @@ type VodSubmitBlockTasksResponse struct {
 func (x *VodSubmitBlockTasksResponse) Reset() {
 	*x = VodSubmitBlockTasksResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[103]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[105]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5577,7 +5687,7 @@ func (x *VodSubmitBlockTasksResponse) String() string {
 func (*VodSubmitBlockTasksResponse) ProtoMessage() {}
 
 func (x *VodSubmitBlockTasksResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[103]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[105]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5590,7 +5700,7 @@ func (x *VodSubmitBlockTasksResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodSubmitBlockTasksResponse.ProtoReflect.Descriptor instead.
 func (*VodSubmitBlockTasksResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{103}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{105}
 }
 
 func (x *VodSubmitBlockTasksResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -5619,7 +5729,7 @@ type VodGetContentBlockTasksResponse struct {
 func (x *VodGetContentBlockTasksResponse) Reset() {
 	*x = VodGetContentBlockTasksResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[104]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[106]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5632,7 +5742,7 @@ func (x *VodGetContentBlockTasksResponse) String() string {
 func (*VodGetContentBlockTasksResponse) ProtoMessage() {}
 
 func (x *VodGetContentBlockTasksResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[104]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[106]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5645,7 +5755,7 @@ func (x *VodGetContentBlockTasksResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetContentBlockTasksResponse.ProtoReflect.Descriptor instead.
 func (*VodGetContentBlockTasksResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{104}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{106}
 }
 
 func (x *VodGetContentBlockTasksResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -5673,7 +5783,7 @@ type VodCreateDomainV2Response struct {
 func (x *VodCreateDomainV2Response) Reset() {
 	*x = VodCreateDomainV2Response{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[105]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[107]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5686,7 +5796,7 @@ func (x *VodCreateDomainV2Response) String() string {
 func (*VodCreateDomainV2Response) ProtoMessage() {}
 
 func (x *VodCreateDomainV2Response) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[105]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[107]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5699,7 +5809,7 @@ func (x *VodCreateDomainV2Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodCreateDomainV2Response.ProtoReflect.Descriptor instead.
 func (*VodCreateDomainV2Response) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{105}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{107}
 }
 
 func (x *VodCreateDomainV2Response) GetResponseMetadata() *base.ResponseMetadata {
@@ -5720,7 +5830,7 @@ type VodCreateDomainV3Response struct {
 func (x *VodCreateDomainV3Response) Reset() {
 	*x = VodCreateDomainV3Response{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[106]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[108]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5733,7 +5843,7 @@ func (x *VodCreateDomainV3Response) String() string {
 func (*VodCreateDomainV3Response) ProtoMessage() {}
 
 func (x *VodCreateDomainV3Response) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[106]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[108]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5746,7 +5856,7 @@ func (x *VodCreateDomainV3Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodCreateDomainV3Response.ProtoReflect.Descriptor instead.
 func (*VodCreateDomainV3Response) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{106}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{108}
 }
 
 func (x *VodCreateDomainV3Response) GetResponseMetadata() *base.ResponseMetadata {
@@ -5767,7 +5877,7 @@ type VodUpdateDomainExpireV2Response struct {
 func (x *VodUpdateDomainExpireV2Response) Reset() {
 	*x = VodUpdateDomainExpireV2Response{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[107]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[109]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5780,7 +5890,7 @@ func (x *VodUpdateDomainExpireV2Response) String() string {
 func (*VodUpdateDomainExpireV2Response) ProtoMessage() {}
 
 func (x *VodUpdateDomainExpireV2Response) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[107]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[109]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5793,7 +5903,7 @@ func (x *VodUpdateDomainExpireV2Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodUpdateDomainExpireV2Response.ProtoReflect.Descriptor instead.
 func (*VodUpdateDomainExpireV2Response) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{107}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{109}
 }
 
 func (x *VodUpdateDomainExpireV2Response) GetResponseMetadata() *base.ResponseMetadata {
@@ -5814,7 +5924,7 @@ type VodUpdateDomainAuthConfigV2Response struct {
 func (x *VodUpdateDomainAuthConfigV2Response) Reset() {
 	*x = VodUpdateDomainAuthConfigV2Response{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[108]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[110]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5827,7 +5937,7 @@ func (x *VodUpdateDomainAuthConfigV2Response) String() string {
 func (*VodUpdateDomainAuthConfigV2Response) ProtoMessage() {}
 
 func (x *VodUpdateDomainAuthConfigV2Response) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[108]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[110]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5840,7 +5950,7 @@ func (x *VodUpdateDomainAuthConfigV2Response) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use VodUpdateDomainAuthConfigV2Response.ProtoReflect.Descriptor instead.
 func (*VodUpdateDomainAuthConfigV2Response) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{108}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{110}
 }
 
 func (x *VodUpdateDomainAuthConfigV2Response) GetResponseMetadata() *base.ResponseMetadata {
@@ -5861,7 +5971,7 @@ type VodUpdateDomainUrlAuthConfigV2Response struct {
 func (x *VodUpdateDomainUrlAuthConfigV2Response) Reset() {
 	*x = VodUpdateDomainUrlAuthConfigV2Response{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[109]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[111]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5874,7 +5984,7 @@ func (x *VodUpdateDomainUrlAuthConfigV2Response) String() string {
 func (*VodUpdateDomainUrlAuthConfigV2Response) ProtoMessage() {}
 
 func (x *VodUpdateDomainUrlAuthConfigV2Response) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[109]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[111]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5887,7 +5997,7 @@ func (x *VodUpdateDomainUrlAuthConfigV2Response) ProtoReflect() protoreflect.Mes
 
 // Deprecated: Use VodUpdateDomainUrlAuthConfigV2Response.ProtoReflect.Descriptor instead.
 func (*VodUpdateDomainUrlAuthConfigV2Response) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{109}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{111}
 }
 
 func (x *VodUpdateDomainUrlAuthConfigV2Response) GetResponseMetadata() *base.ResponseMetadata {
@@ -5909,7 +6019,7 @@ type VodVerifyDomainOwnerResponse struct {
 func (x *VodVerifyDomainOwnerResponse) Reset() {
 	*x = VodVerifyDomainOwnerResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[110]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[112]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5922,7 +6032,7 @@ func (x *VodVerifyDomainOwnerResponse) String() string {
 func (*VodVerifyDomainOwnerResponse) ProtoMessage() {}
 
 func (x *VodVerifyDomainOwnerResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[110]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[112]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5935,7 +6045,7 @@ func (x *VodVerifyDomainOwnerResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodVerifyDomainOwnerResponse.ProtoReflect.Descriptor instead.
 func (*VodVerifyDomainOwnerResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{110}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{112}
 }
 
 func (x *VodVerifyDomainOwnerResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -5964,7 +6074,7 @@ type VodDescribeDomainVerifyContentResponse struct {
 func (x *VodDescribeDomainVerifyContentResponse) Reset() {
 	*x = VodDescribeDomainVerifyContentResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[111]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[113]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -5977,7 +6087,7 @@ func (x *VodDescribeDomainVerifyContentResponse) String() string {
 func (*VodDescribeDomainVerifyContentResponse) ProtoMessage() {}
 
 func (x *VodDescribeDomainVerifyContentResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[111]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[113]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -5990,7 +6100,7 @@ func (x *VodDescribeDomainVerifyContentResponse) ProtoReflect() protoreflect.Mes
 
 // Deprecated: Use VodDescribeDomainVerifyContentResponse.ProtoReflect.Descriptor instead.
 func (*VodDescribeDomainVerifyContentResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{111}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{113}
 }
 
 func (x *VodDescribeDomainVerifyContentResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6019,7 +6129,7 @@ type VodListPCDNDomainResponse struct {
 func (x *VodListPCDNDomainResponse) Reset() {
 	*x = VodListPCDNDomainResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[112]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[114]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6032,7 +6142,7 @@ func (x *VodListPCDNDomainResponse) String() string {
 func (*VodListPCDNDomainResponse) ProtoMessage() {}
 
 func (x *VodListPCDNDomainResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[112]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[114]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6045,7 +6155,7 @@ func (x *VodListPCDNDomainResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodListPCDNDomainResponse.ProtoReflect.Descriptor instead.
 func (*VodListPCDNDomainResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{112}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{114}
 }
 
 func (x *VodListPCDNDomainResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6073,7 +6183,7 @@ type VodCreatePCDNDomainResponse struct {
 func (x *VodCreatePCDNDomainResponse) Reset() {
 	*x = VodCreatePCDNDomainResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[113]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[115]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6086,7 +6196,7 @@ func (x *VodCreatePCDNDomainResponse) String() string {
 func (*VodCreatePCDNDomainResponse) ProtoMessage() {}
 
 func (x *VodCreatePCDNDomainResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[113]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[115]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6099,7 +6209,7 @@ func (x *VodCreatePCDNDomainResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodCreatePCDNDomainResponse.ProtoReflect.Descriptor instead.
 func (*VodCreatePCDNDomainResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{113}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{115}
 }
 
 func (x *VodCreatePCDNDomainResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6120,7 +6230,7 @@ type VodStartPCDNDomainResponse struct {
 func (x *VodStartPCDNDomainResponse) Reset() {
 	*x = VodStartPCDNDomainResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[114]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[116]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6133,7 +6243,7 @@ func (x *VodStartPCDNDomainResponse) String() string {
 func (*VodStartPCDNDomainResponse) ProtoMessage() {}
 
 func (x *VodStartPCDNDomainResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[114]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[116]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6146,7 +6256,7 @@ func (x *VodStartPCDNDomainResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodStartPCDNDomainResponse.ProtoReflect.Descriptor instead.
 func (*VodStartPCDNDomainResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{114}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{116}
 }
 
 func (x *VodStartPCDNDomainResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6167,7 +6277,7 @@ type VodStopPCDNDomainResponse struct {
 func (x *VodStopPCDNDomainResponse) Reset() {
 	*x = VodStopPCDNDomainResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[115]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[117]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6180,7 +6290,7 @@ func (x *VodStopPCDNDomainResponse) String() string {
 func (*VodStopPCDNDomainResponse) ProtoMessage() {}
 
 func (x *VodStopPCDNDomainResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[115]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[117]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6193,7 +6303,7 @@ func (x *VodStopPCDNDomainResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodStopPCDNDomainResponse.ProtoReflect.Descriptor instead.
 func (*VodStopPCDNDomainResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{115}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{117}
 }
 
 func (x *VodStopPCDNDomainResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6214,7 +6324,7 @@ type VodDeletePCDNDomainResponse struct {
 func (x *VodDeletePCDNDomainResponse) Reset() {
 	*x = VodDeletePCDNDomainResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[116]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[118]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6227,7 +6337,7 @@ func (x *VodDeletePCDNDomainResponse) String() string {
 func (*VodDeletePCDNDomainResponse) ProtoMessage() {}
 
 func (x *VodDeletePCDNDomainResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[116]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[118]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6240,7 +6350,7 @@ func (x *VodDeletePCDNDomainResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodDeletePCDNDomainResponse.ProtoReflect.Descriptor instead.
 func (*VodDeletePCDNDomainResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{116}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{118}
 }
 
 func (x *VodDeletePCDNDomainResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6261,7 +6371,7 @@ type VodUpdateDomainConfigResponse struct {
 func (x *VodUpdateDomainConfigResponse) Reset() {
 	*x = VodUpdateDomainConfigResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[117]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[119]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6274,7 +6384,7 @@ func (x *VodUpdateDomainConfigResponse) String() string {
 func (*VodUpdateDomainConfigResponse) ProtoMessage() {}
 
 func (x *VodUpdateDomainConfigResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[117]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[119]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6287,7 +6397,7 @@ func (x *VodUpdateDomainConfigResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodUpdateDomainConfigResponse.ProtoReflect.Descriptor instead.
 func (*VodUpdateDomainConfigResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{117}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{119}
 }
 
 func (x *VodUpdateDomainConfigResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6309,7 +6419,7 @@ type VodDescribeDomainConfigResponse struct {
 func (x *VodDescribeDomainConfigResponse) Reset() {
 	*x = VodDescribeDomainConfigResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[118]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[120]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6322,7 +6432,7 @@ func (x *VodDescribeDomainConfigResponse) String() string {
 func (*VodDescribeDomainConfigResponse) ProtoMessage() {}
 
 func (x *VodDescribeDomainConfigResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[118]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[120]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6335,7 +6445,7 @@ func (x *VodDescribeDomainConfigResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodDescribeDomainConfigResponse.ProtoReflect.Descriptor instead.
 func (*VodDescribeDomainConfigResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{118}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{120}
 }
 
 func (x *VodDescribeDomainConfigResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6364,7 +6474,7 @@ type VodDescribeCdnEdgeIpResponse struct {
 func (x *VodDescribeCdnEdgeIpResponse) Reset() {
 	*x = VodDescribeCdnEdgeIpResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[119]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[121]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6377,7 +6487,7 @@ func (x *VodDescribeCdnEdgeIpResponse) String() string {
 func (*VodDescribeCdnEdgeIpResponse) ProtoMessage() {}
 
 func (x *VodDescribeCdnEdgeIpResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[119]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[121]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6390,7 +6500,7 @@ func (x *VodDescribeCdnEdgeIpResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodDescribeCdnEdgeIpResponse.ProtoReflect.Descriptor instead.
 func (*VodDescribeCdnEdgeIpResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{119}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{121}
 }
 
 func (x *VodDescribeCdnEdgeIpResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6419,7 +6529,7 @@ type VodDescribeCdnRegionAndIspResponse struct {
 func (x *VodDescribeCdnRegionAndIspResponse) Reset() {
 	*x = VodDescribeCdnRegionAndIspResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[120]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[122]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6432,7 +6542,7 @@ func (x *VodDescribeCdnRegionAndIspResponse) String() string {
 func (*VodDescribeCdnRegionAndIspResponse) ProtoMessage() {}
 
 func (x *VodDescribeCdnRegionAndIspResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[120]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[122]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6445,7 +6555,7 @@ func (x *VodDescribeCdnRegionAndIspResponse) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use VodDescribeCdnRegionAndIspResponse.ProtoReflect.Descriptor instead.
 func (*VodDescribeCdnRegionAndIspResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{120}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{122}
 }
 
 func (x *VodDescribeCdnRegionAndIspResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6473,7 +6583,7 @@ type AddOrUpdateCertificateV2Response struct {
 func (x *AddOrUpdateCertificateV2Response) Reset() {
 	*x = AddOrUpdateCertificateV2Response{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[121]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[123]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6486,7 +6596,7 @@ func (x *AddOrUpdateCertificateV2Response) String() string {
 func (*AddOrUpdateCertificateV2Response) ProtoMessage() {}
 
 func (x *AddOrUpdateCertificateV2Response) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[121]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[123]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6499,7 +6609,7 @@ func (x *AddOrUpdateCertificateV2Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AddOrUpdateCertificateV2Response.ProtoReflect.Descriptor instead.
 func (*AddOrUpdateCertificateV2Response) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{121}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{123}
 }
 
 func (x *AddOrUpdateCertificateV2Response) GetResponseMetadata() *base.ResponseMetadata {
@@ -6520,7 +6630,7 @@ type UpdateDomainAreaResponse struct {
 func (x *UpdateDomainAreaResponse) Reset() {
 	*x = UpdateDomainAreaResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[122]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[124]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6533,7 +6643,7 @@ func (x *UpdateDomainAreaResponse) String() string {
 func (*UpdateDomainAreaResponse) ProtoMessage() {}
 
 func (x *UpdateDomainAreaResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[122]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[124]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6546,7 +6656,7 @@ func (x *UpdateDomainAreaResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpdateDomainAreaResponse.ProtoReflect.Descriptor instead.
 func (*UpdateDomainAreaResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{122}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{124}
 }
 
 func (x *UpdateDomainAreaResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6570,7 +6680,7 @@ type VodAddCallbackSubscriptionResponse struct {
 func (x *VodAddCallbackSubscriptionResponse) Reset() {
 	*x = VodAddCallbackSubscriptionResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[123]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[125]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6583,7 +6693,7 @@ func (x *VodAddCallbackSubscriptionResponse) String() string {
 func (*VodAddCallbackSubscriptionResponse) ProtoMessage() {}
 
 func (x *VodAddCallbackSubscriptionResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[123]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[125]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6596,7 +6706,7 @@ func (x *VodAddCallbackSubscriptionResponse) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use VodAddCallbackSubscriptionResponse.ProtoReflect.Descriptor instead.
 func (*VodAddCallbackSubscriptionResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{123}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{125}
 }
 
 func (x *VodAddCallbackSubscriptionResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6617,7 +6727,7 @@ type VodSetCallbackEventResponse struct {
 func (x *VodSetCallbackEventResponse) Reset() {
 	*x = VodSetCallbackEventResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[124]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[126]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6630,7 +6740,7 @@ func (x *VodSetCallbackEventResponse) String() string {
 func (*VodSetCallbackEventResponse) ProtoMessage() {}
 
 func (x *VodSetCallbackEventResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[124]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[126]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6643,7 +6753,7 @@ func (x *VodSetCallbackEventResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodSetCallbackEventResponse.ProtoReflect.Descriptor instead.
 func (*VodSetCallbackEventResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{124}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{126}
 }
 
 func (x *VodSetCallbackEventResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6665,7 +6775,7 @@ type GetCallbackRecordResponse struct {
 func (x *GetCallbackRecordResponse) Reset() {
 	*x = GetCallbackRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[125]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[127]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6678,7 +6788,7 @@ func (x *GetCallbackRecordResponse) String() string {
 func (*GetCallbackRecordResponse) ProtoMessage() {}
 
 func (x *GetCallbackRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[125]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[127]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6691,7 +6801,7 @@ func (x *GetCallbackRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetCallbackRecordResponse.ProtoReflect.Descriptor instead.
 func (*GetCallbackRecordResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{125}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{127}
 }
 
 func (x *GetCallbackRecordResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6723,7 +6833,7 @@ type VodGetSmartStrategyLitePlayInfoResponse struct {
 func (x *VodGetSmartStrategyLitePlayInfoResponse) Reset() {
 	*x = VodGetSmartStrategyLitePlayInfoResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[126]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[128]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6736,7 +6846,7 @@ func (x *VodGetSmartStrategyLitePlayInfoResponse) String() string {
 func (*VodGetSmartStrategyLitePlayInfoResponse) ProtoMessage() {}
 
 func (x *VodGetSmartStrategyLitePlayInfoResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[126]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[128]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6749,7 +6859,7 @@ func (x *VodGetSmartStrategyLitePlayInfoResponse) ProtoReflect() protoreflect.Me
 
 // Deprecated: Use VodGetSmartStrategyLitePlayInfoResponse.ProtoReflect.Descriptor instead.
 func (*VodGetSmartStrategyLitePlayInfoResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{126}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{128}
 }
 
 func (x *VodGetSmartStrategyLitePlayInfoResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6781,7 +6891,7 @@ type VodGetAppInfoResponse struct {
 func (x *VodGetAppInfoResponse) Reset() {
 	*x = VodGetAppInfoResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[127]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[129]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6794,7 +6904,7 @@ func (x *VodGetAppInfoResponse) String() string {
 func (*VodGetAppInfoResponse) ProtoMessage() {}
 
 func (x *VodGetAppInfoResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[127]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[129]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6807,7 +6917,7 @@ func (x *VodGetAppInfoResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetAppInfoResponse.ProtoReflect.Descriptor instead.
 func (*VodGetAppInfoResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{127}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{129}
 }
 
 func (x *VodGetAppInfoResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6840,7 +6950,7 @@ type DescribeVodSpaceTranscodeDataResponse struct {
 func (x *DescribeVodSpaceTranscodeDataResponse) Reset() {
 	*x = DescribeVodSpaceTranscodeDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[128]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[130]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6853,7 +6963,7 @@ func (x *DescribeVodSpaceTranscodeDataResponse) String() string {
 func (*DescribeVodSpaceTranscodeDataResponse) ProtoMessage() {}
 
 func (x *DescribeVodSpaceTranscodeDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[128]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[130]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6866,7 +6976,7 @@ func (x *DescribeVodSpaceTranscodeDataResponse) ProtoReflect() protoreflect.Mess
 
 // Deprecated: Use DescribeVodSpaceTranscodeDataResponse.ProtoReflect.Descriptor instead.
 func (*DescribeVodSpaceTranscodeDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{128}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{130}
 }
 
 func (x *DescribeVodSpaceTranscodeDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6896,7 +7006,7 @@ type DescribeVodSpaceAIStatisDataResponse struct {
 func (x *DescribeVodSpaceAIStatisDataResponse) Reset() {
 	*x = DescribeVodSpaceAIStatisDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[129]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[131]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6909,7 +7019,7 @@ func (x *DescribeVodSpaceAIStatisDataResponse) String() string {
 func (*DescribeVodSpaceAIStatisDataResponse) ProtoMessage() {}
 
 func (x *DescribeVodSpaceAIStatisDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[129]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[131]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6922,7 +7032,7 @@ func (x *DescribeVodSpaceAIStatisDataResponse) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use DescribeVodSpaceAIStatisDataResponse.ProtoReflect.Descriptor instead.
 func (*DescribeVodSpaceAIStatisDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{129}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{131}
 }
 
 func (x *DescribeVodSpaceAIStatisDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -6952,7 +7062,7 @@ type DescribeVodSpaceSubtitleStatisDataResponse struct {
 func (x *DescribeVodSpaceSubtitleStatisDataResponse) Reset() {
 	*x = DescribeVodSpaceSubtitleStatisDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[130]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[132]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -6965,7 +7075,7 @@ func (x *DescribeVodSpaceSubtitleStatisDataResponse) String() string {
 func (*DescribeVodSpaceSubtitleStatisDataResponse) ProtoMessage() {}
 
 func (x *DescribeVodSpaceSubtitleStatisDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[130]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[132]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -6978,7 +7088,7 @@ func (x *DescribeVodSpaceSubtitleStatisDataResponse) ProtoReflect() protoreflect
 
 // Deprecated: Use DescribeVodSpaceSubtitleStatisDataResponse.ProtoReflect.Descriptor instead.
 func (*DescribeVodSpaceSubtitleStatisDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{130}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{132}
 }
 
 func (x *DescribeVodSpaceSubtitleStatisDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7008,7 +7118,7 @@ type DescribeVodSpaceDetectStatisDataResponse struct {
 func (x *DescribeVodSpaceDetectStatisDataResponse) Reset() {
 	*x = DescribeVodSpaceDetectStatisDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[131]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[133]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7021,7 +7131,7 @@ func (x *DescribeVodSpaceDetectStatisDataResponse) String() string {
 func (*DescribeVodSpaceDetectStatisDataResponse) ProtoMessage() {}
 
 func (x *DescribeVodSpaceDetectStatisDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[131]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[133]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7034,7 +7144,7 @@ func (x *DescribeVodSpaceDetectStatisDataResponse) ProtoReflect() protoreflect.M
 
 // Deprecated: Use DescribeVodSpaceDetectStatisDataResponse.ProtoReflect.Descriptor instead.
 func (*DescribeVodSpaceDetectStatisDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{131}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{133}
 }
 
 func (x *DescribeVodSpaceDetectStatisDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7064,7 +7174,7 @@ type DescribeVodSnapshotDataResponse struct {
 func (x *DescribeVodSnapshotDataResponse) Reset() {
 	*x = DescribeVodSnapshotDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[132]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[134]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7077,7 +7187,7 @@ func (x *DescribeVodSnapshotDataResponse) String() string {
 func (*DescribeVodSnapshotDataResponse) ProtoMessage() {}
 
 func (x *DescribeVodSnapshotDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[132]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[134]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7090,7 +7200,7 @@ func (x *DescribeVodSnapshotDataResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DescribeVodSnapshotDataResponse.ProtoReflect.Descriptor instead.
 func (*DescribeVodSnapshotDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{132}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{134}
 }
 
 func (x *DescribeVodSnapshotDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7120,7 +7230,7 @@ type DescribeVodSpaceWorkflowDetailDataResponse struct {
 func (x *DescribeVodSpaceWorkflowDetailDataResponse) Reset() {
 	*x = DescribeVodSpaceWorkflowDetailDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[133]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[135]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7133,7 +7243,7 @@ func (x *DescribeVodSpaceWorkflowDetailDataResponse) String() string {
 func (*DescribeVodSpaceWorkflowDetailDataResponse) ProtoMessage() {}
 
 func (x *DescribeVodSpaceWorkflowDetailDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[133]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[135]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7146,7 +7256,7 @@ func (x *DescribeVodSpaceWorkflowDetailDataResponse) ProtoReflect() protoreflect
 
 // Deprecated: Use DescribeVodSpaceWorkflowDetailDataResponse.ProtoReflect.Descriptor instead.
 func (*DescribeVodSpaceWorkflowDetailDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{133}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{135}
 }
 
 func (x *DescribeVodSpaceWorkflowDetailDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7176,7 +7286,7 @@ type DescribeVodSpaceEditDetailDataResponse struct {
 func (x *DescribeVodSpaceEditDetailDataResponse) Reset() {
 	*x = DescribeVodSpaceEditDetailDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[134]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[136]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7189,7 +7299,7 @@ func (x *DescribeVodSpaceEditDetailDataResponse) String() string {
 func (*DescribeVodSpaceEditDetailDataResponse) ProtoMessage() {}
 
 func (x *DescribeVodSpaceEditDetailDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[134]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[136]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7202,7 +7312,7 @@ func (x *DescribeVodSpaceEditDetailDataResponse) ProtoReflect() protoreflect.Mes
 
 // Deprecated: Use DescribeVodSpaceEditDetailDataResponse.ProtoReflect.Descriptor instead.
 func (*DescribeVodSpaceEditDetailDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{134}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{136}
 }
 
 func (x *DescribeVodSpaceEditDetailDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7232,7 +7342,7 @@ type DescribeVodRealtimeMediaDataResponse struct {
 func (x *DescribeVodRealtimeMediaDataResponse) Reset() {
 	*x = DescribeVodRealtimeMediaDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[135]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[137]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7245,7 +7355,7 @@ func (x *DescribeVodRealtimeMediaDataResponse) String() string {
 func (*DescribeVodRealtimeMediaDataResponse) ProtoMessage() {}
 
 func (x *DescribeVodRealtimeMediaDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[135]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[137]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7258,7 +7368,7 @@ func (x *DescribeVodRealtimeMediaDataResponse) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use DescribeVodRealtimeMediaDataResponse.ProtoReflect.Descriptor instead.
 func (*DescribeVodRealtimeMediaDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{135}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{137}
 }
 
 func (x *DescribeVodRealtimeMediaDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7288,7 +7398,7 @@ type DescribeVodRealtimeMediaDetailDataResponse struct {
 func (x *DescribeVodRealtimeMediaDetailDataResponse) Reset() {
 	*x = DescribeVodRealtimeMediaDetailDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[136]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[138]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7301,7 +7411,7 @@ func (x *DescribeVodRealtimeMediaDetailDataResponse) String() string {
 func (*DescribeVodRealtimeMediaDetailDataResponse) ProtoMessage() {}
 
 func (x *DescribeVodRealtimeMediaDetailDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[136]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[138]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7314,7 +7424,7 @@ func (x *DescribeVodRealtimeMediaDetailDataResponse) ProtoReflect() protoreflect
 
 // Deprecated: Use DescribeVodRealtimeMediaDetailDataResponse.ProtoReflect.Descriptor instead.
 func (*DescribeVodRealtimeMediaDetailDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{136}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{138}
 }
 
 func (x *DescribeVodRealtimeMediaDetailDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7344,7 +7454,7 @@ type DescribeVodPlayFileLogByDomainResponse struct {
 func (x *DescribeVodPlayFileLogByDomainResponse) Reset() {
 	*x = DescribeVodPlayFileLogByDomainResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[137]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[139]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7357,7 +7467,7 @@ func (x *DescribeVodPlayFileLogByDomainResponse) String() string {
 func (*DescribeVodPlayFileLogByDomainResponse) ProtoMessage() {}
 
 func (x *DescribeVodPlayFileLogByDomainResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[137]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[139]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7370,7 +7480,7 @@ func (x *DescribeVodPlayFileLogByDomainResponse) ProtoReflect() protoreflect.Mes
 
 // Deprecated: Use DescribeVodPlayFileLogByDomainResponse.ProtoReflect.Descriptor instead.
 func (*DescribeVodPlayFileLogByDomainResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{137}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{139}
 }
 
 func (x *DescribeVodPlayFileLogByDomainResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7400,7 +7510,7 @@ type DescribeVodEnhanceImageDataResponse struct {
 func (x *DescribeVodEnhanceImageDataResponse) Reset() {
 	*x = DescribeVodEnhanceImageDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[138]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[140]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7413,7 +7523,7 @@ func (x *DescribeVodEnhanceImageDataResponse) String() string {
 func (*DescribeVodEnhanceImageDataResponse) ProtoMessage() {}
 
 func (x *DescribeVodEnhanceImageDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[138]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[140]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7426,7 +7536,7 @@ func (x *DescribeVodEnhanceImageDataResponse) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use DescribeVodEnhanceImageDataResponse.ProtoReflect.Descriptor instead.
 func (*DescribeVodEnhanceImageDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{138}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{140}
 }
 
 func (x *DescribeVodEnhanceImageDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7456,7 +7566,7 @@ type DescribeVodSpaceEditStatisDataResponse struct {
 func (x *DescribeVodSpaceEditStatisDataResponse) Reset() {
 	*x = DescribeVodSpaceEditStatisDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[139]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[141]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7469,7 +7579,7 @@ func (x *DescribeVodSpaceEditStatisDataResponse) String() string {
 func (*DescribeVodSpaceEditStatisDataResponse) ProtoMessage() {}
 
 func (x *DescribeVodSpaceEditStatisDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[139]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[141]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7482,7 +7592,7 @@ func (x *DescribeVodSpaceEditStatisDataResponse) ProtoReflect() protoreflect.Mes
 
 // Deprecated: Use DescribeVodSpaceEditStatisDataResponse.ProtoReflect.Descriptor instead.
 func (*DescribeVodSpaceEditStatisDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{139}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{141}
 }
 
 func (x *DescribeVodSpaceEditStatisDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7512,7 +7622,7 @@ type DescribeVodPlayedStatisDataResponse struct {
 func (x *DescribeVodPlayedStatisDataResponse) Reset() {
 	*x = DescribeVodPlayedStatisDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[140]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[142]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7525,7 +7635,7 @@ func (x *DescribeVodPlayedStatisDataResponse) String() string {
 func (*DescribeVodPlayedStatisDataResponse) ProtoMessage() {}
 
 func (x *DescribeVodPlayedStatisDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[140]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[142]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7538,7 +7648,7 @@ func (x *DescribeVodPlayedStatisDataResponse) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use DescribeVodPlayedStatisDataResponse.ProtoReflect.Descriptor instead.
 func (*DescribeVodPlayedStatisDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{140}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{142}
 }
 
 func (x *DescribeVodPlayedStatisDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7568,7 +7678,7 @@ type DescribeVodMostPlayedStatisDataResponse struct {
 func (x *DescribeVodMostPlayedStatisDataResponse) Reset() {
 	*x = DescribeVodMostPlayedStatisDataResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[141]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[143]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7581,7 +7691,7 @@ func (x *DescribeVodMostPlayedStatisDataResponse) String() string {
 func (*DescribeVodMostPlayedStatisDataResponse) ProtoMessage() {}
 
 func (x *DescribeVodMostPlayedStatisDataResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[141]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[143]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7594,7 +7704,7 @@ func (x *DescribeVodMostPlayedStatisDataResponse) ProtoReflect() protoreflect.Me
 
 // Deprecated: Use DescribeVodMostPlayedStatisDataResponse.ProtoReflect.Descriptor instead.
 func (*DescribeVodMostPlayedStatisDataResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{141}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{143}
 }
 
 func (x *DescribeVodMostPlayedStatisDataResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7624,7 +7734,7 @@ type DescribeVodVidTrafficFileLogResponse struct {
 func (x *DescribeVodVidTrafficFileLogResponse) Reset() {
 	*x = DescribeVodVidTrafficFileLogResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[142]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[144]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7637,7 +7747,7 @@ func (x *DescribeVodVidTrafficFileLogResponse) String() string {
 func (*DescribeVodVidTrafficFileLogResponse) ProtoMessage() {}
 
 func (x *DescribeVodVidTrafficFileLogResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[142]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[144]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7650,7 +7760,7 @@ func (x *DescribeVodVidTrafficFileLogResponse) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use DescribeVodVidTrafficFileLogResponse.ProtoReflect.Descriptor instead.
 func (*DescribeVodVidTrafficFileLogResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{142}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{144}
 }
 
 func (x *DescribeVodVidTrafficFileLogResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7680,7 +7790,7 @@ type VodSubmitBlockMediaTaskResponse struct {
 func (x *VodSubmitBlockMediaTaskResponse) Reset() {
 	*x = VodSubmitBlockMediaTaskResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[143]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[145]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7693,7 +7803,7 @@ func (x *VodSubmitBlockMediaTaskResponse) String() string {
 func (*VodSubmitBlockMediaTaskResponse) ProtoMessage() {}
 
 func (x *VodSubmitBlockMediaTaskResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[143]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[145]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7706,7 +7816,7 @@ func (x *VodSubmitBlockMediaTaskResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodSubmitBlockMediaTaskResponse.ProtoReflect.Descriptor instead.
 func (*VodSubmitBlockMediaTaskResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{143}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{145}
 }
 
 func (x *VodSubmitBlockMediaTaskResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7735,7 +7845,7 @@ type VodSubmitUnblockMediaTaskResponse struct {
 func (x *VodSubmitUnblockMediaTaskResponse) Reset() {
 	*x = VodSubmitUnblockMediaTaskResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[144]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[146]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7748,7 +7858,7 @@ func (x *VodSubmitUnblockMediaTaskResponse) String() string {
 func (*VodSubmitUnblockMediaTaskResponse) ProtoMessage() {}
 
 func (x *VodSubmitUnblockMediaTaskResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[144]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[146]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7761,7 +7871,7 @@ func (x *VodSubmitUnblockMediaTaskResponse) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use VodSubmitUnblockMediaTaskResponse.ProtoReflect.Descriptor instead.
 func (*VodSubmitUnblockMediaTaskResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{144}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{146}
 }
 
 func (x *VodSubmitUnblockMediaTaskResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7790,7 +7900,7 @@ type VodQueryMediaBlockStatusResponse struct {
 func (x *VodQueryMediaBlockStatusResponse) Reset() {
 	*x = VodQueryMediaBlockStatusResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[145]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[147]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7803,7 +7913,7 @@ func (x *VodQueryMediaBlockStatusResponse) String() string {
 func (*VodQueryMediaBlockStatusResponse) ProtoMessage() {}
 
 func (x *VodQueryMediaBlockStatusResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[145]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[147]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7816,7 +7926,7 @@ func (x *VodQueryMediaBlockStatusResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodQueryMediaBlockStatusResponse.ProtoReflect.Descriptor instead.
 func (*VodQueryMediaBlockStatusResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{145}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{147}
 }
 
 func (x *VodQueryMediaBlockStatusResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7848,7 +7958,7 @@ type VodListProjectsResponse struct {
 func (x *VodListProjectsResponse) Reset() {
 	*x = VodListProjectsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[146]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[148]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7861,7 +7971,7 @@ func (x *VodListProjectsResponse) String() string {
 func (*VodListProjectsResponse) ProtoMessage() {}
 
 func (x *VodListProjectsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[146]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[148]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7874,7 +7984,7 @@ func (x *VodListProjectsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodListProjectsResponse.ProtoReflect.Descriptor instead.
 func (*VodListProjectsResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{146}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{148}
 }
 
 func (x *VodListProjectsResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7906,7 +8016,7 @@ type VodGetTradeConfigurationResponse struct {
 func (x *VodGetTradeConfigurationResponse) Reset() {
 	*x = VodGetTradeConfigurationResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[147]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[149]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7919,7 +8029,7 @@ func (x *VodGetTradeConfigurationResponse) String() string {
 func (*VodGetTradeConfigurationResponse) ProtoMessage() {}
 
 func (x *VodGetTradeConfigurationResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[147]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[149]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7932,7 +8042,7 @@ func (x *VodGetTradeConfigurationResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetTradeConfigurationResponse.ProtoReflect.Descriptor instead.
 func (*VodGetTradeConfigurationResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{147}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{149}
 }
 
 func (x *VodGetTradeConfigurationResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -7964,7 +8074,7 @@ type VodSetCloudMigrateJobResponse struct {
 func (x *VodSetCloudMigrateJobResponse) Reset() {
 	*x = VodSetCloudMigrateJobResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[148]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[150]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -7977,7 +8087,7 @@ func (x *VodSetCloudMigrateJobResponse) String() string {
 func (*VodSetCloudMigrateJobResponse) ProtoMessage() {}
 
 func (x *VodSetCloudMigrateJobResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[148]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[150]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -7990,7 +8100,7 @@ func (x *VodSetCloudMigrateJobResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodSetCloudMigrateJobResponse.ProtoReflect.Descriptor instead.
 func (*VodSetCloudMigrateJobResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{148}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{150}
 }
 
 func (x *VodSetCloudMigrateJobResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -8018,7 +8128,7 @@ type VodSubmitCloudMigrateJobResponse struct {
 func (x *VodSubmitCloudMigrateJobResponse) Reset() {
 	*x = VodSubmitCloudMigrateJobResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[149]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[151]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -8031,7 +8141,7 @@ func (x *VodSubmitCloudMigrateJobResponse) String() string {
 func (*VodSubmitCloudMigrateJobResponse) ProtoMessage() {}
 
 func (x *VodSubmitCloudMigrateJobResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[149]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[151]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8044,7 +8154,7 @@ func (x *VodSubmitCloudMigrateJobResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodSubmitCloudMigrateJobResponse.ProtoReflect.Descriptor instead.
 func (*VodSubmitCloudMigrateJobResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{149}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{151}
 }
 
 func (x *VodSubmitCloudMigrateJobResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -8066,7 +8176,7 @@ type VodGetCloudMigrateJobResponse struct {
 func (x *VodGetCloudMigrateJobResponse) Reset() {
 	*x = VodGetCloudMigrateJobResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[150]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[152]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -8079,7 +8189,7 @@ func (x *VodGetCloudMigrateJobResponse) String() string {
 func (*VodGetCloudMigrateJobResponse) ProtoMessage() {}
 
 func (x *VodGetCloudMigrateJobResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[150]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[152]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8092,7 +8202,7 @@ func (x *VodGetCloudMigrateJobResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetCloudMigrateJobResponse.ProtoReflect.Descriptor instead.
 func (*VodGetCloudMigrateJobResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{150}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{152}
 }
 
 func (x *VodGetCloudMigrateJobResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -8124,7 +8234,7 @@ type VodReportEventResponse struct {
 func (x *VodReportEventResponse) Reset() {
 	*x = VodReportEventResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[151]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[153]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -8137,7 +8247,7 @@ func (x *VodReportEventResponse) String() string {
 func (*VodReportEventResponse) ProtoMessage() {}
 
 func (x *VodReportEventResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[151]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[153]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8150,7 +8260,7 @@ func (x *VodReportEventResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodReportEventResponse.ProtoReflect.Descriptor instead.
 func (*VodReportEventResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{151}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{153}
 }
 
 func (x *VodReportEventResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -8182,7 +8292,7 @@ type VodCreateDramaRecapTaskResponse struct {
 func (x *VodCreateDramaRecapTaskResponse) Reset() {
 	*x = VodCreateDramaRecapTaskResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[152]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[154]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -8195,7 +8305,7 @@ func (x *VodCreateDramaRecapTaskResponse) String() string {
 func (*VodCreateDramaRecapTaskResponse) ProtoMessage() {}
 
 func (x *VodCreateDramaRecapTaskResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[152]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[154]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8208,7 +8318,7 @@ func (x *VodCreateDramaRecapTaskResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodCreateDramaRecapTaskResponse.ProtoReflect.Descriptor instead.
 func (*VodCreateDramaRecapTaskResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{152}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{154}
 }
 
 func (x *VodCreateDramaRecapTaskResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -8237,7 +8347,7 @@ type VodCreateDramaScriptTaskResponse struct {
 func (x *VodCreateDramaScriptTaskResponse) Reset() {
 	*x = VodCreateDramaScriptTaskResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[153]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[155]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -8250,7 +8360,7 @@ func (x *VodCreateDramaScriptTaskResponse) String() string {
 func (*VodCreateDramaScriptTaskResponse) ProtoMessage() {}
 
 func (x *VodCreateDramaScriptTaskResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[153]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[155]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8263,7 +8373,7 @@ func (x *VodCreateDramaScriptTaskResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodCreateDramaScriptTaskResponse.ProtoReflect.Descriptor instead.
 func (*VodCreateDramaScriptTaskResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{153}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{155}
 }
 
 func (x *VodCreateDramaScriptTaskResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -8292,7 +8402,7 @@ type VodQueryDramaRecapTaskResponse struct {
 func (x *VodQueryDramaRecapTaskResponse) Reset() {
 	*x = VodQueryDramaRecapTaskResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[154]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[156]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -8305,7 +8415,7 @@ func (x *VodQueryDramaRecapTaskResponse) String() string {
 func (*VodQueryDramaRecapTaskResponse) ProtoMessage() {}
 
 func (x *VodQueryDramaRecapTaskResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[154]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[156]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8318,7 +8428,7 @@ func (x *VodQueryDramaRecapTaskResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodQueryDramaRecapTaskResponse.ProtoReflect.Descriptor instead.
 func (*VodQueryDramaRecapTaskResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{154}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{156}
 }
 
 func (x *VodQueryDramaRecapTaskResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -8347,7 +8457,7 @@ type VodQueryDramaScriptTaskResponse struct {
 func (x *VodQueryDramaScriptTaskResponse) Reset() {
 	*x = VodQueryDramaScriptTaskResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[155]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[157]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -8360,7 +8470,7 @@ func (x *VodQueryDramaScriptTaskResponse) String() string {
 func (*VodQueryDramaScriptTaskResponse) ProtoMessage() {}
 
 func (x *VodQueryDramaScriptTaskResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[155]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[157]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8373,7 +8483,7 @@ func (x *VodQueryDramaScriptTaskResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodQueryDramaScriptTaskResponse.ProtoReflect.Descriptor instead.
 func (*VodQueryDramaScriptTaskResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{155}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{157}
 }
 
 func (x *VodQueryDramaScriptTaskResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -8402,7 +8512,7 @@ type VodGetMediaEntityListResponse struct {
 func (x *VodGetMediaEntityListResponse) Reset() {
 	*x = VodGetMediaEntityListResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[156]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[158]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -8415,7 +8525,7 @@ func (x *VodGetMediaEntityListResponse) String() string {
 func (*VodGetMediaEntityListResponse) ProtoMessage() {}
 
 func (x *VodGetMediaEntityListResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[156]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[158]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8428,7 +8538,7 @@ func (x *VodGetMediaEntityListResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetMediaEntityListResponse.ProtoReflect.Descriptor instead.
 func (*VodGetMediaEntityListResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{156}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{158}
 }
 
 func (x *VodGetMediaEntityListResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -8457,7 +8567,7 @@ type VodGetMediaEntityResponse struct {
 func (x *VodGetMediaEntityResponse) Reset() {
 	*x = VodGetMediaEntityResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[157]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[159]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -8470,7 +8580,7 @@ func (x *VodGetMediaEntityResponse) String() string {
 func (*VodGetMediaEntityResponse) ProtoMessage() {}
 
 func (x *VodGetMediaEntityResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[157]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[159]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8483,7 +8593,7 @@ func (x *VodGetMediaEntityResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodGetMediaEntityResponse.ProtoReflect.Descriptor instead.
 func (*VodGetMediaEntityResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{157}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{159}
 }
 
 func (x *VodGetMediaEntityResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -8511,7 +8621,7 @@ type VodDeleteMediaEntityResponse struct {
 func (x *VodDeleteMediaEntityResponse) Reset() {
 	*x = VodDeleteMediaEntityResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[158]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[160]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -8524,7 +8634,7 @@ func (x *VodDeleteMediaEntityResponse) String() string {
 func (*VodDeleteMediaEntityResponse) ProtoMessage() {}
 
 func (x *VodDeleteMediaEntityResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[158]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[160]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8537,7 +8647,7 @@ func (x *VodDeleteMediaEntityResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VodDeleteMediaEntityResponse.ProtoReflect.Descriptor instead.
 func (*VodDeleteMediaEntityResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{158}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{160}
 }
 
 func (x *VodDeleteMediaEntityResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -8559,7 +8669,7 @@ type VodGetMediaEntityConfigListResponse struct {
 func (x *VodGetMediaEntityConfigListResponse) Reset() {
 	*x = VodGetMediaEntityConfigListResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[159]
+		mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[161]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -8572,7 +8682,7 @@ func (x *VodGetMediaEntityConfigListResponse) String() string {
 func (*VodGetMediaEntityConfigListResponse) ProtoMessage() {}
 
 func (x *VodGetMediaEntityConfigListResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[159]
+	mi := &file_volcengine_vod_response_response_vod_proto_msgTypes[161]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -8585,7 +8695,7 @@ func (x *VodGetMediaEntityConfigListResponse) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use VodGetMediaEntityConfigListResponse.ProtoReflect.Descriptor instead.
 func (*VodGetMediaEntityConfigListResponse) Descriptor() ([]byte, []int) {
-	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{159}
+	return file_volcengine_vod_response_response_vod_proto_rawDescGZIP(), []int{161}
 }
 
 func (x *VodGetMediaEntityConfigListResponse) GetResponseMetadata() *base.ResponseMetadata {
@@ -8963,6 +9073,33 @@ var file_volcengine_vod_response_response_vod_proto_rawDesc = []byte{
 	0x65, 0x2e, 0x56, 0x6f, 0x64, 0x2e, 0x4d, 0x6f, 0x64, 0x65, 0x6c, 0x73, 0x2e, 0x42, 0x75, 0x73,
 	0x69, 0x6e, 0x65, 0x73, 0x73, 0x2e, 0x56, 0x6f, 0x64, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4d,
 	0x65, 0x64, 0x69, 0x61, 0x53, 0x74, 0x6f, 0x72, 0x61, 0x67, 0x65, 0x43, 0x6c, 0x61, 0x73, 0x73,
+	0x44, 0x61, 0x74, 0x61, 0x52, 0x06, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0xd7, 0x01, 0x0a,
+	0x22, 0x56, 0x6f, 0x64, 0x52, 0x65, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x43, 0x6f, 0x6c, 0x64, 0x41,
+	0x72, 0x63, 0x68, 0x69, 0x76, 0x65, 0x56, 0x69, 0x64, 0x65, 0x6f, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x12, 0x59, 0x0a, 0x10, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x4d,
+	0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x2d, 0x2e,
+	0x56, 0x6f, 0x6c, 0x63, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x42, 0x61, 0x73, 0x65, 0x2e,
+	0x4d, 0x6f, 0x64, 0x65, 0x6c, 0x73, 0x2e, 0x42, 0x61, 0x73, 0x65, 0x2e, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0x52, 0x10, 0x52, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0x12, 0x56,
+	0x0a, 0x06, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x3e,
+	0x2e, 0x56, 0x6f, 0x6c, 0x63, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x56, 0x6f, 0x64, 0x2e,
+	0x4d, 0x6f, 0x64, 0x65, 0x6c, 0x73, 0x2e, 0x42, 0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x2e,
+	0x56, 0x6f, 0x64, 0x52, 0x65, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x43, 0x6f, 0x6c, 0x64, 0x41, 0x72,
+	0x63, 0x68, 0x69, 0x76, 0x65, 0x56, 0x69, 0x64, 0x65, 0x6f, 0x44, 0x61, 0x74, 0x61, 0x52, 0x06,
+	0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0xd3, 0x01, 0x0a, 0x20, 0x56, 0x6f, 0x64, 0x47, 0x65,
+	0x74, 0x52, 0x65, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x56, 0x69, 0x64, 0x65, 0x6f, 0x53, 0x74, 0x61,
+	0x74, 0x75, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x59, 0x0a, 0x10, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x2d, 0x2e, 0x56, 0x6f, 0x6c, 0x63, 0x65, 0x6e, 0x67, 0x69,
+	0x6e, 0x65, 0x2e, 0x42, 0x61, 0x73, 0x65, 0x2e, 0x4d, 0x6f, 0x64, 0x65, 0x6c, 0x73, 0x2e, 0x42,
+	0x61, 0x73, 0x65, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x4d, 0x65, 0x74, 0x61,
+	0x64, 0x61, 0x74, 0x61, 0x52, 0x10, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x4d, 0x65,
+	0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0x12, 0x54, 0x0a, 0x06, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74,
+	0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x3c, 0x2e, 0x56, 0x6f, 0x6c, 0x63, 0x65, 0x6e, 0x67,
+	0x69, 0x6e, 0x65, 0x2e, 0x56, 0x6f, 0x64, 0x2e, 0x4d, 0x6f, 0x64, 0x65, 0x6c, 0x73, 0x2e, 0x42,
+	0x75, 0x73, 0x69, 0x6e, 0x65, 0x73, 0x73, 0x2e, 0x56, 0x6f, 0x64, 0x47, 0x65, 0x74, 0x52, 0x65,
+	0x73, 0x74, 0x6f, 0x72, 0x65, 0x56, 0x69, 0x64, 0x65, 0x6f, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73,
 	0x44, 0x61, 0x74, 0x61, 0x52, 0x06, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0xbf, 0x01, 0x0a,
 	0x16, 0x56, 0x6f, 0x64, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x4d, 0x65, 0x64, 0x69, 0x61, 0x52,
 	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x59, 0x0a, 0x10, 0x52, 0x65, 0x73, 0x70, 0x6f,
@@ -10594,7 +10731,7 @@ func file_volcengine_vod_response_response_vod_proto_rawDescGZIP() []byte {
 	return file_volcengine_vod_response_response_vod_proto_rawDescData
 }
 
-var file_volcengine_vod_response_response_vod_proto_msgTypes = make([]protoimpl.MessageInfo, 160)
+var file_volcengine_vod_response_response_vod_proto_msgTypes = make([]protoimpl.MessageInfo, 162)
 var file_volcengine_vod_response_response_vod_proto_goTypes = []interface{}{
 	(*VodGetAllPlayInfoResponse)(nil),                               // 0: Volcengine.Vod.Models.Response.VodGetAllPlayInfoResponse
 	(*VodGetPlayInfoResponse)(nil),                                  // 1: Volcengine.Vod.Models.Response.VodGetPlayInfoResponse
@@ -10620,545 +10757,553 @@ var file_volcengine_vod_response_response_vod_proto_goTypes = []interface{}{
 	(*VodGetRecommendedPosterResponse)(nil),                         // 21: Volcengine.Vod.Models.Response.VodGetRecommendedPosterResponse
 	(*VodUpdateMediaPublishStatusResponse)(nil),                     // 22: Volcengine.Vod.Models.Response.VodUpdateMediaPublishStatusResponse
 	(*VodUpdateMediaStorageClassResponse)(nil),                      // 23: Volcengine.Vod.Models.Response.VodUpdateMediaStorageClassResponse
-	(*VodDeleteMediaResponse)(nil),                                  // 24: Volcengine.Vod.Models.Response.VodDeleteMediaResponse
-	(*VodDeleteMaterialResponse)(nil),                               // 25: Volcengine.Vod.Models.Response.VodDeleteMaterialResponse
-	(*VodDeleteTranscodesResponse)(nil),                             // 26: Volcengine.Vod.Models.Response.VodDeleteTranscodesResponse
-	(*VodDeleteMediaTosFileResponse)(nil),                           // 27: Volcengine.Vod.Models.Response.VodDeleteMediaTosFileResponse
-	(*VodGetMediaListResponse)(nil),                                 // 28: Volcengine.Vod.Models.Response.VodGetMediaListResponse
-	(*VodGetSubtitleInfoListResponse)(nil),                          // 29: Volcengine.Vod.Models.Response.VodGetSubtitleInfoListResponse
-	(*VodUpdateSubtitleStatusResponse)(nil),                         // 30: Volcengine.Vod.Models.Response.VodUpdateSubtitleStatusResponse
-	(*VodUpdateSubtitleInfoResponse)(nil),                           // 31: Volcengine.Vod.Models.Response.VodUpdateSubtitleInfoResponse
-	(*VodGetAuditFramesForAuditResponse)(nil),                       // 32: Volcengine.Vod.Models.Response.VodGetAuditFramesForAuditResponse
-	(*VodGetMLFramesForAuditResponse)(nil),                          // 33: Volcengine.Vod.Models.Response.VodGetMLFramesForAuditResponse
-	(*VodGetBetterFramesForAuditResponse)(nil),                      // 34: Volcengine.Vod.Models.Response.VodGetBetterFramesForAuditResponse
-	(*VodGetAudioInfoForAuditResponse)(nil),                         // 35: Volcengine.Vod.Models.Response.VodGetAudioInfoForAuditResponse
-	(*VodGetAutomaticSpeechRecognitionForAuditResponse)(nil),        // 36: Volcengine.Vod.Models.Response.VodGetAutomaticSpeechRecognitionForAuditResponse
-	(*VodGetAudioEventDetectionForAuditResponse)(nil),               // 37: Volcengine.Vod.Models.Response.VodGetAudioEventDetectionForAuditResponse
-	(*VodCreateVideoClassificationResponse)(nil),                    // 38: Volcengine.Vod.Models.Response.VodCreateVideoClassificationResponse
-	(*VodUpdateVideoClassificationResponse)(nil),                    // 39: Volcengine.Vod.Models.Response.VodUpdateVideoClassificationResponse
-	(*VodDeleteVideoClassificationResponse)(nil),                    // 40: Volcengine.Vod.Models.Response.VodDeleteVideoClassificationResponse
-	(*VodListVideoClassificationsResponse)(nil),                     // 41: Volcengine.Vod.Models.Response.VodListVideoClassificationsResponse
-	(*VodListSnapshotsResponse)(nil),                                // 42: Volcengine.Vod.Models.Response.VodListSnapshotsResponse
-	(*VodGetFileListResponse)(nil),                                  // 43: Volcengine.Vod.Models.Response.VodGetFileListResponse
-	(*VodGetFileInfosResponse)(nil),                                 // 44: Volcengine.Vod.Models.Response.VodGetFileInfosResponse
-	(*VodUpdateFileStorageClassResponse)(nil),                       // 45: Volcengine.Vod.Models.Response.VodUpdateFileStorageClassResponse
-	(*VodGetInnerAuditURLsResponse)(nil),                            // 46: Volcengine.Vod.Models.Response.VodGetInnerAuditURLsResponse
-	(*VodGetAdAuditResultByVidResponse)(nil),                        // 47: Volcengine.Vod.Models.Response.VodGetAdAuditResultByVidResponse
-	(*VodExtractMediaMetaTaskResponse)(nil),                         // 48: Volcengine.Vod.Models.Response.VodExtractMediaMetaTaskResponse
-	(*VodStartWorkflowResponse)(nil),                                // 49: Volcengine.Vod.Models.Response.VodStartWorkflowResponse
-	(*VodRetrieveTranscodeResultResponse)(nil),                      // 50: Volcengine.Vod.Models.Response.VodRetrieveTranscodeResultResponse
-	(*VodListWorkflowExecutionResponse)(nil),                        // 51: Volcengine.Vod.Models.Response.VodListWorkflowExecutionResponse
-	(*VodGetWorkflowExecutionDetailResponse)(nil),                   // 52: Volcengine.Vod.Models.Response.VodGetWorkflowExecutionDetailResponse
-	(*VodGetWorkflowExecutionStatusResponse)(nil),                   // 53: Volcengine.Vod.Models.Response.VodGetWorkflowExecutionStatusResponse
-	(*VodGetWorkflowResultResponse)(nil),                            // 54: Volcengine.Vod.Models.Response.VodGetWorkflowResultResponse
-	(*VodCreateTaskTemplateResponse)(nil),                           // 55: Volcengine.Vod.Models.Response.VodCreateTaskTemplateResponse
-	(*VodUpdateTaskTemplateResponse)(nil),                           // 56: Volcengine.Vod.Models.Response.VodUpdateTaskTemplateResponse
-	(*VodDeleteTaskTemplateResponse)(nil),                           // 57: Volcengine.Vod.Models.Response.VodDeleteTaskTemplateResponse
-	(*VodGetTaskTemplateResponse)(nil),                              // 58: Volcengine.Vod.Models.Response.VodGetTaskTemplateResponse
-	(*VodListTaskTemplateResponse)(nil),                             // 59: Volcengine.Vod.Models.Response.VodListTaskTemplateResponse
-	(*VodCreateWorkflowTemplateResponse)(nil),                       // 60: Volcengine.Vod.Models.Response.VodCreateWorkflowTemplateResponse
-	(*VodUpdateWorkflowTemplateResponse)(nil),                       // 61: Volcengine.Vod.Models.Response.VodUpdateWorkflowTemplateResponse
-	(*VodDeleteWorkflowTemplateResponse)(nil),                       // 62: Volcengine.Vod.Models.Response.VodDeleteWorkflowTemplateResponse
-	(*VodGetWorkflowTemplateResponse)(nil),                          // 63: Volcengine.Vod.Models.Response.VodGetWorkflowTemplateResponse
-	(*VodListWorkflowTemplateResponse)(nil),                         // 64: Volcengine.Vod.Models.Response.VodListWorkflowTemplateResponse
-	(*VodCreateWatermarkResponse)(nil),                              // 65: Volcengine.Vod.Models.Response.VodCreateWatermarkResponse
-	(*VodUpdateWatermarkResponse)(nil),                              // 66: Volcengine.Vod.Models.Response.VodUpdateWatermarkResponse
-	(*VodDeleteWatermarkResponse)(nil),                              // 67: Volcengine.Vod.Models.Response.VodDeleteWatermarkResponse
-	(*VodGetWatermarkResponse)(nil),                                 // 68: Volcengine.Vod.Models.Response.VodGetWatermarkResponse
-	(*VodListWatermarkResponse)(nil),                                // 69: Volcengine.Vod.Models.Response.VodListWatermarkResponse
-	(*VodSubmitDirectEditTaskAsyncResponse)(nil),                    // 70: Volcengine.Vod.Models.Response.VodSubmitDirectEditTaskAsyncResponse
-	(*VodSubmitDirectEditTaskSyncResponse)(nil),                     // 71: Volcengine.Vod.Models.Response.VodSubmitDirectEditTaskSyncResponse
-	(*VodGetDirectEditProgressResponse)(nil),                        // 72: Volcengine.Vod.Models.Response.VodGetDirectEditProgressResponse
-	(*VodGetDirectEditResultResponse)(nil),                          // 73: Volcengine.Vod.Models.Response.VodGetDirectEditResultResponse
-	(*VodCancelDirectEditTaskResponse)(nil),                         // 74: Volcengine.Vod.Models.Response.VodCancelDirectEditTaskResponse
-	(*VodAsyncVCreativeTaskResponse)(nil),                           // 75: Volcengine.Vod.Models.Response.VodAsyncVCreativeTaskResponse
-	(*VodGetVCreativeTaskResultResponse)(nil),                       // 76: Volcengine.Vod.Models.Response.VodGetVCreativeTaskResultResponse
-	(*VodCreateSpaceResponse)(nil),                                  // 77: Volcengine.Vod.Models.Response.VodCreateSpaceResponse
-	(*VodDeleteSpaceResponse)(nil),                                  // 78: Volcengine.Vod.Models.Response.VodDeleteSpaceResponse
-	(*VodListSpaceResponse)(nil),                                    // 79: Volcengine.Vod.Models.Response.VodListSpaceResponse
-	(*VodGetSpaceDetailResponse)(nil),                               // 80: Volcengine.Vod.Models.Response.VodGetSpaceDetailResponse
-	(*VodUpdateSpaceResponse)(nil),                                  // 81: Volcengine.Vod.Models.Response.VodUpdateSpaceResponse
-	(*VodUpdateSpaceUploadConfigResponse)(nil),                      // 82: Volcengine.Vod.Models.Response.VodUpdateSpaceUploadConfigResponse
-	(*VodDescribeUploadSpaceConfigResponse)(nil),                    // 83: Volcengine.Vod.Models.Response.VodDescribeUploadSpaceConfigResponse
-	(*VodUpdateUploadSpaceConfigResponse)(nil),                      // 84: Volcengine.Vod.Models.Response.VodUpdateUploadSpaceConfigResponse
-	(*VodDescribeVodSpaceStorageDataResponse)(nil),                  // 85: Volcengine.Vod.Models.Response.VodDescribeVodSpaceStorageDataResponse
-	(*VodUpdateDomainPlayRuleResponse)(nil),                         // 86: Volcengine.Vod.Models.Response.VodUpdateDomainPlayRuleResponse
-	(*VodAddDomainToSchedulerResponse)(nil),                         // 87: Volcengine.Vod.Models.Response.VodAddDomainToSchedulerResponse
-	(*VodRemoveDomainFromSchedulerResponse)(nil),                    // 88: Volcengine.Vod.Models.Response.VodRemoveDomainFromSchedulerResponse
-	(*VodDeleteDomainResponse)(nil),                                 // 89: Volcengine.Vod.Models.Response.VodDeleteDomainResponse
-	(*VodStartDomainResponse)(nil),                                  // 90: Volcengine.Vod.Models.Response.VodStartDomainResponse
-	(*VodStopDomainResponse)(nil),                                   // 91: Volcengine.Vod.Models.Response.VodStopDomainResponse
-	(*VodListDomainResponse)(nil),                                   // 92: Volcengine.Vod.Models.Response.VodListDomainResponse
-	(*VodCreateCdnRefreshTaskResponse)(nil),                         // 93: Volcengine.Vod.Models.Response.VodCreateCdnRefreshTaskResponse
-	(*VodCreateCdnPreloadTaskResponse)(nil),                         // 94: Volcengine.Vod.Models.Response.VodCreateCdnPreloadTaskResponse
-	(*VodListCdnTasksResponse)(nil),                                 // 95: Volcengine.Vod.Models.Response.VodListCdnTasksResponse
-	(*VodListCdnAccessLogResponse)(nil),                             // 96: Volcengine.Vod.Models.Response.VodListCdnAccessLogResponse
-	(*VodListCdnTopAccessUrlResponse)(nil),                          // 97: Volcengine.Vod.Models.Response.VodListCdnTopAccessUrlResponse
-	(*VodListCdnTopAccessResponse)(nil),                             // 98: Volcengine.Vod.Models.Response.VodListCdnTopAccessResponse
-	(*VodDescribeVodDomainBandwidthDataResponse)(nil),               // 99: Volcengine.Vod.Models.Response.VodDescribeVodDomainBandwidthDataResponse
-	(*VodCdnStatisticsCommonResponse)(nil),                          // 100: Volcengine.Vod.Models.Response.VodCdnStatisticsCommonResponse
-	(*VodDescribeIPInfoResponse)(nil),                               // 101: Volcengine.Vod.Models.Response.VodDescribeIPInfoResponse
-	(*VodDescribeVodDomainTrafficDataResponse)(nil),                 // 102: Volcengine.Vod.Models.Response.VodDescribeVodDomainTrafficDataResponse
-	(*VodSubmitBlockTasksResponse)(nil),                             // 103: Volcengine.Vod.Models.Response.VodSubmitBlockTasksResponse
-	(*VodGetContentBlockTasksResponse)(nil),                         // 104: Volcengine.Vod.Models.Response.VodGetContentBlockTasksResponse
-	(*VodCreateDomainV2Response)(nil),                               // 105: Volcengine.Vod.Models.Response.VodCreateDomainV2Response
-	(*VodCreateDomainV3Response)(nil),                               // 106: Volcengine.Vod.Models.Response.VodCreateDomainV3Response
-	(*VodUpdateDomainExpireV2Response)(nil),                         // 107: Volcengine.Vod.Models.Response.VodUpdateDomainExpireV2Response
-	(*VodUpdateDomainAuthConfigV2Response)(nil),                     // 108: Volcengine.Vod.Models.Response.VodUpdateDomainAuthConfigV2Response
-	(*VodUpdateDomainUrlAuthConfigV2Response)(nil),                  // 109: Volcengine.Vod.Models.Response.VodUpdateDomainUrlAuthConfigV2Response
-	(*VodVerifyDomainOwnerResponse)(nil),                            // 110: Volcengine.Vod.Models.Response.VodVerifyDomainOwnerResponse
-	(*VodDescribeDomainVerifyContentResponse)(nil),                  // 111: Volcengine.Vod.Models.Response.VodDescribeDomainVerifyContentResponse
-	(*VodListPCDNDomainResponse)(nil),                               // 112: Volcengine.Vod.Models.Response.VodListPCDNDomainResponse
-	(*VodCreatePCDNDomainResponse)(nil),                             // 113: Volcengine.Vod.Models.Response.VodCreatePCDNDomainResponse
-	(*VodStartPCDNDomainResponse)(nil),                              // 114: Volcengine.Vod.Models.Response.VodStartPCDNDomainResponse
-	(*VodStopPCDNDomainResponse)(nil),                               // 115: Volcengine.Vod.Models.Response.VodStopPCDNDomainResponse
-	(*VodDeletePCDNDomainResponse)(nil),                             // 116: Volcengine.Vod.Models.Response.VodDeletePCDNDomainResponse
-	(*VodUpdateDomainConfigResponse)(nil),                           // 117: Volcengine.Vod.Models.Response.VodUpdateDomainConfigResponse
-	(*VodDescribeDomainConfigResponse)(nil),                         // 118: Volcengine.Vod.Models.Response.VodDescribeDomainConfigResponse
-	(*VodDescribeCdnEdgeIpResponse)(nil),                            // 119: Volcengine.Vod.Models.Response.VodDescribeCdnEdgeIpResponse
-	(*VodDescribeCdnRegionAndIspResponse)(nil),                      // 120: Volcengine.Vod.Models.Response.VodDescribeCdnRegionAndIspResponse
-	(*AddOrUpdateCertificateV2Response)(nil),                        // 121: Volcengine.Vod.Models.Response.AddOrUpdateCertificateV2Response
-	(*UpdateDomainAreaResponse)(nil),                                // 122: Volcengine.Vod.Models.Response.UpdateDomainAreaResponse
-	(*VodAddCallbackSubscriptionResponse)(nil),                      // 123: Volcengine.Vod.Models.Response.VodAddCallbackSubscriptionResponse
-	(*VodSetCallbackEventResponse)(nil),                             // 124: Volcengine.Vod.Models.Response.VodSetCallbackEventResponse
-	(*GetCallbackRecordResponse)(nil),                               // 125: Volcengine.Vod.Models.Response.GetCallbackRecordResponse
-	(*VodGetSmartStrategyLitePlayInfoResponse)(nil),                 // 126: Volcengine.Vod.Models.Response.VodGetSmartStrategyLitePlayInfoResponse
-	(*VodGetAppInfoResponse)(nil),                                   // 127: Volcengine.Vod.Models.Response.VodGetAppInfoResponse
-	(*DescribeVodSpaceTranscodeDataResponse)(nil),                   // 128: Volcengine.Vod.Models.Response.DescribeVodSpaceTranscodeDataResponse
-	(*DescribeVodSpaceAIStatisDataResponse)(nil),                    // 129: Volcengine.Vod.Models.Response.DescribeVodSpaceAIStatisDataResponse
-	(*DescribeVodSpaceSubtitleStatisDataResponse)(nil),              // 130: Volcengine.Vod.Models.Response.DescribeVodSpaceSubtitleStatisDataResponse
-	(*DescribeVodSpaceDetectStatisDataResponse)(nil),                // 131: Volcengine.Vod.Models.Response.DescribeVodSpaceDetectStatisDataResponse
-	(*DescribeVodSnapshotDataResponse)(nil),                         // 132: Volcengine.Vod.Models.Response.DescribeVodSnapshotDataResponse
-	(*DescribeVodSpaceWorkflowDetailDataResponse)(nil),              // 133: Volcengine.Vod.Models.Response.DescribeVodSpaceWorkflowDetailDataResponse
-	(*DescribeVodSpaceEditDetailDataResponse)(nil),                  // 134: Volcengine.Vod.Models.Response.DescribeVodSpaceEditDetailDataResponse
-	(*DescribeVodRealtimeMediaDataResponse)(nil),                    // 135: Volcengine.Vod.Models.Response.DescribeVodRealtimeMediaDataResponse
-	(*DescribeVodRealtimeMediaDetailDataResponse)(nil),              // 136: Volcengine.Vod.Models.Response.DescribeVodRealtimeMediaDetailDataResponse
-	(*DescribeVodPlayFileLogByDomainResponse)(nil),                  // 137: Volcengine.Vod.Models.Response.DescribeVodPlayFileLogByDomainResponse
-	(*DescribeVodEnhanceImageDataResponse)(nil),                     // 138: Volcengine.Vod.Models.Response.DescribeVodEnhanceImageDataResponse
-	(*DescribeVodSpaceEditStatisDataResponse)(nil),                  // 139: Volcengine.Vod.Models.Response.DescribeVodSpaceEditStatisDataResponse
-	(*DescribeVodPlayedStatisDataResponse)(nil),                     // 140: Volcengine.Vod.Models.Response.DescribeVodPlayedStatisDataResponse
-	(*DescribeVodMostPlayedStatisDataResponse)(nil),                 // 141: Volcengine.Vod.Models.Response.DescribeVodMostPlayedStatisDataResponse
-	(*DescribeVodVidTrafficFileLogResponse)(nil),                    // 142: Volcengine.Vod.Models.Response.DescribeVodVidTrafficFileLogResponse
-	(*VodSubmitBlockMediaTaskResponse)(nil),                         // 143: Volcengine.Vod.Models.Response.VodSubmitBlockMediaTaskResponse
-	(*VodSubmitUnblockMediaTaskResponse)(nil),                       // 144: Volcengine.Vod.Models.Response.VodSubmitUnblockMediaTaskResponse
-	(*VodQueryMediaBlockStatusResponse)(nil),                        // 145: Volcengine.Vod.Models.Response.VodQueryMediaBlockStatusResponse
-	(*VodListProjectsResponse)(nil),                                 // 146: Volcengine.Vod.Models.Response.VodListProjectsResponse
-	(*VodGetTradeConfigurationResponse)(nil),                        // 147: Volcengine.Vod.Models.Response.VodGetTradeConfigurationResponse
-	(*VodSetCloudMigrateJobResponse)(nil),                           // 148: Volcengine.Vod.Models.Response.VodSetCloudMigrateJobResponse
-	(*VodSubmitCloudMigrateJobResponse)(nil),                        // 149: Volcengine.Vod.Models.Response.VodSubmitCloudMigrateJobResponse
-	(*VodGetCloudMigrateJobResponse)(nil),                           // 150: Volcengine.Vod.Models.Response.VodGetCloudMigrateJobResponse
-	(*VodReportEventResponse)(nil),                                  // 151: Volcengine.Vod.Models.Response.VodReportEventResponse
-	(*VodCreateDramaRecapTaskResponse)(nil),                         // 152: Volcengine.Vod.Models.Response.VodCreateDramaRecapTaskResponse
-	(*VodCreateDramaScriptTaskResponse)(nil),                        // 153: Volcengine.Vod.Models.Response.VodCreateDramaScriptTaskResponse
-	(*VodQueryDramaRecapTaskResponse)(nil),                          // 154: Volcengine.Vod.Models.Response.VodQueryDramaRecapTaskResponse
-	(*VodQueryDramaScriptTaskResponse)(nil),                         // 155: Volcengine.Vod.Models.Response.VodQueryDramaScriptTaskResponse
-	(*VodGetMediaEntityListResponse)(nil),                           // 156: Volcengine.Vod.Models.Response.VodGetMediaEntityListResponse
-	(*VodGetMediaEntityResponse)(nil),                               // 157: Volcengine.Vod.Models.Response.VodGetMediaEntityResponse
-	(*VodDeleteMediaEntityResponse)(nil),                            // 158: Volcengine.Vod.Models.Response.VodDeleteMediaEntityResponse
-	(*VodGetMediaEntityConfigListResponse)(nil),                     // 159: Volcengine.Vod.Models.Response.VodGetMediaEntityConfigListResponse
-	(*base.ResponseMetadata)(nil),                                   // 160: Volcengine.Base.Models.Base.ResponseMetadata
-	(*business.VodAllPlayInfoResult)(nil),                           // 161: Volcengine.Vod.Models.Business.VodAllPlayInfoResult
-	(*business.VodPlayInfoModel)(nil),                               // 162: Volcengine.Vod.Models.Business.VodPlayInfoModel
-	(*business.VodGetOriginalPlayInfoResult)(nil),                   // 163: Volcengine.Vod.Models.Business.VodGetOriginalPlayInfoResult
-	(*business.VodGetPrivateDrmPlayAuthResult)(nil),                 // 164: Volcengine.Vod.Models.Business.VodGetPrivateDrmPlayAuthResult
-	(*business.VodGetHlsDecryptionKeyResult)(nil),                   // 165: Volcengine.Vod.Models.Business.VodGetHlsDecryptionKeyResult
-	(*business.VodCreateHlsDecryptionKeyResult)(nil),                // 166: Volcengine.Vod.Models.Business.VodCreateHlsDecryptionKeyResult
-	(*business.VodGetPlayInfoWithLiveTimeShiftSceneResult)(nil),     // 167: Volcengine.Vod.Models.Business.VodGetPlayInfoWithLiveTimeShiftSceneResult
-	(*business.VodDescribeDrmDataKeyResult)(nil),                    // 168: Volcengine.Vod.Models.Business.VodDescribeDrmDataKeyResult
-	(*business.VodSubmitMoveObjectTaskRespData)(nil),                // 169: Volcengine.Vod.Models.Business.VodSubmitMoveObjectTaskRespData
-	(*business.VodQueryMoveObjectTaskInfoResData)(nil),              // 170: Volcengine.Vod.Models.Business.VodQueryMoveObjectTaskInfoResData
-	(*business.VodSubmitBlockObjectTasksResult)(nil),                // 171: Volcengine.Vod.Models.Business.VodSubmitBlockObjectTasksResult
-	(*business.VodListBlockObjectTasksResult)(nil),                  // 172: Volcengine.Vod.Models.Business.VodListBlockObjectTasksResult
-	(*business.VodCommitData)(nil),                                  // 173: Volcengine.Vod.Models.Business.VodCommitData
-	(*business.VodQueryData)(nil),                                   // 174: Volcengine.Vod.Models.Business.VodQueryData
-	(*business.VodUrlResponseData)(nil),                             // 175: Volcengine.Vod.Models.Business.VodUrlResponseData
-	(*business.VodApplyUploadInfoResult)(nil),                       // 176: Volcengine.Vod.Models.Business.VodApplyUploadInfoResult
-	(*business.VodCommitUploadInfoResult)(nil),                      // 177: Volcengine.Vod.Models.Business.VodCommitUploadInfoResult
-	(*business.VodParseUploadManifestResult)(nil),                   // 178: Volcengine.Vod.Models.Business.VodParseUploadManifestResult
-	(*business.VodListFileMetaInfosByFileNamesResult)(nil),          // 179: Volcengine.Vod.Models.Business.VodListFileMetaInfosByFileNamesResult
-	(*business.VodGetMediaInfosData)(nil),                           // 180: Volcengine.Vod.Models.Business.VodGetMediaInfosData
-	(*business.VodGetRecPosterData)(nil),                            // 181: Volcengine.Vod.Models.Business.VodGetRecPosterData
-	(*business.VodUpdateMediaStorageClassData)(nil),                 // 182: Volcengine.Vod.Models.Business.VodUpdateMediaStorageClassData
-	(*business.VodDeleteMediaData)(nil),                             // 183: Volcengine.Vod.Models.Business.VodDeleteMediaData
-	(*business.VodDeleteTranscodesData)(nil),                        // 184: Volcengine.Vod.Models.Business.VodDeleteTranscodesData
-	(*business.VodDeleteMediaTosFileData)(nil),                      // 185: Volcengine.Vod.Models.Business.VodDeleteMediaTosFileData
-	(*business.VodGetMediaListData)(nil),                            // 186: Volcengine.Vod.Models.Business.VodGetMediaListData
-	(*business.VodGetSubtitleInfoListData)(nil),                     // 187: Volcengine.Vod.Models.Business.VodGetSubtitleInfoListData
-	(*business.VodUpdateSubtitleStatusData)(nil),                    // 188: Volcengine.Vod.Models.Business.VodUpdateSubtitleStatusData
-	(*business.VodGetFramesForAuditResult)(nil),                     // 189: Volcengine.Vod.Models.Business.VodGetFramesForAuditResult
-	(*business.VodGetBetterFramesForAuditResult)(nil),               // 190: Volcengine.Vod.Models.Business.VodGetBetterFramesForAuditResult
-	(*business.VodGetAudioInfoForAuditResult)(nil),                  // 191: Volcengine.Vod.Models.Business.VodGetAudioInfoForAuditResult
-	(*business.VodGetAutomaticSpeechRecognitionForAuditResult)(nil), // 192: Volcengine.Vod.Models.Business.VodGetAutomaticSpeechRecognitionForAuditResult
-	(*business.VodGetAudioEventDetectionForAuditResult)(nil),        // 193: Volcengine.Vod.Models.Business.VodGetAudioEventDetectionForAuditResult
-	(*business.VodCreateVideoClassificationData)(nil),               // 194: Volcengine.Vod.Models.Business.VodCreateVideoClassificationData
-	(*business.VodVideoClassificationsData)(nil),                    // 195: Volcengine.Vod.Models.Business.VodVideoClassificationsData
-	(*business.VodSnapshotData)(nil),                                // 196: Volcengine.Vod.Models.Business.VodSnapshotData
-	(*business.VodGetFileInfosData)(nil),                            // 197: Volcengine.Vod.Models.Business.VodGetFileInfosData
-	(*business.VodUpdateFileStorageClassData)(nil),                  // 198: Volcengine.Vod.Models.Business.VodUpdateFileStorageClassData
-	(*business.VodGetInnerAuditURLsData)(nil),                       // 199: Volcengine.Vod.Models.Business.VodGetInnerAuditURLsData
-	(*business.VodGetAdAuditResultByVidData)(nil),                   // 200: Volcengine.Vod.Models.Business.VodGetAdAuditResultByVidData
-	(*business.VodStartWorkflowResult)(nil),                         // 201: Volcengine.Vod.Models.Business.VodStartWorkflowResult
-	(*business.TranscodeResult)(nil),                                // 202: Volcengine.Vod.Models.Business.TranscodeResult
-	(*business.VodListWorkflowExecutionResult)(nil),                 // 203: Volcengine.Vod.Models.Business.VodListWorkflowExecutionResult
-	(*business.VodGetWorkflowExecutionDetailResult)(nil),            // 204: Volcengine.Vod.Models.Business.VodGetWorkflowExecutionDetailResult
-	(*business.WorkflowExecution)(nil),                              // 205: Volcengine.Vod.Models.Business.WorkflowExecution
-	(*business.VodWorkflowResult)(nil),                              // 206: Volcengine.Vod.Models.Business.VodWorkflowResult
-	(*business.VodTaskTemplateResult)(nil),                          // 207: Volcengine.Vod.Models.Business.VodTaskTemplateResult
-	(*business.VodListTaskTemplateResult)(nil),                      // 208: Volcengine.Vod.Models.Business.VodListTaskTemplateResult
-	(*business.VodWorkflowTemplateResult)(nil),                      // 209: Volcengine.Vod.Models.Business.VodWorkflowTemplateResult
-	(*business.VodListWorkflowTemplateResult)(nil),                  // 210: Volcengine.Vod.Models.Business.VodListWorkflowTemplateResult
-	(*business.LogoTemplate)(nil),                                   // 211: Volcengine.Vod.Models.Business.LogoTemplate
-	(*business.VodListWatermarkResponseResult)(nil),                 // 212: Volcengine.Vod.Models.Business.VodListWatermarkResponseResult
-	(*business.SubmitDirectEditTaskAsyncResult)(nil),                // 213: Volcengine.Vod.Models.Business.SubmitDirectEditTaskAsyncResult
-	(*business.SubmitDirectEditTaskSyncResult)(nil),                 // 214: Volcengine.Vod.Models.Business.SubmitDirectEditTaskSyncResult
-	(*business.GetDirectEditProgress)(nil),                          // 215: Volcengine.Vod.Models.Business.GetDirectEditProgress
-	(*business.GetDirectEditResult)(nil),                            // 216: Volcengine.Vod.Models.Business.GetDirectEditResult
-	(*business.CancelDirectEditTask)(nil),                           // 217: Volcengine.Vod.Models.Business.CancelDirectEditTask
-	(*business.AsyncVCreativeTaskResult)(nil),                       // 218: Volcengine.Vod.Models.Business.AsyncVCreativeTaskResult
-	(*business.GetVCreativeTaskResult)(nil),                         // 219: Volcengine.Vod.Models.Business.GetVCreativeTaskResult
-	(*business.VodSpaceInfo)(nil),                                   // 220: Volcengine.Vod.Models.Business.VodSpaceInfo
-	(*business.VodUploadSpaceConfig)(nil),                           // 221: Volcengine.Vod.Models.Business.VodUploadSpaceConfig
-	(*business.VodDescribeVodSpaceStorageDataResult)(nil),           // 222: Volcengine.Vod.Models.Business.VodDescribeVodSpaceStorageDataResult
-	(*business.VodDomainConfigInfo)(nil),                            // 223: Volcengine.Vod.Models.Business.VodDomainConfigInfo
-	(*business.VodCreateCdnTaskResult)(nil),                         // 224: Volcengine.Vod.Models.Business.VodCreateCdnTaskResult
-	(*business.VodCdnTaskResult)(nil),                               // 225: Volcengine.Vod.Models.Business.VodCdnTaskResult
-	(*business.VodListCdnAccessLogResult)(nil),                      // 226: Volcengine.Vod.Models.Business.VodListCdnAccessLogResult
-	(*business.VodListCdnTopAccessUrlResult)(nil),                   // 227: Volcengine.Vod.Models.Business.VodListCdnTopAccessUrlResult
-	(*business.VodListCdnTopAccessResult)(nil),                      // 228: Volcengine.Vod.Models.Business.VodListCdnTopAccessResult
-	(*business.VodDescribeVodDomainBandwidthDataResult)(nil),        // 229: Volcengine.Vod.Models.Business.VodDescribeVodDomainBandwidthDataResult
-	(*business.VodCdnStatisticsCommonResult)(nil),                   // 230: Volcengine.Vod.Models.Business.VodCdnStatisticsCommonResult
-	(*business.VodCdnIpInfo)(nil),                                   // 231: Volcengine.Vod.Models.Business.VodCdnIpInfo
-	(*business.VodDescribeVodDomainTrafficDataResult)(nil),          // 232: Volcengine.Vod.Models.Business.VodDescribeVodDomainTrafficDataResult
-	(*business.VodSubmitBlockTasksResult)(nil),                      // 233: Volcengine.Vod.Models.Business.VodSubmitBlockTasksResult
-	(*business.VodGetContentBlockTasksResult)(nil),                  // 234: Volcengine.Vod.Models.Business.VodGetContentBlockTasksResult
-	(*business.VodVerifyDomainOwnerResult)(nil),                     // 235: Volcengine.Vod.Models.Business.VodVerifyDomainOwnerResult
-	(*business.VodDescribeDomainVerifyContentResult)(nil),           // 236: Volcengine.Vod.Models.Business.VodDescribeDomainVerifyContentResult
-	(*business.VodPCDNDomainConfigInfo)(nil),                        // 237: Volcengine.Vod.Models.Business.VodPCDNDomainConfigInfo
-	(*business.VodDescribeDomainConfigResult)(nil),                  // 238: Volcengine.Vod.Models.Business.VodDescribeDomainConfigResult
-	(*business.VodDescribeCdnEdgeIpResult)(nil),                     // 239: Volcengine.Vod.Models.Business.VodDescribeCdnEdgeIpResult
-	(*business.VodDescribeCdnRegionAndIspResult)(nil),               // 240: Volcengine.Vod.Models.Business.VodDescribeCdnRegionAndIspResult
-	(*business.CallbackRecords)(nil),                                // 241: Volcengine.Vod.Models.Business.CallbackRecords
-	(*business.VodGetSmartStrategyLitePlayInfoResult)(nil),          // 242: Volcengine.Vod.Models.Business.VodGetSmartStrategyLitePlayInfoResult
-	(*business.VodGetAppInfoResult)(nil),                            // 243: Volcengine.Vod.Models.Business.VodGetAppInfoResult
-	(*business.DescribeVodSpaceTranscodeDataResult)(nil),            // 244: Volcengine.Vod.Models.Business.DescribeVodSpaceTranscodeDataResult
-	(*business.DescribeVodSpaceAIStatisDataResult)(nil),             // 245: Volcengine.Vod.Models.Business.DescribeVodSpaceAIStatisDataResult
-	(*business.DescribeVodSpaceSubtitleStatisDataResult)(nil),       // 246: Volcengine.Vod.Models.Business.DescribeVodSpaceSubtitleStatisDataResult
-	(*business.DescribeVodSpaceDetectStatisDataResult)(nil),         // 247: Volcengine.Vod.Models.Business.DescribeVodSpaceDetectStatisDataResult
-	(*business.DescribeVodSnapshotDataResult)(nil),                  // 248: Volcengine.Vod.Models.Business.DescribeVodSnapshotDataResult
-	(*business.DescribeVodSpaceWorkflowDetailDataResult)(nil),       // 249: Volcengine.Vod.Models.Business.DescribeVodSpaceWorkflowDetailDataResult
-	(*business.DescribeVodSpaceEditDetailDataResult)(nil),           // 250: Volcengine.Vod.Models.Business.DescribeVodSpaceEditDetailDataResult
-	(*business.DescribeVodRealtimeMediaDataResult)(nil),             // 251: Volcengine.Vod.Models.Business.DescribeVodRealtimeMediaDataResult
-	(*business.DescribeVodRealtimeMediaDetailDataResult)(nil),       // 252: Volcengine.Vod.Models.Business.DescribeVodRealtimeMediaDetailDataResult
-	(*business.DescribeVodPlayFileLogByDomainResult)(nil),           // 253: Volcengine.Vod.Models.Business.DescribeVodPlayFileLogByDomainResult
-	(*business.DescribeVodEnhanceImageDataResult)(nil),              // 254: Volcengine.Vod.Models.Business.DescribeVodEnhanceImageDataResult
-	(*business.DescribeVodSpaceEditStatisDataResult)(nil),           // 255: Volcengine.Vod.Models.Business.DescribeVodSpaceEditStatisDataResult
-	(*business.DescribeVodPlayedStatisDataResult)(nil),              // 256: Volcengine.Vod.Models.Business.DescribeVodPlayedStatisDataResult
-	(*business.DescribeVodMostPlayedStatisDataResult)(nil),          // 257: Volcengine.Vod.Models.Business.DescribeVodMostPlayedStatisDataResult
-	(*business.DescribeVodVidTrafficFileLogResult)(nil),             // 258: Volcengine.Vod.Models.Business.DescribeVodVidTrafficFileLogResult
-	(*business.VodSubmitBlockMediaTaskResult)(nil),                  // 259: Volcengine.Vod.Models.Business.VodSubmitBlockMediaTaskResult
-	(*business.VodSubmitUnblockMediaTaskResult)(nil),                // 260: Volcengine.Vod.Models.Business.VodSubmitUnblockMediaTaskResult
-	(*business.VodQueryMediaBlockStatusResult)(nil),                 // 261: Volcengine.Vod.Models.Business.VodQueryMediaBlockStatusResult
-	(*business.VodListProjectsResult)(nil),                          // 262: Volcengine.Vod.Models.Business.VodListProjectsResult
-	(*business.TradeConfigurationInfoResult)(nil),                   // 263: Volcengine.Vod.Models.Business.TradeConfigurationInfoResult
-	(*business.VodSetCloudMigrateJobResult)(nil),                    // 264: Volcengine.Vod.Models.Business.VodSetCloudMigrateJobResult
-	(*business.VodGetCloudMigrateJobResult)(nil),                    // 265: Volcengine.Vod.Models.Business.VodGetCloudMigrateJobResult
-	(*business.VodReportEventResult)(nil),                           // 266: Volcengine.Vod.Models.Business.VodReportEventResult
-	(*business.VodCreateDramaRecapTaskResult)(nil),                  // 267: Volcengine.Vod.Models.Business.VodCreateDramaRecapTaskResult
-	(*business.VodCreateDramaScriptTaskResult)(nil),                 // 268: Volcengine.Vod.Models.Business.VodCreateDramaScriptTaskResult
-	(*business.VodQueryDramaRecapTaskResult)(nil),                   // 269: Volcengine.Vod.Models.Business.VodQueryDramaRecapTaskResult
-	(*business.VodQueryDramaScriptTaskResult)(nil),                  // 270: Volcengine.Vod.Models.Business.VodQueryDramaScriptTaskResult
-	(*business.VodGetMediaEntityListResult)(nil),                    // 271: Volcengine.Vod.Models.Business.VodGetMediaEntityListResult
-	(*business.VodGetMediaEntityResult)(nil),                        // 272: Volcengine.Vod.Models.Business.VodGetMediaEntityResult
-	(*business.VodMediaEntityConfig)(nil),                           // 273: Volcengine.Vod.Models.Business.VodMediaEntityConfig
+	(*VodRestoreColdArchiveVideoResponse)(nil),                      // 24: Volcengine.Vod.Models.Response.VodRestoreColdArchiveVideoResponse
+	(*VodGetRestoreVideoStatusResponse)(nil),                        // 25: Volcengine.Vod.Models.Response.VodGetRestoreVideoStatusResponse
+	(*VodDeleteMediaResponse)(nil),                                  // 26: Volcengine.Vod.Models.Response.VodDeleteMediaResponse
+	(*VodDeleteMaterialResponse)(nil),                               // 27: Volcengine.Vod.Models.Response.VodDeleteMaterialResponse
+	(*VodDeleteTranscodesResponse)(nil),                             // 28: Volcengine.Vod.Models.Response.VodDeleteTranscodesResponse
+	(*VodDeleteMediaTosFileResponse)(nil),                           // 29: Volcengine.Vod.Models.Response.VodDeleteMediaTosFileResponse
+	(*VodGetMediaListResponse)(nil),                                 // 30: Volcengine.Vod.Models.Response.VodGetMediaListResponse
+	(*VodGetSubtitleInfoListResponse)(nil),                          // 31: Volcengine.Vod.Models.Response.VodGetSubtitleInfoListResponse
+	(*VodUpdateSubtitleStatusResponse)(nil),                         // 32: Volcengine.Vod.Models.Response.VodUpdateSubtitleStatusResponse
+	(*VodUpdateSubtitleInfoResponse)(nil),                           // 33: Volcengine.Vod.Models.Response.VodUpdateSubtitleInfoResponse
+	(*VodGetAuditFramesForAuditResponse)(nil),                       // 34: Volcengine.Vod.Models.Response.VodGetAuditFramesForAuditResponse
+	(*VodGetMLFramesForAuditResponse)(nil),                          // 35: Volcengine.Vod.Models.Response.VodGetMLFramesForAuditResponse
+	(*VodGetBetterFramesForAuditResponse)(nil),                      // 36: Volcengine.Vod.Models.Response.VodGetBetterFramesForAuditResponse
+	(*VodGetAudioInfoForAuditResponse)(nil),                         // 37: Volcengine.Vod.Models.Response.VodGetAudioInfoForAuditResponse
+	(*VodGetAutomaticSpeechRecognitionForAuditResponse)(nil),        // 38: Volcengine.Vod.Models.Response.VodGetAutomaticSpeechRecognitionForAuditResponse
+	(*VodGetAudioEventDetectionForAuditResponse)(nil),               // 39: Volcengine.Vod.Models.Response.VodGetAudioEventDetectionForAuditResponse
+	(*VodCreateVideoClassificationResponse)(nil),                    // 40: Volcengine.Vod.Models.Response.VodCreateVideoClassificationResponse
+	(*VodUpdateVideoClassificationResponse)(nil),                    // 41: Volcengine.Vod.Models.Response.VodUpdateVideoClassificationResponse
+	(*VodDeleteVideoClassificationResponse)(nil),                    // 42: Volcengine.Vod.Models.Response.VodDeleteVideoClassificationResponse
+	(*VodListVideoClassificationsResponse)(nil),                     // 43: Volcengine.Vod.Models.Response.VodListVideoClassificationsResponse
+	(*VodListSnapshotsResponse)(nil),                                // 44: Volcengine.Vod.Models.Response.VodListSnapshotsResponse
+	(*VodGetFileListResponse)(nil),                                  // 45: Volcengine.Vod.Models.Response.VodGetFileListResponse
+	(*VodGetFileInfosResponse)(nil),                                 // 46: Volcengine.Vod.Models.Response.VodGetFileInfosResponse
+	(*VodUpdateFileStorageClassResponse)(nil),                       // 47: Volcengine.Vod.Models.Response.VodUpdateFileStorageClassResponse
+	(*VodGetInnerAuditURLsResponse)(nil),                            // 48: Volcengine.Vod.Models.Response.VodGetInnerAuditURLsResponse
+	(*VodGetAdAuditResultByVidResponse)(nil),                        // 49: Volcengine.Vod.Models.Response.VodGetAdAuditResultByVidResponse
+	(*VodExtractMediaMetaTaskResponse)(nil),                         // 50: Volcengine.Vod.Models.Response.VodExtractMediaMetaTaskResponse
+	(*VodStartWorkflowResponse)(nil),                                // 51: Volcengine.Vod.Models.Response.VodStartWorkflowResponse
+	(*VodRetrieveTranscodeResultResponse)(nil),                      // 52: Volcengine.Vod.Models.Response.VodRetrieveTranscodeResultResponse
+	(*VodListWorkflowExecutionResponse)(nil),                        // 53: Volcengine.Vod.Models.Response.VodListWorkflowExecutionResponse
+	(*VodGetWorkflowExecutionDetailResponse)(nil),                   // 54: Volcengine.Vod.Models.Response.VodGetWorkflowExecutionDetailResponse
+	(*VodGetWorkflowExecutionStatusResponse)(nil),                   // 55: Volcengine.Vod.Models.Response.VodGetWorkflowExecutionStatusResponse
+	(*VodGetWorkflowResultResponse)(nil),                            // 56: Volcengine.Vod.Models.Response.VodGetWorkflowResultResponse
+	(*VodCreateTaskTemplateResponse)(nil),                           // 57: Volcengine.Vod.Models.Response.VodCreateTaskTemplateResponse
+	(*VodUpdateTaskTemplateResponse)(nil),                           // 58: Volcengine.Vod.Models.Response.VodUpdateTaskTemplateResponse
+	(*VodDeleteTaskTemplateResponse)(nil),                           // 59: Volcengine.Vod.Models.Response.VodDeleteTaskTemplateResponse
+	(*VodGetTaskTemplateResponse)(nil),                              // 60: Volcengine.Vod.Models.Response.VodGetTaskTemplateResponse
+	(*VodListTaskTemplateResponse)(nil),                             // 61: Volcengine.Vod.Models.Response.VodListTaskTemplateResponse
+	(*VodCreateWorkflowTemplateResponse)(nil),                       // 62: Volcengine.Vod.Models.Response.VodCreateWorkflowTemplateResponse
+	(*VodUpdateWorkflowTemplateResponse)(nil),                       // 63: Volcengine.Vod.Models.Response.VodUpdateWorkflowTemplateResponse
+	(*VodDeleteWorkflowTemplateResponse)(nil),                       // 64: Volcengine.Vod.Models.Response.VodDeleteWorkflowTemplateResponse
+	(*VodGetWorkflowTemplateResponse)(nil),                          // 65: Volcengine.Vod.Models.Response.VodGetWorkflowTemplateResponse
+	(*VodListWorkflowTemplateResponse)(nil),                         // 66: Volcengine.Vod.Models.Response.VodListWorkflowTemplateResponse
+	(*VodCreateWatermarkResponse)(nil),                              // 67: Volcengine.Vod.Models.Response.VodCreateWatermarkResponse
+	(*VodUpdateWatermarkResponse)(nil),                              // 68: Volcengine.Vod.Models.Response.VodUpdateWatermarkResponse
+	(*VodDeleteWatermarkResponse)(nil),                              // 69: Volcengine.Vod.Models.Response.VodDeleteWatermarkResponse
+	(*VodGetWatermarkResponse)(nil),                                 // 70: Volcengine.Vod.Models.Response.VodGetWatermarkResponse
+	(*VodListWatermarkResponse)(nil),                                // 71: Volcengine.Vod.Models.Response.VodListWatermarkResponse
+	(*VodSubmitDirectEditTaskAsyncResponse)(nil),                    // 72: Volcengine.Vod.Models.Response.VodSubmitDirectEditTaskAsyncResponse
+	(*VodSubmitDirectEditTaskSyncResponse)(nil),                     // 73: Volcengine.Vod.Models.Response.VodSubmitDirectEditTaskSyncResponse
+	(*VodGetDirectEditProgressResponse)(nil),                        // 74: Volcengine.Vod.Models.Response.VodGetDirectEditProgressResponse
+	(*VodGetDirectEditResultResponse)(nil),                          // 75: Volcengine.Vod.Models.Response.VodGetDirectEditResultResponse
+	(*VodCancelDirectEditTaskResponse)(nil),                         // 76: Volcengine.Vod.Models.Response.VodCancelDirectEditTaskResponse
+	(*VodAsyncVCreativeTaskResponse)(nil),                           // 77: Volcengine.Vod.Models.Response.VodAsyncVCreativeTaskResponse
+	(*VodGetVCreativeTaskResultResponse)(nil),                       // 78: Volcengine.Vod.Models.Response.VodGetVCreativeTaskResultResponse
+	(*VodCreateSpaceResponse)(nil),                                  // 79: Volcengine.Vod.Models.Response.VodCreateSpaceResponse
+	(*VodDeleteSpaceResponse)(nil),                                  // 80: Volcengine.Vod.Models.Response.VodDeleteSpaceResponse
+	(*VodListSpaceResponse)(nil),                                    // 81: Volcengine.Vod.Models.Response.VodListSpaceResponse
+	(*VodGetSpaceDetailResponse)(nil),                               // 82: Volcengine.Vod.Models.Response.VodGetSpaceDetailResponse
+	(*VodUpdateSpaceResponse)(nil),                                  // 83: Volcengine.Vod.Models.Response.VodUpdateSpaceResponse
+	(*VodUpdateSpaceUploadConfigResponse)(nil),                      // 84: Volcengine.Vod.Models.Response.VodUpdateSpaceUploadConfigResponse
+	(*VodDescribeUploadSpaceConfigResponse)(nil),                    // 85: Volcengine.Vod.Models.Response.VodDescribeUploadSpaceConfigResponse
+	(*VodUpdateUploadSpaceConfigResponse)(nil),                      // 86: Volcengine.Vod.Models.Response.VodUpdateUploadSpaceConfigResponse
+	(*VodDescribeVodSpaceStorageDataResponse)(nil),                  // 87: Volcengine.Vod.Models.Response.VodDescribeVodSpaceStorageDataResponse
+	(*VodUpdateDomainPlayRuleResponse)(nil),                         // 88: Volcengine.Vod.Models.Response.VodUpdateDomainPlayRuleResponse
+	(*VodAddDomainToSchedulerResponse)(nil),                         // 89: Volcengine.Vod.Models.Response.VodAddDomainToSchedulerResponse
+	(*VodRemoveDomainFromSchedulerResponse)(nil),                    // 90: Volcengine.Vod.Models.Response.VodRemoveDomainFromSchedulerResponse
+	(*VodDeleteDomainResponse)(nil),                                 // 91: Volcengine.Vod.Models.Response.VodDeleteDomainResponse
+	(*VodStartDomainResponse)(nil),                                  // 92: Volcengine.Vod.Models.Response.VodStartDomainResponse
+	(*VodStopDomainResponse)(nil),                                   // 93: Volcengine.Vod.Models.Response.VodStopDomainResponse
+	(*VodListDomainResponse)(nil),                                   // 94: Volcengine.Vod.Models.Response.VodListDomainResponse
+	(*VodCreateCdnRefreshTaskResponse)(nil),                         // 95: Volcengine.Vod.Models.Response.VodCreateCdnRefreshTaskResponse
+	(*VodCreateCdnPreloadTaskResponse)(nil),                         // 96: Volcengine.Vod.Models.Response.VodCreateCdnPreloadTaskResponse
+	(*VodListCdnTasksResponse)(nil),                                 // 97: Volcengine.Vod.Models.Response.VodListCdnTasksResponse
+	(*VodListCdnAccessLogResponse)(nil),                             // 98: Volcengine.Vod.Models.Response.VodListCdnAccessLogResponse
+	(*VodListCdnTopAccessUrlResponse)(nil),                          // 99: Volcengine.Vod.Models.Response.VodListCdnTopAccessUrlResponse
+	(*VodListCdnTopAccessResponse)(nil),                             // 100: Volcengine.Vod.Models.Response.VodListCdnTopAccessResponse
+	(*VodDescribeVodDomainBandwidthDataResponse)(nil),               // 101: Volcengine.Vod.Models.Response.VodDescribeVodDomainBandwidthDataResponse
+	(*VodCdnStatisticsCommonResponse)(nil),                          // 102: Volcengine.Vod.Models.Response.VodCdnStatisticsCommonResponse
+	(*VodDescribeIPInfoResponse)(nil),                               // 103: Volcengine.Vod.Models.Response.VodDescribeIPInfoResponse
+	(*VodDescribeVodDomainTrafficDataResponse)(nil),                 // 104: Volcengine.Vod.Models.Response.VodDescribeVodDomainTrafficDataResponse
+	(*VodSubmitBlockTasksResponse)(nil),                             // 105: Volcengine.Vod.Models.Response.VodSubmitBlockTasksResponse
+	(*VodGetContentBlockTasksResponse)(nil),                         // 106: Volcengine.Vod.Models.Response.VodGetContentBlockTasksResponse
+	(*VodCreateDomainV2Response)(nil),                               // 107: Volcengine.Vod.Models.Response.VodCreateDomainV2Response
+	(*VodCreateDomainV3Response)(nil),                               // 108: Volcengine.Vod.Models.Response.VodCreateDomainV3Response
+	(*VodUpdateDomainExpireV2Response)(nil),                         // 109: Volcengine.Vod.Models.Response.VodUpdateDomainExpireV2Response
+	(*VodUpdateDomainAuthConfigV2Response)(nil),                     // 110: Volcengine.Vod.Models.Response.VodUpdateDomainAuthConfigV2Response
+	(*VodUpdateDomainUrlAuthConfigV2Response)(nil),                  // 111: Volcengine.Vod.Models.Response.VodUpdateDomainUrlAuthConfigV2Response
+	(*VodVerifyDomainOwnerResponse)(nil),                            // 112: Volcengine.Vod.Models.Response.VodVerifyDomainOwnerResponse
+	(*VodDescribeDomainVerifyContentResponse)(nil),                  // 113: Volcengine.Vod.Models.Response.VodDescribeDomainVerifyContentResponse
+	(*VodListPCDNDomainResponse)(nil),                               // 114: Volcengine.Vod.Models.Response.VodListPCDNDomainResponse
+	(*VodCreatePCDNDomainResponse)(nil),                             // 115: Volcengine.Vod.Models.Response.VodCreatePCDNDomainResponse
+	(*VodStartPCDNDomainResponse)(nil),                              // 116: Volcengine.Vod.Models.Response.VodStartPCDNDomainResponse
+	(*VodStopPCDNDomainResponse)(nil),                               // 117: Volcengine.Vod.Models.Response.VodStopPCDNDomainResponse
+	(*VodDeletePCDNDomainResponse)(nil),                             // 118: Volcengine.Vod.Models.Response.VodDeletePCDNDomainResponse
+	(*VodUpdateDomainConfigResponse)(nil),                           // 119: Volcengine.Vod.Models.Response.VodUpdateDomainConfigResponse
+	(*VodDescribeDomainConfigResponse)(nil),                         // 120: Volcengine.Vod.Models.Response.VodDescribeDomainConfigResponse
+	(*VodDescribeCdnEdgeIpResponse)(nil),                            // 121: Volcengine.Vod.Models.Response.VodDescribeCdnEdgeIpResponse
+	(*VodDescribeCdnRegionAndIspResponse)(nil),                      // 122: Volcengine.Vod.Models.Response.VodDescribeCdnRegionAndIspResponse
+	(*AddOrUpdateCertificateV2Response)(nil),                        // 123: Volcengine.Vod.Models.Response.AddOrUpdateCertificateV2Response
+	(*UpdateDomainAreaResponse)(nil),                                // 124: Volcengine.Vod.Models.Response.UpdateDomainAreaResponse
+	(*VodAddCallbackSubscriptionResponse)(nil),                      // 125: Volcengine.Vod.Models.Response.VodAddCallbackSubscriptionResponse
+	(*VodSetCallbackEventResponse)(nil),                             // 126: Volcengine.Vod.Models.Response.VodSetCallbackEventResponse
+	(*GetCallbackRecordResponse)(nil),                               // 127: Volcengine.Vod.Models.Response.GetCallbackRecordResponse
+	(*VodGetSmartStrategyLitePlayInfoResponse)(nil),                 // 128: Volcengine.Vod.Models.Response.VodGetSmartStrategyLitePlayInfoResponse
+	(*VodGetAppInfoResponse)(nil),                                   // 129: Volcengine.Vod.Models.Response.VodGetAppInfoResponse
+	(*DescribeVodSpaceTranscodeDataResponse)(nil),                   // 130: Volcengine.Vod.Models.Response.DescribeVodSpaceTranscodeDataResponse
+	(*DescribeVodSpaceAIStatisDataResponse)(nil),                    // 131: Volcengine.Vod.Models.Response.DescribeVodSpaceAIStatisDataResponse
+	(*DescribeVodSpaceSubtitleStatisDataResponse)(nil),              // 132: Volcengine.Vod.Models.Response.DescribeVodSpaceSubtitleStatisDataResponse
+	(*DescribeVodSpaceDetectStatisDataResponse)(nil),                // 133: Volcengine.Vod.Models.Response.DescribeVodSpaceDetectStatisDataResponse
+	(*DescribeVodSnapshotDataResponse)(nil),                         // 134: Volcengine.Vod.Models.Response.DescribeVodSnapshotDataResponse
+	(*DescribeVodSpaceWorkflowDetailDataResponse)(nil),              // 135: Volcengine.Vod.Models.Response.DescribeVodSpaceWorkflowDetailDataResponse
+	(*DescribeVodSpaceEditDetailDataResponse)(nil),                  // 136: Volcengine.Vod.Models.Response.DescribeVodSpaceEditDetailDataResponse
+	(*DescribeVodRealtimeMediaDataResponse)(nil),                    // 137: Volcengine.Vod.Models.Response.DescribeVodRealtimeMediaDataResponse
+	(*DescribeVodRealtimeMediaDetailDataResponse)(nil),              // 138: Volcengine.Vod.Models.Response.DescribeVodRealtimeMediaDetailDataResponse
+	(*DescribeVodPlayFileLogByDomainResponse)(nil),                  // 139: Volcengine.Vod.Models.Response.DescribeVodPlayFileLogByDomainResponse
+	(*DescribeVodEnhanceImageDataResponse)(nil),                     // 140: Volcengine.Vod.Models.Response.DescribeVodEnhanceImageDataResponse
+	(*DescribeVodSpaceEditStatisDataResponse)(nil),                  // 141: Volcengine.Vod.Models.Response.DescribeVodSpaceEditStatisDataResponse
+	(*DescribeVodPlayedStatisDataResponse)(nil),                     // 142: Volcengine.Vod.Models.Response.DescribeVodPlayedStatisDataResponse
+	(*DescribeVodMostPlayedStatisDataResponse)(nil),                 // 143: Volcengine.Vod.Models.Response.DescribeVodMostPlayedStatisDataResponse
+	(*DescribeVodVidTrafficFileLogResponse)(nil),                    // 144: Volcengine.Vod.Models.Response.DescribeVodVidTrafficFileLogResponse
+	(*VodSubmitBlockMediaTaskResponse)(nil),                         // 145: Volcengine.Vod.Models.Response.VodSubmitBlockMediaTaskResponse
+	(*VodSubmitUnblockMediaTaskResponse)(nil),                       // 146: Volcengine.Vod.Models.Response.VodSubmitUnblockMediaTaskResponse
+	(*VodQueryMediaBlockStatusResponse)(nil),                        // 147: Volcengine.Vod.Models.Response.VodQueryMediaBlockStatusResponse
+	(*VodListProjectsResponse)(nil),                                 // 148: Volcengine.Vod.Models.Response.VodListProjectsResponse
+	(*VodGetTradeConfigurationResponse)(nil),                        // 149: Volcengine.Vod.Models.Response.VodGetTradeConfigurationResponse
+	(*VodSetCloudMigrateJobResponse)(nil),                           // 150: Volcengine.Vod.Models.Response.VodSetCloudMigrateJobResponse
+	(*VodSubmitCloudMigrateJobResponse)(nil),                        // 151: Volcengine.Vod.Models.Response.VodSubmitCloudMigrateJobResponse
+	(*VodGetCloudMigrateJobResponse)(nil),                           // 152: Volcengine.Vod.Models.Response.VodGetCloudMigrateJobResponse
+	(*VodReportEventResponse)(nil),                                  // 153: Volcengine.Vod.Models.Response.VodReportEventResponse
+	(*VodCreateDramaRecapTaskResponse)(nil),                         // 154: Volcengine.Vod.Models.Response.VodCreateDramaRecapTaskResponse
+	(*VodCreateDramaScriptTaskResponse)(nil),                        // 155: Volcengine.Vod.Models.Response.VodCreateDramaScriptTaskResponse
+	(*VodQueryDramaRecapTaskResponse)(nil),                          // 156: Volcengine.Vod.Models.Response.VodQueryDramaRecapTaskResponse
+	(*VodQueryDramaScriptTaskResponse)(nil),                         // 157: Volcengine.Vod.Models.Response.VodQueryDramaScriptTaskResponse
+	(*VodGetMediaEntityListResponse)(nil),                           // 158: Volcengine.Vod.Models.Response.VodGetMediaEntityListResponse
+	(*VodGetMediaEntityResponse)(nil),                               // 159: Volcengine.Vod.Models.Response.VodGetMediaEntityResponse
+	(*VodDeleteMediaEntityResponse)(nil),                            // 160: Volcengine.Vod.Models.Response.VodDeleteMediaEntityResponse
+	(*VodGetMediaEntityConfigListResponse)(nil),                     // 161: Volcengine.Vod.Models.Response.VodGetMediaEntityConfigListResponse
+	(*base.ResponseMetadata)(nil),                                   // 162: Volcengine.Base.Models.Base.ResponseMetadata
+	(*business.VodAllPlayInfoResult)(nil),                           // 163: Volcengine.Vod.Models.Business.VodAllPlayInfoResult
+	(*business.VodPlayInfoModel)(nil),                               // 164: Volcengine.Vod.Models.Business.VodPlayInfoModel
+	(*business.VodGetOriginalPlayInfoResult)(nil),                   // 165: Volcengine.Vod.Models.Business.VodGetOriginalPlayInfoResult
+	(*business.VodGetPrivateDrmPlayAuthResult)(nil),                 // 166: Volcengine.Vod.Models.Business.VodGetPrivateDrmPlayAuthResult
+	(*business.VodGetHlsDecryptionKeyResult)(nil),                   // 167: Volcengine.Vod.Models.Business.VodGetHlsDecryptionKeyResult
+	(*business.VodCreateHlsDecryptionKeyResult)(nil),                // 168: Volcengine.Vod.Models.Business.VodCreateHlsDecryptionKeyResult
+	(*business.VodGetPlayInfoWithLiveTimeShiftSceneResult)(nil),     // 169: Volcengine.Vod.Models.Business.VodGetPlayInfoWithLiveTimeShiftSceneResult
+	(*business.VodDescribeDrmDataKeyResult)(nil),                    // 170: Volcengine.Vod.Models.Business.VodDescribeDrmDataKeyResult
+	(*business.VodSubmitMoveObjectTaskRespData)(nil),                // 171: Volcengine.Vod.Models.Business.VodSubmitMoveObjectTaskRespData
+	(*business.VodQueryMoveObjectTaskInfoResData)(nil),              // 172: Volcengine.Vod.Models.Business.VodQueryMoveObjectTaskInfoResData
+	(*business.VodSubmitBlockObjectTasksResult)(nil),                // 173: Volcengine.Vod.Models.Business.VodSubmitBlockObjectTasksResult
+	(*business.VodListBlockObjectTasksResult)(nil),                  // 174: Volcengine.Vod.Models.Business.VodListBlockObjectTasksResult
+	(*business.VodCommitData)(nil),                                  // 175: Volcengine.Vod.Models.Business.VodCommitData
+	(*business.VodQueryData)(nil),                                   // 176: Volcengine.Vod.Models.Business.VodQueryData
+	(*business.VodUrlResponseData)(nil),                             // 177: Volcengine.Vod.Models.Business.VodUrlResponseData
+	(*business.VodApplyUploadInfoResult)(nil),                       // 178: Volcengine.Vod.Models.Business.VodApplyUploadInfoResult
+	(*business.VodCommitUploadInfoResult)(nil),                      // 179: Volcengine.Vod.Models.Business.VodCommitUploadInfoResult
+	(*business.VodParseUploadManifestResult)(nil),                   // 180: Volcengine.Vod.Models.Business.VodParseUploadManifestResult
+	(*business.VodListFileMetaInfosByFileNamesResult)(nil),          // 181: Volcengine.Vod.Models.Business.VodListFileMetaInfosByFileNamesResult
+	(*business.VodGetMediaInfosData)(nil),                           // 182: Volcengine.Vod.Models.Business.VodGetMediaInfosData
+	(*business.VodGetRecPosterData)(nil),                            // 183: Volcengine.Vod.Models.Business.VodGetRecPosterData
+	(*business.VodUpdateMediaStorageClassData)(nil),                 // 184: Volcengine.Vod.Models.Business.VodUpdateMediaStorageClassData
+	(*business.VodRestoreColdArchiveVideoData)(nil),                 // 185: Volcengine.Vod.Models.Business.VodRestoreColdArchiveVideoData
+	(*business.VodGetRestoreVideoStatusData)(nil),                   // 186: Volcengine.Vod.Models.Business.VodGetRestoreVideoStatusData
+	(*business.VodDeleteMediaData)(nil),                             // 187: Volcengine.Vod.Models.Business.VodDeleteMediaData
+	(*business.VodDeleteTranscodesData)(nil),                        // 188: Volcengine.Vod.Models.Business.VodDeleteTranscodesData
+	(*business.VodDeleteMediaTosFileData)(nil),                      // 189: Volcengine.Vod.Models.Business.VodDeleteMediaTosFileData
+	(*business.VodGetMediaListData)(nil),                            // 190: Volcengine.Vod.Models.Business.VodGetMediaListData
+	(*business.VodGetSubtitleInfoListData)(nil),                     // 191: Volcengine.Vod.Models.Business.VodGetSubtitleInfoListData
+	(*business.VodUpdateSubtitleStatusData)(nil),                    // 192: Volcengine.Vod.Models.Business.VodUpdateSubtitleStatusData
+	(*business.VodGetFramesForAuditResult)(nil),                     // 193: Volcengine.Vod.Models.Business.VodGetFramesForAuditResult
+	(*business.VodGetBetterFramesForAuditResult)(nil),               // 194: Volcengine.Vod.Models.Business.VodGetBetterFramesForAuditResult
+	(*business.VodGetAudioInfoForAuditResult)(nil),                  // 195: Volcengine.Vod.Models.Business.VodGetAudioInfoForAuditResult
+	(*business.VodGetAutomaticSpeechRecognitionForAuditResult)(nil), // 196: Volcengine.Vod.Models.Business.VodGetAutomaticSpeechRecognitionForAuditResult
+	(*business.VodGetAudioEventDetectionForAuditResult)(nil),        // 197: Volcengine.Vod.Models.Business.VodGetAudioEventDetectionForAuditResult
+	(*business.VodCreateVideoClassificationData)(nil),               // 198: Volcengine.Vod.Models.Business.VodCreateVideoClassificationData
+	(*business.VodVideoClassificationsData)(nil),                    // 199: Volcengine.Vod.Models.Business.VodVideoClassificationsData
+	(*business.VodSnapshotData)(nil),                                // 200: Volcengine.Vod.Models.Business.VodSnapshotData
+	(*business.VodGetFileInfosData)(nil),                            // 201: Volcengine.Vod.Models.Business.VodGetFileInfosData
+	(*business.VodUpdateFileStorageClassData)(nil),                  // 202: Volcengine.Vod.Models.Business.VodUpdateFileStorageClassData
+	(*business.VodGetInnerAuditURLsData)(nil),                       // 203: Volcengine.Vod.Models.Business.VodGetInnerAuditURLsData
+	(*business.VodGetAdAuditResultByVidData)(nil),                   // 204: Volcengine.Vod.Models.Business.VodGetAdAuditResultByVidData
+	(*business.VodStartWorkflowResult)(nil),                         // 205: Volcengine.Vod.Models.Business.VodStartWorkflowResult
+	(*business.TranscodeResult)(nil),                                // 206: Volcengine.Vod.Models.Business.TranscodeResult
+	(*business.VodListWorkflowExecutionResult)(nil),                 // 207: Volcengine.Vod.Models.Business.VodListWorkflowExecutionResult
+	(*business.VodGetWorkflowExecutionDetailResult)(nil),            // 208: Volcengine.Vod.Models.Business.VodGetWorkflowExecutionDetailResult
+	(*business.WorkflowExecution)(nil),                              // 209: Volcengine.Vod.Models.Business.WorkflowExecution
+	(*business.VodWorkflowResult)(nil),                              // 210: Volcengine.Vod.Models.Business.VodWorkflowResult
+	(*business.VodTaskTemplateResult)(nil),                          // 211: Volcengine.Vod.Models.Business.VodTaskTemplateResult
+	(*business.VodListTaskTemplateResult)(nil),                      // 212: Volcengine.Vod.Models.Business.VodListTaskTemplateResult
+	(*business.VodWorkflowTemplateResult)(nil),                      // 213: Volcengine.Vod.Models.Business.VodWorkflowTemplateResult
+	(*business.VodListWorkflowTemplateResult)(nil),                  // 214: Volcengine.Vod.Models.Business.VodListWorkflowTemplateResult
+	(*business.LogoTemplate)(nil),                                   // 215: Volcengine.Vod.Models.Business.LogoTemplate
+	(*business.VodListWatermarkResponseResult)(nil),                 // 216: Volcengine.Vod.Models.Business.VodListWatermarkResponseResult
+	(*business.SubmitDirectEditTaskAsyncResult)(nil),                // 217: Volcengine.Vod.Models.Business.SubmitDirectEditTaskAsyncResult
+	(*business.SubmitDirectEditTaskSyncResult)(nil),                 // 218: Volcengine.Vod.Models.Business.SubmitDirectEditTaskSyncResult
+	(*business.GetDirectEditProgress)(nil),                          // 219: Volcengine.Vod.Models.Business.GetDirectEditProgress
+	(*business.GetDirectEditResult)(nil),                            // 220: Volcengine.Vod.Models.Business.GetDirectEditResult
+	(*business.CancelDirectEditTask)(nil),                           // 221: Volcengine.Vod.Models.Business.CancelDirectEditTask
+	(*business.AsyncVCreativeTaskResult)(nil),                       // 222: Volcengine.Vod.Models.Business.AsyncVCreativeTaskResult
+	(*business.GetVCreativeTaskResult)(nil),                         // 223: Volcengine.Vod.Models.Business.GetVCreativeTaskResult
+	(*business.VodSpaceInfo)(nil),                                   // 224: Volcengine.Vod.Models.Business.VodSpaceInfo
+	(*business.VodUploadSpaceConfig)(nil),                           // 225: Volcengine.Vod.Models.Business.VodUploadSpaceConfig
+	(*business.VodDescribeVodSpaceStorageDataResult)(nil),           // 226: Volcengine.Vod.Models.Business.VodDescribeVodSpaceStorageDataResult
+	(*business.VodDomainConfigInfo)(nil),                            // 227: Volcengine.Vod.Models.Business.VodDomainConfigInfo
+	(*business.VodCreateCdnTaskResult)(nil),                         // 228: Volcengine.Vod.Models.Business.VodCreateCdnTaskResult
+	(*business.VodCdnTaskResult)(nil),                               // 229: Volcengine.Vod.Models.Business.VodCdnTaskResult
+	(*business.VodListCdnAccessLogResult)(nil),                      // 230: Volcengine.Vod.Models.Business.VodListCdnAccessLogResult
+	(*business.VodListCdnTopAccessUrlResult)(nil),                   // 231: Volcengine.Vod.Models.Business.VodListCdnTopAccessUrlResult
+	(*business.VodListCdnTopAccessResult)(nil),                      // 232: Volcengine.Vod.Models.Business.VodListCdnTopAccessResult
+	(*business.VodDescribeVodDomainBandwidthDataResult)(nil),        // 233: Volcengine.Vod.Models.Business.VodDescribeVodDomainBandwidthDataResult
+	(*business.VodCdnStatisticsCommonResult)(nil),                   // 234: Volcengine.Vod.Models.Business.VodCdnStatisticsCommonResult
+	(*business.VodCdnIpInfo)(nil),                                   // 235: Volcengine.Vod.Models.Business.VodCdnIpInfo
+	(*business.VodDescribeVodDomainTrafficDataResult)(nil),          // 236: Volcengine.Vod.Models.Business.VodDescribeVodDomainTrafficDataResult
+	(*business.VodSubmitBlockTasksResult)(nil),                      // 237: Volcengine.Vod.Models.Business.VodSubmitBlockTasksResult
+	(*business.VodGetContentBlockTasksResult)(nil),                  // 238: Volcengine.Vod.Models.Business.VodGetContentBlockTasksResult
+	(*business.VodVerifyDomainOwnerResult)(nil),                     // 239: Volcengine.Vod.Models.Business.VodVerifyDomainOwnerResult
+	(*business.VodDescribeDomainVerifyContentResult)(nil),           // 240: Volcengine.Vod.Models.Business.VodDescribeDomainVerifyContentResult
+	(*business.VodPCDNDomainConfigInfo)(nil),                        // 241: Volcengine.Vod.Models.Business.VodPCDNDomainConfigInfo
+	(*business.VodDescribeDomainConfigResult)(nil),                  // 242: Volcengine.Vod.Models.Business.VodDescribeDomainConfigResult
+	(*business.VodDescribeCdnEdgeIpResult)(nil),                     // 243: Volcengine.Vod.Models.Business.VodDescribeCdnEdgeIpResult
+	(*business.VodDescribeCdnRegionAndIspResult)(nil),               // 244: Volcengine.Vod.Models.Business.VodDescribeCdnRegionAndIspResult
+	(*business.CallbackRecords)(nil),                                // 245: Volcengine.Vod.Models.Business.CallbackRecords
+	(*business.VodGetSmartStrategyLitePlayInfoResult)(nil),          // 246: Volcengine.Vod.Models.Business.VodGetSmartStrategyLitePlayInfoResult
+	(*business.VodGetAppInfoResult)(nil),                            // 247: Volcengine.Vod.Models.Business.VodGetAppInfoResult
+	(*business.DescribeVodSpaceTranscodeDataResult)(nil),            // 248: Volcengine.Vod.Models.Business.DescribeVodSpaceTranscodeDataResult
+	(*business.DescribeVodSpaceAIStatisDataResult)(nil),             // 249: Volcengine.Vod.Models.Business.DescribeVodSpaceAIStatisDataResult
+	(*business.DescribeVodSpaceSubtitleStatisDataResult)(nil),       // 250: Volcengine.Vod.Models.Business.DescribeVodSpaceSubtitleStatisDataResult
+	(*business.DescribeVodSpaceDetectStatisDataResult)(nil),         // 251: Volcengine.Vod.Models.Business.DescribeVodSpaceDetectStatisDataResult
+	(*business.DescribeVodSnapshotDataResult)(nil),                  // 252: Volcengine.Vod.Models.Business.DescribeVodSnapshotDataResult
+	(*business.DescribeVodSpaceWorkflowDetailDataResult)(nil),       // 253: Volcengine.Vod.Models.Business.DescribeVodSpaceWorkflowDetailDataResult
+	(*business.DescribeVodSpaceEditDetailDataResult)(nil),           // 254: Volcengine.Vod.Models.Business.DescribeVodSpaceEditDetailDataResult
+	(*business.DescribeVodRealtimeMediaDataResult)(nil),             // 255: Volcengine.Vod.Models.Business.DescribeVodRealtimeMediaDataResult
+	(*business.DescribeVodRealtimeMediaDetailDataResult)(nil),       // 256: Volcengine.Vod.Models.Business.DescribeVodRealtimeMediaDetailDataResult
+	(*business.DescribeVodPlayFileLogByDomainResult)(nil),           // 257: Volcengine.Vod.Models.Business.DescribeVodPlayFileLogByDomainResult
+	(*business.DescribeVodEnhanceImageDataResult)(nil),              // 258: Volcengine.Vod.Models.Business.DescribeVodEnhanceImageDataResult
+	(*business.DescribeVodSpaceEditStatisDataResult)(nil),           // 259: Volcengine.Vod.Models.Business.DescribeVodSpaceEditStatisDataResult
+	(*business.DescribeVodPlayedStatisDataResult)(nil),              // 260: Volcengine.Vod.Models.Business.DescribeVodPlayedStatisDataResult
+	(*business.DescribeVodMostPlayedStatisDataResult)(nil),          // 261: Volcengine.Vod.Models.Business.DescribeVodMostPlayedStatisDataResult
+	(*business.DescribeVodVidTrafficFileLogResult)(nil),             // 262: Volcengine.Vod.Models.Business.DescribeVodVidTrafficFileLogResult
+	(*business.VodSubmitBlockMediaTaskResult)(nil),                  // 263: Volcengine.Vod.Models.Business.VodSubmitBlockMediaTaskResult
+	(*business.VodSubmitUnblockMediaTaskResult)(nil),                // 264: Volcengine.Vod.Models.Business.VodSubmitUnblockMediaTaskResult
+	(*business.VodQueryMediaBlockStatusResult)(nil),                 // 265: Volcengine.Vod.Models.Business.VodQueryMediaBlockStatusResult
+	(*business.VodListProjectsResult)(nil),                          // 266: Volcengine.Vod.Models.Business.VodListProjectsResult
+	(*business.TradeConfigurationInfoResult)(nil),                   // 267: Volcengine.Vod.Models.Business.TradeConfigurationInfoResult
+	(*business.VodSetCloudMigrateJobResult)(nil),                    // 268: Volcengine.Vod.Models.Business.VodSetCloudMigrateJobResult
+	(*business.VodGetCloudMigrateJobResult)(nil),                    // 269: Volcengine.Vod.Models.Business.VodGetCloudMigrateJobResult
+	(*business.VodReportEventResult)(nil),                           // 270: Volcengine.Vod.Models.Business.VodReportEventResult
+	(*business.VodCreateDramaRecapTaskResult)(nil),                  // 271: Volcengine.Vod.Models.Business.VodCreateDramaRecapTaskResult
+	(*business.VodCreateDramaScriptTaskResult)(nil),                 // 272: Volcengine.Vod.Models.Business.VodCreateDramaScriptTaskResult
+	(*business.VodQueryDramaRecapTaskResult)(nil),                   // 273: Volcengine.Vod.Models.Business.VodQueryDramaRecapTaskResult
+	(*business.VodQueryDramaScriptTaskResult)(nil),                  // 274: Volcengine.Vod.Models.Business.VodQueryDramaScriptTaskResult
+	(*business.VodGetMediaEntityListResult)(nil),                    // 275: Volcengine.Vod.Models.Business.VodGetMediaEntityListResult
+	(*business.VodGetMediaEntityResult)(nil),                        // 276: Volcengine.Vod.Models.Business.VodGetMediaEntityResult
+	(*business.VodMediaEntityConfig)(nil),                           // 277: Volcengine.Vod.Models.Business.VodMediaEntityConfig
 }
 var file_volcengine_vod_response_response_vod_proto_depIdxs = []int32{
-	160, // 0: Volcengine.Vod.Models.Response.VodGetAllPlayInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	161, // 1: Volcengine.Vod.Models.Response.VodGetAllPlayInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodAllPlayInfoResult
-	160, // 2: Volcengine.Vod.Models.Response.VodGetPlayInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	162, // 3: Volcengine.Vod.Models.Response.VodGetPlayInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodPlayInfoModel
-	160, // 4: Volcengine.Vod.Models.Response.VodGetOriginalPlayInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	163, // 5: Volcengine.Vod.Models.Response.VodGetOriginalPlayInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetOriginalPlayInfoResult
-	160, // 6: Volcengine.Vod.Models.Response.VodGetPrivateDrmPlayAuthResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	164, // 7: Volcengine.Vod.Models.Response.VodGetPrivateDrmPlayAuthResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetPrivateDrmPlayAuthResult
-	160, // 8: Volcengine.Vod.Models.Response.VodGetHlsDecryptionKeyResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	165, // 9: Volcengine.Vod.Models.Response.VodGetHlsDecryptionKeyResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetHlsDecryptionKeyResult
-	160, // 10: Volcengine.Vod.Models.Response.VodCreateHlsDecryptionKeyResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	166, // 11: Volcengine.Vod.Models.Response.VodCreateHlsDecryptionKeyResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCreateHlsDecryptionKeyResult
-	160, // 12: Volcengine.Vod.Models.Response.VodGetPlayInfoWithLiveTimeShiftSceneResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	167, // 13: Volcengine.Vod.Models.Response.VodGetPlayInfoWithLiveTimeShiftSceneResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetPlayInfoWithLiveTimeShiftSceneResult
-	160, // 14: Volcengine.Vod.Models.Response.VodDescribeDrmDataKeyResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	168, // 15: Volcengine.Vod.Models.Response.VodDescribeDrmDataKeyResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeDrmDataKeyResult
-	160, // 16: Volcengine.Vod.Models.Response.VodSubmitMoveObjectTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	169, // 17: Volcengine.Vod.Models.Response.VodSubmitMoveObjectTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSubmitMoveObjectTaskRespData
-	160, // 18: Volcengine.Vod.Models.Response.VodQueryMoveObjectTaskInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	170, // 19: Volcengine.Vod.Models.Response.VodQueryMoveObjectTaskInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodQueryMoveObjectTaskInfoResData
-	160, // 20: Volcengine.Vod.Models.Response.VodSubmitBlockObjectTasksResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	171, // 21: Volcengine.Vod.Models.Response.VodSubmitBlockObjectTasksResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSubmitBlockObjectTasksResult
-	160, // 22: Volcengine.Vod.Models.Response.VodListBlockObjectTasksResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	172, // 23: Volcengine.Vod.Models.Response.VodListBlockObjectTasksResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListBlockObjectTasksResult
-	160, // 24: Volcengine.Vod.Models.Response.VodUploadMediaResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	173, // 25: Volcengine.Vod.Models.Response.VodUploadMediaResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCommitData
-	160, // 26: Volcengine.Vod.Models.Response.VodQueryUploadTaskInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	174, // 27: Volcengine.Vod.Models.Response.VodQueryUploadTaskInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodQueryData
-	160, // 28: Volcengine.Vod.Models.Response.VodUrlUploadResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	175, // 29: Volcengine.Vod.Models.Response.VodUrlUploadResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodUrlResponseData
-	160, // 30: Volcengine.Vod.Models.Response.VodApplyUploadInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	176, // 31: Volcengine.Vod.Models.Response.VodApplyUploadInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodApplyUploadInfoResult
-	160, // 32: Volcengine.Vod.Models.Response.VodCommitUploadInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	177, // 33: Volcengine.Vod.Models.Response.VodCommitUploadInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCommitUploadInfoResult
-	160, // 34: Volcengine.Vod.Models.Response.VodParseUploadManifestResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	178, // 35: Volcengine.Vod.Models.Response.VodParseUploadManifestResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodParseUploadManifestResult
-	160, // 36: Volcengine.Vod.Models.Response.VodListFileMetaInfosByFileNamesResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	179, // 37: Volcengine.Vod.Models.Response.VodListFileMetaInfosByFileNamesResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListFileMetaInfosByFileNamesResult
-	160, // 38: Volcengine.Vod.Models.Response.VodGetMediaInfosResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	180, // 39: Volcengine.Vod.Models.Response.VodGetMediaInfosResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetMediaInfosData
-	160, // 40: Volcengine.Vod.Models.Response.VodUpdateMediaInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 41: Volcengine.Vod.Models.Response.VodGetRecommendedPosterResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	181, // 42: Volcengine.Vod.Models.Response.VodGetRecommendedPosterResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetRecPosterData
-	160, // 43: Volcengine.Vod.Models.Response.VodUpdateMediaPublishStatusResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 44: Volcengine.Vod.Models.Response.VodUpdateMediaStorageClassResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	182, // 45: Volcengine.Vod.Models.Response.VodUpdateMediaStorageClassResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodUpdateMediaStorageClassData
-	160, // 46: Volcengine.Vod.Models.Response.VodDeleteMediaResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	183, // 47: Volcengine.Vod.Models.Response.VodDeleteMediaResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDeleteMediaData
-	160, // 48: Volcengine.Vod.Models.Response.VodDeleteMaterialResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 49: Volcengine.Vod.Models.Response.VodDeleteTranscodesResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	184, // 50: Volcengine.Vod.Models.Response.VodDeleteTranscodesResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDeleteTranscodesData
-	160, // 51: Volcengine.Vod.Models.Response.VodDeleteMediaTosFileResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	185, // 52: Volcengine.Vod.Models.Response.VodDeleteMediaTosFileResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDeleteMediaTosFileData
-	160, // 53: Volcengine.Vod.Models.Response.VodGetMediaListResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	186, // 54: Volcengine.Vod.Models.Response.VodGetMediaListResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetMediaListData
-	160, // 55: Volcengine.Vod.Models.Response.VodGetSubtitleInfoListResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	187, // 56: Volcengine.Vod.Models.Response.VodGetSubtitleInfoListResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetSubtitleInfoListData
-	160, // 57: Volcengine.Vod.Models.Response.VodUpdateSubtitleStatusResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	188, // 58: Volcengine.Vod.Models.Response.VodUpdateSubtitleStatusResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodUpdateSubtitleStatusData
-	160, // 59: Volcengine.Vod.Models.Response.VodUpdateSubtitleInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 60: Volcengine.Vod.Models.Response.VodGetAuditFramesForAuditResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	189, // 61: Volcengine.Vod.Models.Response.VodGetAuditFramesForAuditResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetFramesForAuditResult
-	160, // 62: Volcengine.Vod.Models.Response.VodGetMLFramesForAuditResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	189, // 63: Volcengine.Vod.Models.Response.VodGetMLFramesForAuditResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetFramesForAuditResult
-	160, // 64: Volcengine.Vod.Models.Response.VodGetBetterFramesForAuditResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	190, // 65: Volcengine.Vod.Models.Response.VodGetBetterFramesForAuditResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetBetterFramesForAuditResult
-	160, // 66: Volcengine.Vod.Models.Response.VodGetAudioInfoForAuditResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	191, // 67: Volcengine.Vod.Models.Response.VodGetAudioInfoForAuditResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetAudioInfoForAuditResult
-	160, // 68: Volcengine.Vod.Models.Response.VodGetAutomaticSpeechRecognitionForAuditResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	192, // 69: Volcengine.Vod.Models.Response.VodGetAutomaticSpeechRecognitionForAuditResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetAutomaticSpeechRecognitionForAuditResult
-	160, // 70: Volcengine.Vod.Models.Response.VodGetAudioEventDetectionForAuditResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	193, // 71: Volcengine.Vod.Models.Response.VodGetAudioEventDetectionForAuditResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetAudioEventDetectionForAuditResult
-	160, // 72: Volcengine.Vod.Models.Response.VodCreateVideoClassificationResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	194, // 73: Volcengine.Vod.Models.Response.VodCreateVideoClassificationResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCreateVideoClassificationData
-	160, // 74: Volcengine.Vod.Models.Response.VodUpdateVideoClassificationResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 75: Volcengine.Vod.Models.Response.VodDeleteVideoClassificationResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 76: Volcengine.Vod.Models.Response.VodListVideoClassificationsResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	195, // 77: Volcengine.Vod.Models.Response.VodListVideoClassificationsResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodVideoClassificationsData
-	160, // 78: Volcengine.Vod.Models.Response.VodListSnapshotsResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	196, // 79: Volcengine.Vod.Models.Response.VodListSnapshotsResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSnapshotData
-	160, // 80: Volcengine.Vod.Models.Response.VodGetFileListResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	180, // 81: Volcengine.Vod.Models.Response.VodGetFileListResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetMediaInfosData
-	160, // 82: Volcengine.Vod.Models.Response.VodGetFileInfosResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	197, // 83: Volcengine.Vod.Models.Response.VodGetFileInfosResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetFileInfosData
-	160, // 84: Volcengine.Vod.Models.Response.VodUpdateFileStorageClassResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	198, // 85: Volcengine.Vod.Models.Response.VodUpdateFileStorageClassResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodUpdateFileStorageClassData
-	160, // 86: Volcengine.Vod.Models.Response.VodGetInnerAuditURLsResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	199, // 87: Volcengine.Vod.Models.Response.VodGetInnerAuditURLsResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetInnerAuditURLsData
-	160, // 88: Volcengine.Vod.Models.Response.VodGetAdAuditResultByVidResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	200, // 89: Volcengine.Vod.Models.Response.VodGetAdAuditResultByVidResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetAdAuditResultByVidData
-	160, // 90: Volcengine.Vod.Models.Response.VodExtractMediaMetaTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 91: Volcengine.Vod.Models.Response.VodStartWorkflowResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	201, // 92: Volcengine.Vod.Models.Response.VodStartWorkflowResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodStartWorkflowResult
-	160, // 93: Volcengine.Vod.Models.Response.VodRetrieveTranscodeResultResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	202, // 94: Volcengine.Vod.Models.Response.VodRetrieveTranscodeResultResponse.Result:type_name -> Volcengine.Vod.Models.Business.TranscodeResult
-	160, // 95: Volcengine.Vod.Models.Response.VodListWorkflowExecutionResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	203, // 96: Volcengine.Vod.Models.Response.VodListWorkflowExecutionResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListWorkflowExecutionResult
-	160, // 97: Volcengine.Vod.Models.Response.VodGetWorkflowExecutionDetailResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	204, // 98: Volcengine.Vod.Models.Response.VodGetWorkflowExecutionDetailResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetWorkflowExecutionDetailResult
-	160, // 99: Volcengine.Vod.Models.Response.VodGetWorkflowExecutionStatusResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	205, // 100: Volcengine.Vod.Models.Response.VodGetWorkflowExecutionStatusResponse.Result:type_name -> Volcengine.Vod.Models.Business.WorkflowExecution
-	160, // 101: Volcengine.Vod.Models.Response.VodGetWorkflowResultResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	206, // 102: Volcengine.Vod.Models.Response.VodGetWorkflowResultResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodWorkflowResult
-	160, // 103: Volcengine.Vod.Models.Response.VodCreateTaskTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	207, // 104: Volcengine.Vod.Models.Response.VodCreateTaskTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodTaskTemplateResult
-	160, // 105: Volcengine.Vod.Models.Response.VodUpdateTaskTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	207, // 106: Volcengine.Vod.Models.Response.VodUpdateTaskTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodTaskTemplateResult
-	160, // 107: Volcengine.Vod.Models.Response.VodDeleteTaskTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	207, // 108: Volcengine.Vod.Models.Response.VodDeleteTaskTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodTaskTemplateResult
-	160, // 109: Volcengine.Vod.Models.Response.VodGetTaskTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	207, // 110: Volcengine.Vod.Models.Response.VodGetTaskTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodTaskTemplateResult
-	160, // 111: Volcengine.Vod.Models.Response.VodListTaskTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	208, // 112: Volcengine.Vod.Models.Response.VodListTaskTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListTaskTemplateResult
-	160, // 113: Volcengine.Vod.Models.Response.VodCreateWorkflowTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	209, // 114: Volcengine.Vod.Models.Response.VodCreateWorkflowTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodWorkflowTemplateResult
-	160, // 115: Volcengine.Vod.Models.Response.VodUpdateWorkflowTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 116: Volcengine.Vod.Models.Response.VodDeleteWorkflowTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 117: Volcengine.Vod.Models.Response.VodGetWorkflowTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	209, // 118: Volcengine.Vod.Models.Response.VodGetWorkflowTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodWorkflowTemplateResult
-	160, // 119: Volcengine.Vod.Models.Response.VodListWorkflowTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	210, // 120: Volcengine.Vod.Models.Response.VodListWorkflowTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListWorkflowTemplateResult
-	160, // 121: Volcengine.Vod.Models.Response.VodCreateWatermarkResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	211, // 122: Volcengine.Vod.Models.Response.VodCreateWatermarkResponse.Result:type_name -> Volcengine.Vod.Models.Business.LogoTemplate
-	160, // 123: Volcengine.Vod.Models.Response.VodUpdateWatermarkResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 124: Volcengine.Vod.Models.Response.VodDeleteWatermarkResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 125: Volcengine.Vod.Models.Response.VodGetWatermarkResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	211, // 126: Volcengine.Vod.Models.Response.VodGetWatermarkResponse.Result:type_name -> Volcengine.Vod.Models.Business.LogoTemplate
-	160, // 127: Volcengine.Vod.Models.Response.VodListWatermarkResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	212, // 128: Volcengine.Vod.Models.Response.VodListWatermarkResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListWatermarkResponseResult
-	160, // 129: Volcengine.Vod.Models.Response.VodSubmitDirectEditTaskAsyncResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	213, // 130: Volcengine.Vod.Models.Response.VodSubmitDirectEditTaskAsyncResponse.Result:type_name -> Volcengine.Vod.Models.Business.SubmitDirectEditTaskAsyncResult
-	160, // 131: Volcengine.Vod.Models.Response.VodSubmitDirectEditTaskSyncResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	214, // 132: Volcengine.Vod.Models.Response.VodSubmitDirectEditTaskSyncResponse.Result:type_name -> Volcengine.Vod.Models.Business.SubmitDirectEditTaskSyncResult
-	160, // 133: Volcengine.Vod.Models.Response.VodGetDirectEditProgressResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	215, // 134: Volcengine.Vod.Models.Response.VodGetDirectEditProgressResponse.Result:type_name -> Volcengine.Vod.Models.Business.GetDirectEditProgress
-	160, // 135: Volcengine.Vod.Models.Response.VodGetDirectEditResultResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	216, // 136: Volcengine.Vod.Models.Response.VodGetDirectEditResultResponse.Result:type_name -> Volcengine.Vod.Models.Business.GetDirectEditResult
-	160, // 137: Volcengine.Vod.Models.Response.VodCancelDirectEditTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	217, // 138: Volcengine.Vod.Models.Response.VodCancelDirectEditTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.CancelDirectEditTask
-	160, // 139: Volcengine.Vod.Models.Response.VodAsyncVCreativeTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	218, // 140: Volcengine.Vod.Models.Response.VodAsyncVCreativeTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.AsyncVCreativeTaskResult
-	160, // 141: Volcengine.Vod.Models.Response.VodGetVCreativeTaskResultResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	219, // 142: Volcengine.Vod.Models.Response.VodGetVCreativeTaskResultResponse.Result:type_name -> Volcengine.Vod.Models.Business.GetVCreativeTaskResult
-	160, // 143: Volcengine.Vod.Models.Response.VodCreateSpaceResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 144: Volcengine.Vod.Models.Response.VodDeleteSpaceResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 145: Volcengine.Vod.Models.Response.VodListSpaceResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	220, // 146: Volcengine.Vod.Models.Response.VodListSpaceResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSpaceInfo
-	160, // 147: Volcengine.Vod.Models.Response.VodGetSpaceDetailResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	220, // 148: Volcengine.Vod.Models.Response.VodGetSpaceDetailResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSpaceInfo
-	160, // 149: Volcengine.Vod.Models.Response.VodUpdateSpaceResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 150: Volcengine.Vod.Models.Response.VodUpdateSpaceUploadConfigResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 151: Volcengine.Vod.Models.Response.VodDescribeUploadSpaceConfigResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	221, // 152: Volcengine.Vod.Models.Response.VodDescribeUploadSpaceConfigResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodUploadSpaceConfig
-	160, // 153: Volcengine.Vod.Models.Response.VodUpdateUploadSpaceConfigResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 154: Volcengine.Vod.Models.Response.VodDescribeVodSpaceStorageDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	222, // 155: Volcengine.Vod.Models.Response.VodDescribeVodSpaceStorageDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeVodSpaceStorageDataResult
-	160, // 156: Volcengine.Vod.Models.Response.VodUpdateDomainPlayRuleResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 157: Volcengine.Vod.Models.Response.VodAddDomainToSchedulerResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 158: Volcengine.Vod.Models.Response.VodRemoveDomainFromSchedulerResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 159: Volcengine.Vod.Models.Response.VodDeleteDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 160: Volcengine.Vod.Models.Response.VodStartDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 161: Volcengine.Vod.Models.Response.VodStopDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 162: Volcengine.Vod.Models.Response.VodListDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	223, // 163: Volcengine.Vod.Models.Response.VodListDomainResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDomainConfigInfo
-	160, // 164: Volcengine.Vod.Models.Response.VodCreateCdnRefreshTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	224, // 165: Volcengine.Vod.Models.Response.VodCreateCdnRefreshTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCreateCdnTaskResult
-	160, // 166: Volcengine.Vod.Models.Response.VodCreateCdnPreloadTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	224, // 167: Volcengine.Vod.Models.Response.VodCreateCdnPreloadTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCreateCdnTaskResult
-	160, // 168: Volcengine.Vod.Models.Response.VodListCdnTasksResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	225, // 169: Volcengine.Vod.Models.Response.VodListCdnTasksResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCdnTaskResult
-	160, // 170: Volcengine.Vod.Models.Response.VodListCdnAccessLogResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	226, // 171: Volcengine.Vod.Models.Response.VodListCdnAccessLogResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListCdnAccessLogResult
-	160, // 172: Volcengine.Vod.Models.Response.VodListCdnTopAccessUrlResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	227, // 173: Volcengine.Vod.Models.Response.VodListCdnTopAccessUrlResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListCdnTopAccessUrlResult
-	160, // 174: Volcengine.Vod.Models.Response.VodListCdnTopAccessResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	228, // 175: Volcengine.Vod.Models.Response.VodListCdnTopAccessResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListCdnTopAccessResult
-	160, // 176: Volcengine.Vod.Models.Response.VodDescribeVodDomainBandwidthDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	229, // 177: Volcengine.Vod.Models.Response.VodDescribeVodDomainBandwidthDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeVodDomainBandwidthDataResult
-	160, // 178: Volcengine.Vod.Models.Response.VodCdnStatisticsCommonResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	230, // 179: Volcengine.Vod.Models.Response.VodCdnStatisticsCommonResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCdnStatisticsCommonResult
-	160, // 180: Volcengine.Vod.Models.Response.VodDescribeIPInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	231, // 181: Volcengine.Vod.Models.Response.VodDescribeIPInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCdnIpInfo
-	160, // 182: Volcengine.Vod.Models.Response.VodDescribeVodDomainTrafficDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	232, // 183: Volcengine.Vod.Models.Response.VodDescribeVodDomainTrafficDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeVodDomainTrafficDataResult
-	160, // 184: Volcengine.Vod.Models.Response.VodSubmitBlockTasksResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	233, // 185: Volcengine.Vod.Models.Response.VodSubmitBlockTasksResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSubmitBlockTasksResult
-	160, // 186: Volcengine.Vod.Models.Response.VodGetContentBlockTasksResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	234, // 187: Volcengine.Vod.Models.Response.VodGetContentBlockTasksResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetContentBlockTasksResult
-	160, // 188: Volcengine.Vod.Models.Response.VodCreateDomainV2Response.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 189: Volcengine.Vod.Models.Response.VodCreateDomainV3Response.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 190: Volcengine.Vod.Models.Response.VodUpdateDomainExpireV2Response.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 191: Volcengine.Vod.Models.Response.VodUpdateDomainAuthConfigV2Response.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 192: Volcengine.Vod.Models.Response.VodUpdateDomainUrlAuthConfigV2Response.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 193: Volcengine.Vod.Models.Response.VodVerifyDomainOwnerResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	235, // 194: Volcengine.Vod.Models.Response.VodVerifyDomainOwnerResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodVerifyDomainOwnerResult
-	160, // 195: Volcengine.Vod.Models.Response.VodDescribeDomainVerifyContentResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	236, // 196: Volcengine.Vod.Models.Response.VodDescribeDomainVerifyContentResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeDomainVerifyContentResult
-	160, // 197: Volcengine.Vod.Models.Response.VodListPCDNDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	237, // 198: Volcengine.Vod.Models.Response.VodListPCDNDomainResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodPCDNDomainConfigInfo
-	160, // 199: Volcengine.Vod.Models.Response.VodCreatePCDNDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 200: Volcengine.Vod.Models.Response.VodStartPCDNDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 201: Volcengine.Vod.Models.Response.VodStopPCDNDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 202: Volcengine.Vod.Models.Response.VodDeletePCDNDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 203: Volcengine.Vod.Models.Response.VodUpdateDomainConfigResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 204: Volcengine.Vod.Models.Response.VodDescribeDomainConfigResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	238, // 205: Volcengine.Vod.Models.Response.VodDescribeDomainConfigResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeDomainConfigResult
-	160, // 206: Volcengine.Vod.Models.Response.VodDescribeCdnEdgeIpResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	239, // 207: Volcengine.Vod.Models.Response.VodDescribeCdnEdgeIpResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeCdnEdgeIpResult
-	160, // 208: Volcengine.Vod.Models.Response.VodDescribeCdnRegionAndIspResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	240, // 209: Volcengine.Vod.Models.Response.VodDescribeCdnRegionAndIspResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeCdnRegionAndIspResult
-	160, // 210: Volcengine.Vod.Models.Response.AddOrUpdateCertificateV2Response.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 211: Volcengine.Vod.Models.Response.UpdateDomainAreaResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 212: Volcengine.Vod.Models.Response.VodAddCallbackSubscriptionResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 213: Volcengine.Vod.Models.Response.VodSetCallbackEventResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 214: Volcengine.Vod.Models.Response.GetCallbackRecordResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	241, // 215: Volcengine.Vod.Models.Response.GetCallbackRecordResponse.Result:type_name -> Volcengine.Vod.Models.Business.CallbackRecords
-	160, // 216: Volcengine.Vod.Models.Response.VodGetSmartStrategyLitePlayInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	242, // 217: Volcengine.Vod.Models.Response.VodGetSmartStrategyLitePlayInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetSmartStrategyLitePlayInfoResult
-	160, // 218: Volcengine.Vod.Models.Response.VodGetAppInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	243, // 219: Volcengine.Vod.Models.Response.VodGetAppInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetAppInfoResult
-	160, // 220: Volcengine.Vod.Models.Response.DescribeVodSpaceTranscodeDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	244, // 221: Volcengine.Vod.Models.Response.DescribeVodSpaceTranscodeDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSpaceTranscodeDataResult
-	160, // 222: Volcengine.Vod.Models.Response.DescribeVodSpaceAIStatisDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	245, // 223: Volcengine.Vod.Models.Response.DescribeVodSpaceAIStatisDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSpaceAIStatisDataResult
-	160, // 224: Volcengine.Vod.Models.Response.DescribeVodSpaceSubtitleStatisDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	246, // 225: Volcengine.Vod.Models.Response.DescribeVodSpaceSubtitleStatisDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSpaceSubtitleStatisDataResult
-	160, // 226: Volcengine.Vod.Models.Response.DescribeVodSpaceDetectStatisDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	247, // 227: Volcengine.Vod.Models.Response.DescribeVodSpaceDetectStatisDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSpaceDetectStatisDataResult
-	160, // 228: Volcengine.Vod.Models.Response.DescribeVodSnapshotDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	248, // 229: Volcengine.Vod.Models.Response.DescribeVodSnapshotDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSnapshotDataResult
-	160, // 230: Volcengine.Vod.Models.Response.DescribeVodSpaceWorkflowDetailDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	249, // 231: Volcengine.Vod.Models.Response.DescribeVodSpaceWorkflowDetailDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSpaceWorkflowDetailDataResult
-	160, // 232: Volcengine.Vod.Models.Response.DescribeVodSpaceEditDetailDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	250, // 233: Volcengine.Vod.Models.Response.DescribeVodSpaceEditDetailDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSpaceEditDetailDataResult
-	160, // 234: Volcengine.Vod.Models.Response.DescribeVodRealtimeMediaDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	251, // 235: Volcengine.Vod.Models.Response.DescribeVodRealtimeMediaDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodRealtimeMediaDataResult
-	160, // 236: Volcengine.Vod.Models.Response.DescribeVodRealtimeMediaDetailDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	252, // 237: Volcengine.Vod.Models.Response.DescribeVodRealtimeMediaDetailDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodRealtimeMediaDetailDataResult
-	160, // 238: Volcengine.Vod.Models.Response.DescribeVodPlayFileLogByDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	253, // 239: Volcengine.Vod.Models.Response.DescribeVodPlayFileLogByDomainResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodPlayFileLogByDomainResult
-	160, // 240: Volcengine.Vod.Models.Response.DescribeVodEnhanceImageDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	254, // 241: Volcengine.Vod.Models.Response.DescribeVodEnhanceImageDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodEnhanceImageDataResult
-	160, // 242: Volcengine.Vod.Models.Response.DescribeVodSpaceEditStatisDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	255, // 243: Volcengine.Vod.Models.Response.DescribeVodSpaceEditStatisDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSpaceEditStatisDataResult
-	160, // 244: Volcengine.Vod.Models.Response.DescribeVodPlayedStatisDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	256, // 245: Volcengine.Vod.Models.Response.DescribeVodPlayedStatisDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodPlayedStatisDataResult
-	160, // 246: Volcengine.Vod.Models.Response.DescribeVodMostPlayedStatisDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	257, // 247: Volcengine.Vod.Models.Response.DescribeVodMostPlayedStatisDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodMostPlayedStatisDataResult
-	160, // 248: Volcengine.Vod.Models.Response.DescribeVodVidTrafficFileLogResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	258, // 249: Volcengine.Vod.Models.Response.DescribeVodVidTrafficFileLogResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodVidTrafficFileLogResult
-	160, // 250: Volcengine.Vod.Models.Response.VodSubmitBlockMediaTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	259, // 251: Volcengine.Vod.Models.Response.VodSubmitBlockMediaTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSubmitBlockMediaTaskResult
-	160, // 252: Volcengine.Vod.Models.Response.VodSubmitUnblockMediaTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	260, // 253: Volcengine.Vod.Models.Response.VodSubmitUnblockMediaTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSubmitUnblockMediaTaskResult
-	160, // 254: Volcengine.Vod.Models.Response.VodQueryMediaBlockStatusResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	261, // 255: Volcengine.Vod.Models.Response.VodQueryMediaBlockStatusResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodQueryMediaBlockStatusResult
-	160, // 256: Volcengine.Vod.Models.Response.VodListProjectsResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	262, // 257: Volcengine.Vod.Models.Response.VodListProjectsResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListProjectsResult
-	160, // 258: Volcengine.Vod.Models.Response.VodGetTradeConfigurationResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	263, // 259: Volcengine.Vod.Models.Response.VodGetTradeConfigurationResponse.Result:type_name -> Volcengine.Vod.Models.Business.TradeConfigurationInfoResult
-	160, // 260: Volcengine.Vod.Models.Response.VodSetCloudMigrateJobResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	264, // 261: Volcengine.Vod.Models.Response.VodSetCloudMigrateJobResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSetCloudMigrateJobResult
-	160, // 262: Volcengine.Vod.Models.Response.VodSubmitCloudMigrateJobResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 263: Volcengine.Vod.Models.Response.VodGetCloudMigrateJobResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	265, // 264: Volcengine.Vod.Models.Response.VodGetCloudMigrateJobResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetCloudMigrateJobResult
-	160, // 265: Volcengine.Vod.Models.Response.VodReportEventResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	266, // 266: Volcengine.Vod.Models.Response.VodReportEventResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodReportEventResult
-	160, // 267: Volcengine.Vod.Models.Response.VodCreateDramaRecapTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	267, // 268: Volcengine.Vod.Models.Response.VodCreateDramaRecapTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCreateDramaRecapTaskResult
-	160, // 269: Volcengine.Vod.Models.Response.VodCreateDramaScriptTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	268, // 270: Volcengine.Vod.Models.Response.VodCreateDramaScriptTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCreateDramaScriptTaskResult
-	160, // 271: Volcengine.Vod.Models.Response.VodQueryDramaRecapTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	269, // 272: Volcengine.Vod.Models.Response.VodQueryDramaRecapTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodQueryDramaRecapTaskResult
-	160, // 273: Volcengine.Vod.Models.Response.VodQueryDramaScriptTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	270, // 274: Volcengine.Vod.Models.Response.VodQueryDramaScriptTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodQueryDramaScriptTaskResult
-	160, // 275: Volcengine.Vod.Models.Response.VodGetMediaEntityListResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	271, // 276: Volcengine.Vod.Models.Response.VodGetMediaEntityListResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetMediaEntityListResult
-	160, // 277: Volcengine.Vod.Models.Response.VodGetMediaEntityResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	272, // 278: Volcengine.Vod.Models.Response.VodGetMediaEntityResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetMediaEntityResult
-	160, // 279: Volcengine.Vod.Models.Response.VodDeleteMediaEntityResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	160, // 280: Volcengine.Vod.Models.Response.VodGetMediaEntityConfigListResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
-	273, // 281: Volcengine.Vod.Models.Response.VodGetMediaEntityConfigListResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodMediaEntityConfig
-	282, // [282:282] is the sub-list for method output_type
-	282, // [282:282] is the sub-list for method input_type
-	282, // [282:282] is the sub-list for extension type_name
-	282, // [282:282] is the sub-list for extension extendee
-	0,   // [0:282] is the sub-list for field type_name
+	162, // 0: Volcengine.Vod.Models.Response.VodGetAllPlayInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	163, // 1: Volcengine.Vod.Models.Response.VodGetAllPlayInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodAllPlayInfoResult
+	162, // 2: Volcengine.Vod.Models.Response.VodGetPlayInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	164, // 3: Volcengine.Vod.Models.Response.VodGetPlayInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodPlayInfoModel
+	162, // 4: Volcengine.Vod.Models.Response.VodGetOriginalPlayInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	165, // 5: Volcengine.Vod.Models.Response.VodGetOriginalPlayInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetOriginalPlayInfoResult
+	162, // 6: Volcengine.Vod.Models.Response.VodGetPrivateDrmPlayAuthResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	166, // 7: Volcengine.Vod.Models.Response.VodGetPrivateDrmPlayAuthResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetPrivateDrmPlayAuthResult
+	162, // 8: Volcengine.Vod.Models.Response.VodGetHlsDecryptionKeyResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	167, // 9: Volcengine.Vod.Models.Response.VodGetHlsDecryptionKeyResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetHlsDecryptionKeyResult
+	162, // 10: Volcengine.Vod.Models.Response.VodCreateHlsDecryptionKeyResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	168, // 11: Volcengine.Vod.Models.Response.VodCreateHlsDecryptionKeyResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCreateHlsDecryptionKeyResult
+	162, // 12: Volcengine.Vod.Models.Response.VodGetPlayInfoWithLiveTimeShiftSceneResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	169, // 13: Volcengine.Vod.Models.Response.VodGetPlayInfoWithLiveTimeShiftSceneResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetPlayInfoWithLiveTimeShiftSceneResult
+	162, // 14: Volcengine.Vod.Models.Response.VodDescribeDrmDataKeyResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	170, // 15: Volcengine.Vod.Models.Response.VodDescribeDrmDataKeyResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeDrmDataKeyResult
+	162, // 16: Volcengine.Vod.Models.Response.VodSubmitMoveObjectTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	171, // 17: Volcengine.Vod.Models.Response.VodSubmitMoveObjectTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSubmitMoveObjectTaskRespData
+	162, // 18: Volcengine.Vod.Models.Response.VodQueryMoveObjectTaskInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	172, // 19: Volcengine.Vod.Models.Response.VodQueryMoveObjectTaskInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodQueryMoveObjectTaskInfoResData
+	162, // 20: Volcengine.Vod.Models.Response.VodSubmitBlockObjectTasksResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	173, // 21: Volcengine.Vod.Models.Response.VodSubmitBlockObjectTasksResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSubmitBlockObjectTasksResult
+	162, // 22: Volcengine.Vod.Models.Response.VodListBlockObjectTasksResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	174, // 23: Volcengine.Vod.Models.Response.VodListBlockObjectTasksResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListBlockObjectTasksResult
+	162, // 24: Volcengine.Vod.Models.Response.VodUploadMediaResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	175, // 25: Volcengine.Vod.Models.Response.VodUploadMediaResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCommitData
+	162, // 26: Volcengine.Vod.Models.Response.VodQueryUploadTaskInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	176, // 27: Volcengine.Vod.Models.Response.VodQueryUploadTaskInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodQueryData
+	162, // 28: Volcengine.Vod.Models.Response.VodUrlUploadResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	177, // 29: Volcengine.Vod.Models.Response.VodUrlUploadResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodUrlResponseData
+	162, // 30: Volcengine.Vod.Models.Response.VodApplyUploadInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	178, // 31: Volcengine.Vod.Models.Response.VodApplyUploadInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodApplyUploadInfoResult
+	162, // 32: Volcengine.Vod.Models.Response.VodCommitUploadInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	179, // 33: Volcengine.Vod.Models.Response.VodCommitUploadInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCommitUploadInfoResult
+	162, // 34: Volcengine.Vod.Models.Response.VodParseUploadManifestResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	180, // 35: Volcengine.Vod.Models.Response.VodParseUploadManifestResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodParseUploadManifestResult
+	162, // 36: Volcengine.Vod.Models.Response.VodListFileMetaInfosByFileNamesResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	181, // 37: Volcengine.Vod.Models.Response.VodListFileMetaInfosByFileNamesResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListFileMetaInfosByFileNamesResult
+	162, // 38: Volcengine.Vod.Models.Response.VodGetMediaInfosResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	182, // 39: Volcengine.Vod.Models.Response.VodGetMediaInfosResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetMediaInfosData
+	162, // 40: Volcengine.Vod.Models.Response.VodUpdateMediaInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 41: Volcengine.Vod.Models.Response.VodGetRecommendedPosterResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	183, // 42: Volcengine.Vod.Models.Response.VodGetRecommendedPosterResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetRecPosterData
+	162, // 43: Volcengine.Vod.Models.Response.VodUpdateMediaPublishStatusResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 44: Volcengine.Vod.Models.Response.VodUpdateMediaStorageClassResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	184, // 45: Volcengine.Vod.Models.Response.VodUpdateMediaStorageClassResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodUpdateMediaStorageClassData
+	162, // 46: Volcengine.Vod.Models.Response.VodRestoreColdArchiveVideoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	185, // 47: Volcengine.Vod.Models.Response.VodRestoreColdArchiveVideoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodRestoreColdArchiveVideoData
+	162, // 48: Volcengine.Vod.Models.Response.VodGetRestoreVideoStatusResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	186, // 49: Volcengine.Vod.Models.Response.VodGetRestoreVideoStatusResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetRestoreVideoStatusData
+	162, // 50: Volcengine.Vod.Models.Response.VodDeleteMediaResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	187, // 51: Volcengine.Vod.Models.Response.VodDeleteMediaResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDeleteMediaData
+	162, // 52: Volcengine.Vod.Models.Response.VodDeleteMaterialResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 53: Volcengine.Vod.Models.Response.VodDeleteTranscodesResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	188, // 54: Volcengine.Vod.Models.Response.VodDeleteTranscodesResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDeleteTranscodesData
+	162, // 55: Volcengine.Vod.Models.Response.VodDeleteMediaTosFileResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	189, // 56: Volcengine.Vod.Models.Response.VodDeleteMediaTosFileResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDeleteMediaTosFileData
+	162, // 57: Volcengine.Vod.Models.Response.VodGetMediaListResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	190, // 58: Volcengine.Vod.Models.Response.VodGetMediaListResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetMediaListData
+	162, // 59: Volcengine.Vod.Models.Response.VodGetSubtitleInfoListResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	191, // 60: Volcengine.Vod.Models.Response.VodGetSubtitleInfoListResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetSubtitleInfoListData
+	162, // 61: Volcengine.Vod.Models.Response.VodUpdateSubtitleStatusResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	192, // 62: Volcengine.Vod.Models.Response.VodUpdateSubtitleStatusResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodUpdateSubtitleStatusData
+	162, // 63: Volcengine.Vod.Models.Response.VodUpdateSubtitleInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 64: Volcengine.Vod.Models.Response.VodGetAuditFramesForAuditResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	193, // 65: Volcengine.Vod.Models.Response.VodGetAuditFramesForAuditResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetFramesForAuditResult
+	162, // 66: Volcengine.Vod.Models.Response.VodGetMLFramesForAuditResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	193, // 67: Volcengine.Vod.Models.Response.VodGetMLFramesForAuditResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetFramesForAuditResult
+	162, // 68: Volcengine.Vod.Models.Response.VodGetBetterFramesForAuditResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	194, // 69: Volcengine.Vod.Models.Response.VodGetBetterFramesForAuditResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetBetterFramesForAuditResult
+	162, // 70: Volcengine.Vod.Models.Response.VodGetAudioInfoForAuditResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	195, // 71: Volcengine.Vod.Models.Response.VodGetAudioInfoForAuditResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetAudioInfoForAuditResult
+	162, // 72: Volcengine.Vod.Models.Response.VodGetAutomaticSpeechRecognitionForAuditResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	196, // 73: Volcengine.Vod.Models.Response.VodGetAutomaticSpeechRecognitionForAuditResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetAutomaticSpeechRecognitionForAuditResult
+	162, // 74: Volcengine.Vod.Models.Response.VodGetAudioEventDetectionForAuditResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	197, // 75: Volcengine.Vod.Models.Response.VodGetAudioEventDetectionForAuditResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetAudioEventDetectionForAuditResult
+	162, // 76: Volcengine.Vod.Models.Response.VodCreateVideoClassificationResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	198, // 77: Volcengine.Vod.Models.Response.VodCreateVideoClassificationResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCreateVideoClassificationData
+	162, // 78: Volcengine.Vod.Models.Response.VodUpdateVideoClassificationResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 79: Volcengine.Vod.Models.Response.VodDeleteVideoClassificationResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 80: Volcengine.Vod.Models.Response.VodListVideoClassificationsResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	199, // 81: Volcengine.Vod.Models.Response.VodListVideoClassificationsResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodVideoClassificationsData
+	162, // 82: Volcengine.Vod.Models.Response.VodListSnapshotsResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	200, // 83: Volcengine.Vod.Models.Response.VodListSnapshotsResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSnapshotData
+	162, // 84: Volcengine.Vod.Models.Response.VodGetFileListResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	182, // 85: Volcengine.Vod.Models.Response.VodGetFileListResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetMediaInfosData
+	162, // 86: Volcengine.Vod.Models.Response.VodGetFileInfosResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	201, // 87: Volcengine.Vod.Models.Response.VodGetFileInfosResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetFileInfosData
+	162, // 88: Volcengine.Vod.Models.Response.VodUpdateFileStorageClassResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	202, // 89: Volcengine.Vod.Models.Response.VodUpdateFileStorageClassResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodUpdateFileStorageClassData
+	162, // 90: Volcengine.Vod.Models.Response.VodGetInnerAuditURLsResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	203, // 91: Volcengine.Vod.Models.Response.VodGetInnerAuditURLsResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetInnerAuditURLsData
+	162, // 92: Volcengine.Vod.Models.Response.VodGetAdAuditResultByVidResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	204, // 93: Volcengine.Vod.Models.Response.VodGetAdAuditResultByVidResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetAdAuditResultByVidData
+	162, // 94: Volcengine.Vod.Models.Response.VodExtractMediaMetaTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 95: Volcengine.Vod.Models.Response.VodStartWorkflowResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	205, // 96: Volcengine.Vod.Models.Response.VodStartWorkflowResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodStartWorkflowResult
+	162, // 97: Volcengine.Vod.Models.Response.VodRetrieveTranscodeResultResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	206, // 98: Volcengine.Vod.Models.Response.VodRetrieveTranscodeResultResponse.Result:type_name -> Volcengine.Vod.Models.Business.TranscodeResult
+	162, // 99: Volcengine.Vod.Models.Response.VodListWorkflowExecutionResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	207, // 100: Volcengine.Vod.Models.Response.VodListWorkflowExecutionResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListWorkflowExecutionResult
+	162, // 101: Volcengine.Vod.Models.Response.VodGetWorkflowExecutionDetailResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	208, // 102: Volcengine.Vod.Models.Response.VodGetWorkflowExecutionDetailResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetWorkflowExecutionDetailResult
+	162, // 103: Volcengine.Vod.Models.Response.VodGetWorkflowExecutionStatusResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	209, // 104: Volcengine.Vod.Models.Response.VodGetWorkflowExecutionStatusResponse.Result:type_name -> Volcengine.Vod.Models.Business.WorkflowExecution
+	162, // 105: Volcengine.Vod.Models.Response.VodGetWorkflowResultResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	210, // 106: Volcengine.Vod.Models.Response.VodGetWorkflowResultResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodWorkflowResult
+	162, // 107: Volcengine.Vod.Models.Response.VodCreateTaskTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	211, // 108: Volcengine.Vod.Models.Response.VodCreateTaskTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodTaskTemplateResult
+	162, // 109: Volcengine.Vod.Models.Response.VodUpdateTaskTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	211, // 110: Volcengine.Vod.Models.Response.VodUpdateTaskTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodTaskTemplateResult
+	162, // 111: Volcengine.Vod.Models.Response.VodDeleteTaskTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	211, // 112: Volcengine.Vod.Models.Response.VodDeleteTaskTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodTaskTemplateResult
+	162, // 113: Volcengine.Vod.Models.Response.VodGetTaskTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	211, // 114: Volcengine.Vod.Models.Response.VodGetTaskTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodTaskTemplateResult
+	162, // 115: Volcengine.Vod.Models.Response.VodListTaskTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	212, // 116: Volcengine.Vod.Models.Response.VodListTaskTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListTaskTemplateResult
+	162, // 117: Volcengine.Vod.Models.Response.VodCreateWorkflowTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	213, // 118: Volcengine.Vod.Models.Response.VodCreateWorkflowTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodWorkflowTemplateResult
+	162, // 119: Volcengine.Vod.Models.Response.VodUpdateWorkflowTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 120: Volcengine.Vod.Models.Response.VodDeleteWorkflowTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 121: Volcengine.Vod.Models.Response.VodGetWorkflowTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	213, // 122: Volcengine.Vod.Models.Response.VodGetWorkflowTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodWorkflowTemplateResult
+	162, // 123: Volcengine.Vod.Models.Response.VodListWorkflowTemplateResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	214, // 124: Volcengine.Vod.Models.Response.VodListWorkflowTemplateResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListWorkflowTemplateResult
+	162, // 125: Volcengine.Vod.Models.Response.VodCreateWatermarkResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	215, // 126: Volcengine.Vod.Models.Response.VodCreateWatermarkResponse.Result:type_name -> Volcengine.Vod.Models.Business.LogoTemplate
+	162, // 127: Volcengine.Vod.Models.Response.VodUpdateWatermarkResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 128: Volcengine.Vod.Models.Response.VodDeleteWatermarkResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 129: Volcengine.Vod.Models.Response.VodGetWatermarkResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	215, // 130: Volcengine.Vod.Models.Response.VodGetWatermarkResponse.Result:type_name -> Volcengine.Vod.Models.Business.LogoTemplate
+	162, // 131: Volcengine.Vod.Models.Response.VodListWatermarkResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	216, // 132: Volcengine.Vod.Models.Response.VodListWatermarkResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListWatermarkResponseResult
+	162, // 133: Volcengine.Vod.Models.Response.VodSubmitDirectEditTaskAsyncResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	217, // 134: Volcengine.Vod.Models.Response.VodSubmitDirectEditTaskAsyncResponse.Result:type_name -> Volcengine.Vod.Models.Business.SubmitDirectEditTaskAsyncResult
+	162, // 135: Volcengine.Vod.Models.Response.VodSubmitDirectEditTaskSyncResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	218, // 136: Volcengine.Vod.Models.Response.VodSubmitDirectEditTaskSyncResponse.Result:type_name -> Volcengine.Vod.Models.Business.SubmitDirectEditTaskSyncResult
+	162, // 137: Volcengine.Vod.Models.Response.VodGetDirectEditProgressResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	219, // 138: Volcengine.Vod.Models.Response.VodGetDirectEditProgressResponse.Result:type_name -> Volcengine.Vod.Models.Business.GetDirectEditProgress
+	162, // 139: Volcengine.Vod.Models.Response.VodGetDirectEditResultResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	220, // 140: Volcengine.Vod.Models.Response.VodGetDirectEditResultResponse.Result:type_name -> Volcengine.Vod.Models.Business.GetDirectEditResult
+	162, // 141: Volcengine.Vod.Models.Response.VodCancelDirectEditTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	221, // 142: Volcengine.Vod.Models.Response.VodCancelDirectEditTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.CancelDirectEditTask
+	162, // 143: Volcengine.Vod.Models.Response.VodAsyncVCreativeTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	222, // 144: Volcengine.Vod.Models.Response.VodAsyncVCreativeTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.AsyncVCreativeTaskResult
+	162, // 145: Volcengine.Vod.Models.Response.VodGetVCreativeTaskResultResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	223, // 146: Volcengine.Vod.Models.Response.VodGetVCreativeTaskResultResponse.Result:type_name -> Volcengine.Vod.Models.Business.GetVCreativeTaskResult
+	162, // 147: Volcengine.Vod.Models.Response.VodCreateSpaceResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 148: Volcengine.Vod.Models.Response.VodDeleteSpaceResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 149: Volcengine.Vod.Models.Response.VodListSpaceResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	224, // 150: Volcengine.Vod.Models.Response.VodListSpaceResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSpaceInfo
+	162, // 151: Volcengine.Vod.Models.Response.VodGetSpaceDetailResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	224, // 152: Volcengine.Vod.Models.Response.VodGetSpaceDetailResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSpaceInfo
+	162, // 153: Volcengine.Vod.Models.Response.VodUpdateSpaceResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 154: Volcengine.Vod.Models.Response.VodUpdateSpaceUploadConfigResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 155: Volcengine.Vod.Models.Response.VodDescribeUploadSpaceConfigResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	225, // 156: Volcengine.Vod.Models.Response.VodDescribeUploadSpaceConfigResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodUploadSpaceConfig
+	162, // 157: Volcengine.Vod.Models.Response.VodUpdateUploadSpaceConfigResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 158: Volcengine.Vod.Models.Response.VodDescribeVodSpaceStorageDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	226, // 159: Volcengine.Vod.Models.Response.VodDescribeVodSpaceStorageDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeVodSpaceStorageDataResult
+	162, // 160: Volcengine.Vod.Models.Response.VodUpdateDomainPlayRuleResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 161: Volcengine.Vod.Models.Response.VodAddDomainToSchedulerResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 162: Volcengine.Vod.Models.Response.VodRemoveDomainFromSchedulerResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 163: Volcengine.Vod.Models.Response.VodDeleteDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 164: Volcengine.Vod.Models.Response.VodStartDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 165: Volcengine.Vod.Models.Response.VodStopDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 166: Volcengine.Vod.Models.Response.VodListDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	227, // 167: Volcengine.Vod.Models.Response.VodListDomainResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDomainConfigInfo
+	162, // 168: Volcengine.Vod.Models.Response.VodCreateCdnRefreshTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	228, // 169: Volcengine.Vod.Models.Response.VodCreateCdnRefreshTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCreateCdnTaskResult
+	162, // 170: Volcengine.Vod.Models.Response.VodCreateCdnPreloadTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	228, // 171: Volcengine.Vod.Models.Response.VodCreateCdnPreloadTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCreateCdnTaskResult
+	162, // 172: Volcengine.Vod.Models.Response.VodListCdnTasksResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	229, // 173: Volcengine.Vod.Models.Response.VodListCdnTasksResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCdnTaskResult
+	162, // 174: Volcengine.Vod.Models.Response.VodListCdnAccessLogResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	230, // 175: Volcengine.Vod.Models.Response.VodListCdnAccessLogResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListCdnAccessLogResult
+	162, // 176: Volcengine.Vod.Models.Response.VodListCdnTopAccessUrlResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	231, // 177: Volcengine.Vod.Models.Response.VodListCdnTopAccessUrlResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListCdnTopAccessUrlResult
+	162, // 178: Volcengine.Vod.Models.Response.VodListCdnTopAccessResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	232, // 179: Volcengine.Vod.Models.Response.VodListCdnTopAccessResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListCdnTopAccessResult
+	162, // 180: Volcengine.Vod.Models.Response.VodDescribeVodDomainBandwidthDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	233, // 181: Volcengine.Vod.Models.Response.VodDescribeVodDomainBandwidthDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeVodDomainBandwidthDataResult
+	162, // 182: Volcengine.Vod.Models.Response.VodCdnStatisticsCommonResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	234, // 183: Volcengine.Vod.Models.Response.VodCdnStatisticsCommonResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCdnStatisticsCommonResult
+	162, // 184: Volcengine.Vod.Models.Response.VodDescribeIPInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	235, // 185: Volcengine.Vod.Models.Response.VodDescribeIPInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCdnIpInfo
+	162, // 186: Volcengine.Vod.Models.Response.VodDescribeVodDomainTrafficDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	236, // 187: Volcengine.Vod.Models.Response.VodDescribeVodDomainTrafficDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeVodDomainTrafficDataResult
+	162, // 188: Volcengine.Vod.Models.Response.VodSubmitBlockTasksResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	237, // 189: Volcengine.Vod.Models.Response.VodSubmitBlockTasksResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSubmitBlockTasksResult
+	162, // 190: Volcengine.Vod.Models.Response.VodGetContentBlockTasksResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	238, // 191: Volcengine.Vod.Models.Response.VodGetContentBlockTasksResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetContentBlockTasksResult
+	162, // 192: Volcengine.Vod.Models.Response.VodCreateDomainV2Response.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 193: Volcengine.Vod.Models.Response.VodCreateDomainV3Response.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 194: Volcengine.Vod.Models.Response.VodUpdateDomainExpireV2Response.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 195: Volcengine.Vod.Models.Response.VodUpdateDomainAuthConfigV2Response.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 196: Volcengine.Vod.Models.Response.VodUpdateDomainUrlAuthConfigV2Response.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 197: Volcengine.Vod.Models.Response.VodVerifyDomainOwnerResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	239, // 198: Volcengine.Vod.Models.Response.VodVerifyDomainOwnerResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodVerifyDomainOwnerResult
+	162, // 199: Volcengine.Vod.Models.Response.VodDescribeDomainVerifyContentResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	240, // 200: Volcengine.Vod.Models.Response.VodDescribeDomainVerifyContentResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeDomainVerifyContentResult
+	162, // 201: Volcengine.Vod.Models.Response.VodListPCDNDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	241, // 202: Volcengine.Vod.Models.Response.VodListPCDNDomainResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodPCDNDomainConfigInfo
+	162, // 203: Volcengine.Vod.Models.Response.VodCreatePCDNDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 204: Volcengine.Vod.Models.Response.VodStartPCDNDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 205: Volcengine.Vod.Models.Response.VodStopPCDNDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 206: Volcengine.Vod.Models.Response.VodDeletePCDNDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 207: Volcengine.Vod.Models.Response.VodUpdateDomainConfigResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 208: Volcengine.Vod.Models.Response.VodDescribeDomainConfigResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	242, // 209: Volcengine.Vod.Models.Response.VodDescribeDomainConfigResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeDomainConfigResult
+	162, // 210: Volcengine.Vod.Models.Response.VodDescribeCdnEdgeIpResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	243, // 211: Volcengine.Vod.Models.Response.VodDescribeCdnEdgeIpResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeCdnEdgeIpResult
+	162, // 212: Volcengine.Vod.Models.Response.VodDescribeCdnRegionAndIspResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	244, // 213: Volcengine.Vod.Models.Response.VodDescribeCdnRegionAndIspResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodDescribeCdnRegionAndIspResult
+	162, // 214: Volcengine.Vod.Models.Response.AddOrUpdateCertificateV2Response.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 215: Volcengine.Vod.Models.Response.UpdateDomainAreaResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 216: Volcengine.Vod.Models.Response.VodAddCallbackSubscriptionResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 217: Volcengine.Vod.Models.Response.VodSetCallbackEventResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 218: Volcengine.Vod.Models.Response.GetCallbackRecordResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	245, // 219: Volcengine.Vod.Models.Response.GetCallbackRecordResponse.Result:type_name -> Volcengine.Vod.Models.Business.CallbackRecords
+	162, // 220: Volcengine.Vod.Models.Response.VodGetSmartStrategyLitePlayInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	246, // 221: Volcengine.Vod.Models.Response.VodGetSmartStrategyLitePlayInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetSmartStrategyLitePlayInfoResult
+	162, // 222: Volcengine.Vod.Models.Response.VodGetAppInfoResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	247, // 223: Volcengine.Vod.Models.Response.VodGetAppInfoResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetAppInfoResult
+	162, // 224: Volcengine.Vod.Models.Response.DescribeVodSpaceTranscodeDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	248, // 225: Volcengine.Vod.Models.Response.DescribeVodSpaceTranscodeDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSpaceTranscodeDataResult
+	162, // 226: Volcengine.Vod.Models.Response.DescribeVodSpaceAIStatisDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	249, // 227: Volcengine.Vod.Models.Response.DescribeVodSpaceAIStatisDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSpaceAIStatisDataResult
+	162, // 228: Volcengine.Vod.Models.Response.DescribeVodSpaceSubtitleStatisDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	250, // 229: Volcengine.Vod.Models.Response.DescribeVodSpaceSubtitleStatisDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSpaceSubtitleStatisDataResult
+	162, // 230: Volcengine.Vod.Models.Response.DescribeVodSpaceDetectStatisDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	251, // 231: Volcengine.Vod.Models.Response.DescribeVodSpaceDetectStatisDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSpaceDetectStatisDataResult
+	162, // 232: Volcengine.Vod.Models.Response.DescribeVodSnapshotDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	252, // 233: Volcengine.Vod.Models.Response.DescribeVodSnapshotDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSnapshotDataResult
+	162, // 234: Volcengine.Vod.Models.Response.DescribeVodSpaceWorkflowDetailDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	253, // 235: Volcengine.Vod.Models.Response.DescribeVodSpaceWorkflowDetailDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSpaceWorkflowDetailDataResult
+	162, // 236: Volcengine.Vod.Models.Response.DescribeVodSpaceEditDetailDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	254, // 237: Volcengine.Vod.Models.Response.DescribeVodSpaceEditDetailDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSpaceEditDetailDataResult
+	162, // 238: Volcengine.Vod.Models.Response.DescribeVodRealtimeMediaDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	255, // 239: Volcengine.Vod.Models.Response.DescribeVodRealtimeMediaDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodRealtimeMediaDataResult
+	162, // 240: Volcengine.Vod.Models.Response.DescribeVodRealtimeMediaDetailDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	256, // 241: Volcengine.Vod.Models.Response.DescribeVodRealtimeMediaDetailDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodRealtimeMediaDetailDataResult
+	162, // 242: Volcengine.Vod.Models.Response.DescribeVodPlayFileLogByDomainResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	257, // 243: Volcengine.Vod.Models.Response.DescribeVodPlayFileLogByDomainResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodPlayFileLogByDomainResult
+	162, // 244: Volcengine.Vod.Models.Response.DescribeVodEnhanceImageDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	258, // 245: Volcengine.Vod.Models.Response.DescribeVodEnhanceImageDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodEnhanceImageDataResult
+	162, // 246: Volcengine.Vod.Models.Response.DescribeVodSpaceEditStatisDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	259, // 247: Volcengine.Vod.Models.Response.DescribeVodSpaceEditStatisDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodSpaceEditStatisDataResult
+	162, // 248: Volcengine.Vod.Models.Response.DescribeVodPlayedStatisDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	260, // 249: Volcengine.Vod.Models.Response.DescribeVodPlayedStatisDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodPlayedStatisDataResult
+	162, // 250: Volcengine.Vod.Models.Response.DescribeVodMostPlayedStatisDataResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	261, // 251: Volcengine.Vod.Models.Response.DescribeVodMostPlayedStatisDataResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodMostPlayedStatisDataResult
+	162, // 252: Volcengine.Vod.Models.Response.DescribeVodVidTrafficFileLogResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	262, // 253: Volcengine.Vod.Models.Response.DescribeVodVidTrafficFileLogResponse.Result:type_name -> Volcengine.Vod.Models.Business.DescribeVodVidTrafficFileLogResult
+	162, // 254: Volcengine.Vod.Models.Response.VodSubmitBlockMediaTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	263, // 255: Volcengine.Vod.Models.Response.VodSubmitBlockMediaTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSubmitBlockMediaTaskResult
+	162, // 256: Volcengine.Vod.Models.Response.VodSubmitUnblockMediaTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	264, // 257: Volcengine.Vod.Models.Response.VodSubmitUnblockMediaTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSubmitUnblockMediaTaskResult
+	162, // 258: Volcengine.Vod.Models.Response.VodQueryMediaBlockStatusResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	265, // 259: Volcengine.Vod.Models.Response.VodQueryMediaBlockStatusResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodQueryMediaBlockStatusResult
+	162, // 260: Volcengine.Vod.Models.Response.VodListProjectsResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	266, // 261: Volcengine.Vod.Models.Response.VodListProjectsResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodListProjectsResult
+	162, // 262: Volcengine.Vod.Models.Response.VodGetTradeConfigurationResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	267, // 263: Volcengine.Vod.Models.Response.VodGetTradeConfigurationResponse.Result:type_name -> Volcengine.Vod.Models.Business.TradeConfigurationInfoResult
+	162, // 264: Volcengine.Vod.Models.Response.VodSetCloudMigrateJobResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	268, // 265: Volcengine.Vod.Models.Response.VodSetCloudMigrateJobResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodSetCloudMigrateJobResult
+	162, // 266: Volcengine.Vod.Models.Response.VodSubmitCloudMigrateJobResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 267: Volcengine.Vod.Models.Response.VodGetCloudMigrateJobResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	269, // 268: Volcengine.Vod.Models.Response.VodGetCloudMigrateJobResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetCloudMigrateJobResult
+	162, // 269: Volcengine.Vod.Models.Response.VodReportEventResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	270, // 270: Volcengine.Vod.Models.Response.VodReportEventResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodReportEventResult
+	162, // 271: Volcengine.Vod.Models.Response.VodCreateDramaRecapTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	271, // 272: Volcengine.Vod.Models.Response.VodCreateDramaRecapTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCreateDramaRecapTaskResult
+	162, // 273: Volcengine.Vod.Models.Response.VodCreateDramaScriptTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	272, // 274: Volcengine.Vod.Models.Response.VodCreateDramaScriptTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodCreateDramaScriptTaskResult
+	162, // 275: Volcengine.Vod.Models.Response.VodQueryDramaRecapTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	273, // 276: Volcengine.Vod.Models.Response.VodQueryDramaRecapTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodQueryDramaRecapTaskResult
+	162, // 277: Volcengine.Vod.Models.Response.VodQueryDramaScriptTaskResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	274, // 278: Volcengine.Vod.Models.Response.VodQueryDramaScriptTaskResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodQueryDramaScriptTaskResult
+	162, // 279: Volcengine.Vod.Models.Response.VodGetMediaEntityListResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	275, // 280: Volcengine.Vod.Models.Response.VodGetMediaEntityListResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetMediaEntityListResult
+	162, // 281: Volcengine.Vod.Models.Response.VodGetMediaEntityResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	276, // 282: Volcengine.Vod.Models.Response.VodGetMediaEntityResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodGetMediaEntityResult
+	162, // 283: Volcengine.Vod.Models.Response.VodDeleteMediaEntityResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	162, // 284: Volcengine.Vod.Models.Response.VodGetMediaEntityConfigListResponse.ResponseMetadata:type_name -> Volcengine.Base.Models.Base.ResponseMetadata
+	277, // 285: Volcengine.Vod.Models.Response.VodGetMediaEntityConfigListResponse.Result:type_name -> Volcengine.Vod.Models.Business.VodMediaEntityConfig
+	286, // [286:286] is the sub-list for method output_type
+	286, // [286:286] is the sub-list for method input_type
+	286, // [286:286] is the sub-list for extension type_name
+	286, // [286:286] is the sub-list for extension extendee
+	0,   // [0:286] is the sub-list for field type_name
 }
 
 func init() { file_volcengine_vod_response_response_vod_proto_init() }
@@ -11456,7 +11601,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDeleteMediaResponse); i {
+			switch v := v.(*VodRestoreColdArchiveVideoResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11468,7 +11613,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDeleteMaterialResponse); i {
+			switch v := v.(*VodGetRestoreVideoStatusResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11480,7 +11625,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDeleteTranscodesResponse); i {
+			switch v := v.(*VodDeleteMediaResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11492,7 +11637,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDeleteMediaTosFileResponse); i {
+			switch v := v.(*VodDeleteMaterialResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11504,7 +11649,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetMediaListResponse); i {
+			switch v := v.(*VodDeleteTranscodesResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11516,7 +11661,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetSubtitleInfoListResponse); i {
+			switch v := v.(*VodDeleteMediaTosFileResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11528,7 +11673,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[30].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodUpdateSubtitleStatusResponse); i {
+			switch v := v.(*VodGetMediaListResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11540,7 +11685,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[31].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodUpdateSubtitleInfoResponse); i {
+			switch v := v.(*VodGetSubtitleInfoListResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11552,7 +11697,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[32].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetAuditFramesForAuditResponse); i {
+			switch v := v.(*VodUpdateSubtitleStatusResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11564,7 +11709,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[33].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetMLFramesForAuditResponse); i {
+			switch v := v.(*VodUpdateSubtitleInfoResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11576,7 +11721,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[34].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetBetterFramesForAuditResponse); i {
+			switch v := v.(*VodGetAuditFramesForAuditResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11588,7 +11733,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[35].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetAudioInfoForAuditResponse); i {
+			switch v := v.(*VodGetMLFramesForAuditResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11600,7 +11745,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[36].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetAutomaticSpeechRecognitionForAuditResponse); i {
+			switch v := v.(*VodGetBetterFramesForAuditResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11612,7 +11757,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[37].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetAudioEventDetectionForAuditResponse); i {
+			switch v := v.(*VodGetAudioInfoForAuditResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11624,7 +11769,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[38].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodCreateVideoClassificationResponse); i {
+			switch v := v.(*VodGetAutomaticSpeechRecognitionForAuditResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11636,7 +11781,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[39].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodUpdateVideoClassificationResponse); i {
+			switch v := v.(*VodGetAudioEventDetectionForAuditResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11648,7 +11793,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[40].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDeleteVideoClassificationResponse); i {
+			switch v := v.(*VodCreateVideoClassificationResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11660,7 +11805,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[41].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodListVideoClassificationsResponse); i {
+			switch v := v.(*VodUpdateVideoClassificationResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11672,7 +11817,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[42].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodListSnapshotsResponse); i {
+			switch v := v.(*VodDeleteVideoClassificationResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11684,7 +11829,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[43].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetFileListResponse); i {
+			switch v := v.(*VodListVideoClassificationsResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11696,7 +11841,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[44].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetFileInfosResponse); i {
+			switch v := v.(*VodListSnapshotsResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11708,7 +11853,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[45].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodUpdateFileStorageClassResponse); i {
+			switch v := v.(*VodGetFileListResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11720,7 +11865,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[46].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetInnerAuditURLsResponse); i {
+			switch v := v.(*VodGetFileInfosResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11732,7 +11877,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[47].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetAdAuditResultByVidResponse); i {
+			switch v := v.(*VodUpdateFileStorageClassResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11744,7 +11889,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[48].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodExtractMediaMetaTaskResponse); i {
+			switch v := v.(*VodGetInnerAuditURLsResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11756,7 +11901,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[49].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodStartWorkflowResponse); i {
+			switch v := v.(*VodGetAdAuditResultByVidResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11768,7 +11913,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[50].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodRetrieveTranscodeResultResponse); i {
+			switch v := v.(*VodExtractMediaMetaTaskResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11780,7 +11925,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[51].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodListWorkflowExecutionResponse); i {
+			switch v := v.(*VodStartWorkflowResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11792,7 +11937,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[52].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetWorkflowExecutionDetailResponse); i {
+			switch v := v.(*VodRetrieveTranscodeResultResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11804,7 +11949,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[53].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetWorkflowExecutionStatusResponse); i {
+			switch v := v.(*VodListWorkflowExecutionResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11816,7 +11961,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[54].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetWorkflowResultResponse); i {
+			switch v := v.(*VodGetWorkflowExecutionDetailResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11828,7 +11973,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[55].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodCreateTaskTemplateResponse); i {
+			switch v := v.(*VodGetWorkflowExecutionStatusResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11840,7 +11985,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[56].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodUpdateTaskTemplateResponse); i {
+			switch v := v.(*VodGetWorkflowResultResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11852,7 +11997,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[57].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDeleteTaskTemplateResponse); i {
+			switch v := v.(*VodCreateTaskTemplateResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11864,7 +12009,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[58].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetTaskTemplateResponse); i {
+			switch v := v.(*VodUpdateTaskTemplateResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11876,7 +12021,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[59].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodListTaskTemplateResponse); i {
+			switch v := v.(*VodDeleteTaskTemplateResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11888,7 +12033,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[60].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodCreateWorkflowTemplateResponse); i {
+			switch v := v.(*VodGetTaskTemplateResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11900,7 +12045,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[61].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodUpdateWorkflowTemplateResponse); i {
+			switch v := v.(*VodListTaskTemplateResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11912,7 +12057,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[62].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDeleteWorkflowTemplateResponse); i {
+			switch v := v.(*VodCreateWorkflowTemplateResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11924,7 +12069,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[63].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetWorkflowTemplateResponse); i {
+			switch v := v.(*VodUpdateWorkflowTemplateResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11936,7 +12081,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[64].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodListWorkflowTemplateResponse); i {
+			switch v := v.(*VodDeleteWorkflowTemplateResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11948,7 +12093,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[65].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodCreateWatermarkResponse); i {
+			switch v := v.(*VodGetWorkflowTemplateResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11960,7 +12105,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[66].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodUpdateWatermarkResponse); i {
+			switch v := v.(*VodListWorkflowTemplateResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11972,7 +12117,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[67].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDeleteWatermarkResponse); i {
+			switch v := v.(*VodCreateWatermarkResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11984,7 +12129,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[68].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetWatermarkResponse); i {
+			switch v := v.(*VodUpdateWatermarkResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -11996,7 +12141,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[69].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodListWatermarkResponse); i {
+			switch v := v.(*VodDeleteWatermarkResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12008,7 +12153,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[70].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodSubmitDirectEditTaskAsyncResponse); i {
+			switch v := v.(*VodGetWatermarkResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12020,7 +12165,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[71].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodSubmitDirectEditTaskSyncResponse); i {
+			switch v := v.(*VodListWatermarkResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12032,7 +12177,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[72].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetDirectEditProgressResponse); i {
+			switch v := v.(*VodSubmitDirectEditTaskAsyncResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12044,7 +12189,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[73].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetDirectEditResultResponse); i {
+			switch v := v.(*VodSubmitDirectEditTaskSyncResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12056,7 +12201,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[74].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodCancelDirectEditTaskResponse); i {
+			switch v := v.(*VodGetDirectEditProgressResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12068,7 +12213,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[75].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodAsyncVCreativeTaskResponse); i {
+			switch v := v.(*VodGetDirectEditResultResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12080,7 +12225,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[76].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetVCreativeTaskResultResponse); i {
+			switch v := v.(*VodCancelDirectEditTaskResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12092,7 +12237,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[77].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodCreateSpaceResponse); i {
+			switch v := v.(*VodAsyncVCreativeTaskResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12104,7 +12249,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[78].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDeleteSpaceResponse); i {
+			switch v := v.(*VodGetVCreativeTaskResultResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12116,7 +12261,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[79].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodListSpaceResponse); i {
+			switch v := v.(*VodCreateSpaceResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12128,7 +12273,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[80].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetSpaceDetailResponse); i {
+			switch v := v.(*VodDeleteSpaceResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12140,7 +12285,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[81].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodUpdateSpaceResponse); i {
+			switch v := v.(*VodListSpaceResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12152,7 +12297,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[82].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodUpdateSpaceUploadConfigResponse); i {
+			switch v := v.(*VodGetSpaceDetailResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12164,7 +12309,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[83].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDescribeUploadSpaceConfigResponse); i {
+			switch v := v.(*VodUpdateSpaceResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12176,7 +12321,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[84].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodUpdateUploadSpaceConfigResponse); i {
+			switch v := v.(*VodUpdateSpaceUploadConfigResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12188,7 +12333,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[85].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDescribeVodSpaceStorageDataResponse); i {
+			switch v := v.(*VodDescribeUploadSpaceConfigResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12200,7 +12345,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[86].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodUpdateDomainPlayRuleResponse); i {
+			switch v := v.(*VodUpdateUploadSpaceConfigResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12212,7 +12357,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[87].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodAddDomainToSchedulerResponse); i {
+			switch v := v.(*VodDescribeVodSpaceStorageDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12224,7 +12369,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[88].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodRemoveDomainFromSchedulerResponse); i {
+			switch v := v.(*VodUpdateDomainPlayRuleResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12236,7 +12381,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[89].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDeleteDomainResponse); i {
+			switch v := v.(*VodAddDomainToSchedulerResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12248,7 +12393,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[90].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodStartDomainResponse); i {
+			switch v := v.(*VodRemoveDomainFromSchedulerResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12260,7 +12405,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[91].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodStopDomainResponse); i {
+			switch v := v.(*VodDeleteDomainResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12272,7 +12417,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[92].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodListDomainResponse); i {
+			switch v := v.(*VodStartDomainResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12284,7 +12429,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[93].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodCreateCdnRefreshTaskResponse); i {
+			switch v := v.(*VodStopDomainResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12296,7 +12441,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[94].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodCreateCdnPreloadTaskResponse); i {
+			switch v := v.(*VodListDomainResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12308,7 +12453,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[95].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodListCdnTasksResponse); i {
+			switch v := v.(*VodCreateCdnRefreshTaskResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12320,7 +12465,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[96].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodListCdnAccessLogResponse); i {
+			switch v := v.(*VodCreateCdnPreloadTaskResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12332,7 +12477,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[97].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodListCdnTopAccessUrlResponse); i {
+			switch v := v.(*VodListCdnTasksResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12344,7 +12489,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[98].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodListCdnTopAccessResponse); i {
+			switch v := v.(*VodListCdnAccessLogResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12356,7 +12501,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[99].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDescribeVodDomainBandwidthDataResponse); i {
+			switch v := v.(*VodListCdnTopAccessUrlResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12368,7 +12513,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[100].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodCdnStatisticsCommonResponse); i {
+			switch v := v.(*VodListCdnTopAccessResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12380,7 +12525,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[101].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDescribeIPInfoResponse); i {
+			switch v := v.(*VodDescribeVodDomainBandwidthDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12392,7 +12537,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[102].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDescribeVodDomainTrafficDataResponse); i {
+			switch v := v.(*VodCdnStatisticsCommonResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12404,7 +12549,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[103].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodSubmitBlockTasksResponse); i {
+			switch v := v.(*VodDescribeIPInfoResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12416,7 +12561,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[104].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetContentBlockTasksResponse); i {
+			switch v := v.(*VodDescribeVodDomainTrafficDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12428,7 +12573,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[105].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodCreateDomainV2Response); i {
+			switch v := v.(*VodSubmitBlockTasksResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12440,7 +12585,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[106].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodCreateDomainV3Response); i {
+			switch v := v.(*VodGetContentBlockTasksResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12452,7 +12597,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[107].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodUpdateDomainExpireV2Response); i {
+			switch v := v.(*VodCreateDomainV2Response); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12464,7 +12609,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[108].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodUpdateDomainAuthConfigV2Response); i {
+			switch v := v.(*VodCreateDomainV3Response); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12476,7 +12621,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[109].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodUpdateDomainUrlAuthConfigV2Response); i {
+			switch v := v.(*VodUpdateDomainExpireV2Response); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12488,7 +12633,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[110].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodVerifyDomainOwnerResponse); i {
+			switch v := v.(*VodUpdateDomainAuthConfigV2Response); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12500,7 +12645,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[111].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDescribeDomainVerifyContentResponse); i {
+			switch v := v.(*VodUpdateDomainUrlAuthConfigV2Response); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12512,7 +12657,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[112].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodListPCDNDomainResponse); i {
+			switch v := v.(*VodVerifyDomainOwnerResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12524,7 +12669,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[113].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodCreatePCDNDomainResponse); i {
+			switch v := v.(*VodDescribeDomainVerifyContentResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12536,7 +12681,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[114].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodStartPCDNDomainResponse); i {
+			switch v := v.(*VodListPCDNDomainResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12548,7 +12693,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[115].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodStopPCDNDomainResponse); i {
+			switch v := v.(*VodCreatePCDNDomainResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12560,7 +12705,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[116].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDeletePCDNDomainResponse); i {
+			switch v := v.(*VodStartPCDNDomainResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12572,7 +12717,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[117].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodUpdateDomainConfigResponse); i {
+			switch v := v.(*VodStopPCDNDomainResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12584,7 +12729,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[118].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDescribeDomainConfigResponse); i {
+			switch v := v.(*VodDeletePCDNDomainResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12596,7 +12741,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[119].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDescribeCdnEdgeIpResponse); i {
+			switch v := v.(*VodUpdateDomainConfigResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12608,7 +12753,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[120].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDescribeCdnRegionAndIspResponse); i {
+			switch v := v.(*VodDescribeDomainConfigResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12620,7 +12765,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[121].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*AddOrUpdateCertificateV2Response); i {
+			switch v := v.(*VodDescribeCdnEdgeIpResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12632,7 +12777,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[122].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdateDomainAreaResponse); i {
+			switch v := v.(*VodDescribeCdnRegionAndIspResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12644,7 +12789,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[123].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodAddCallbackSubscriptionResponse); i {
+			switch v := v.(*AddOrUpdateCertificateV2Response); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12656,7 +12801,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[124].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodSetCallbackEventResponse); i {
+			switch v := v.(*UpdateDomainAreaResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12668,7 +12813,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[125].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetCallbackRecordResponse); i {
+			switch v := v.(*VodAddCallbackSubscriptionResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12680,7 +12825,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[126].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetSmartStrategyLitePlayInfoResponse); i {
+			switch v := v.(*VodSetCallbackEventResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12692,7 +12837,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[127].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetAppInfoResponse); i {
+			switch v := v.(*GetCallbackRecordResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12704,7 +12849,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[128].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DescribeVodSpaceTranscodeDataResponse); i {
+			switch v := v.(*VodGetSmartStrategyLitePlayInfoResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12716,7 +12861,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[129].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DescribeVodSpaceAIStatisDataResponse); i {
+			switch v := v.(*VodGetAppInfoResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12728,7 +12873,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[130].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DescribeVodSpaceSubtitleStatisDataResponse); i {
+			switch v := v.(*DescribeVodSpaceTranscodeDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12740,7 +12885,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[131].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DescribeVodSpaceDetectStatisDataResponse); i {
+			switch v := v.(*DescribeVodSpaceAIStatisDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12752,7 +12897,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[132].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DescribeVodSnapshotDataResponse); i {
+			switch v := v.(*DescribeVodSpaceSubtitleStatisDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12764,7 +12909,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[133].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DescribeVodSpaceWorkflowDetailDataResponse); i {
+			switch v := v.(*DescribeVodSpaceDetectStatisDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12776,7 +12921,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[134].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DescribeVodSpaceEditDetailDataResponse); i {
+			switch v := v.(*DescribeVodSnapshotDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12788,7 +12933,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[135].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DescribeVodRealtimeMediaDataResponse); i {
+			switch v := v.(*DescribeVodSpaceWorkflowDetailDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12800,7 +12945,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[136].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DescribeVodRealtimeMediaDetailDataResponse); i {
+			switch v := v.(*DescribeVodSpaceEditDetailDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12812,7 +12957,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[137].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DescribeVodPlayFileLogByDomainResponse); i {
+			switch v := v.(*DescribeVodRealtimeMediaDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12824,7 +12969,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[138].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DescribeVodEnhanceImageDataResponse); i {
+			switch v := v.(*DescribeVodRealtimeMediaDetailDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12836,7 +12981,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[139].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DescribeVodSpaceEditStatisDataResponse); i {
+			switch v := v.(*DescribeVodPlayFileLogByDomainResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12848,7 +12993,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[140].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DescribeVodPlayedStatisDataResponse); i {
+			switch v := v.(*DescribeVodEnhanceImageDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12860,7 +13005,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[141].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DescribeVodMostPlayedStatisDataResponse); i {
+			switch v := v.(*DescribeVodSpaceEditStatisDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12872,7 +13017,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[142].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DescribeVodVidTrafficFileLogResponse); i {
+			switch v := v.(*DescribeVodPlayedStatisDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12884,7 +13029,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[143].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodSubmitBlockMediaTaskResponse); i {
+			switch v := v.(*DescribeVodMostPlayedStatisDataResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12896,7 +13041,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[144].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodSubmitUnblockMediaTaskResponse); i {
+			switch v := v.(*DescribeVodVidTrafficFileLogResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12908,7 +13053,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[145].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodQueryMediaBlockStatusResponse); i {
+			switch v := v.(*VodSubmitBlockMediaTaskResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12920,7 +13065,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[146].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodListProjectsResponse); i {
+			switch v := v.(*VodSubmitUnblockMediaTaskResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12932,7 +13077,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[147].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetTradeConfigurationResponse); i {
+			switch v := v.(*VodQueryMediaBlockStatusResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12944,7 +13089,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[148].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodSetCloudMigrateJobResponse); i {
+			switch v := v.(*VodListProjectsResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12956,7 +13101,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[149].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodSubmitCloudMigrateJobResponse); i {
+			switch v := v.(*VodGetTradeConfigurationResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12968,7 +13113,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[150].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetCloudMigrateJobResponse); i {
+			switch v := v.(*VodSetCloudMigrateJobResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12980,7 +13125,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[151].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodReportEventResponse); i {
+			switch v := v.(*VodSubmitCloudMigrateJobResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -12992,7 +13137,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[152].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodCreateDramaRecapTaskResponse); i {
+			switch v := v.(*VodGetCloudMigrateJobResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -13004,7 +13149,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[153].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodCreateDramaScriptTaskResponse); i {
+			switch v := v.(*VodReportEventResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -13016,7 +13161,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[154].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodQueryDramaRecapTaskResponse); i {
+			switch v := v.(*VodCreateDramaRecapTaskResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -13028,7 +13173,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[155].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodQueryDramaScriptTaskResponse); i {
+			switch v := v.(*VodCreateDramaScriptTaskResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -13040,7 +13185,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[156].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetMediaEntityListResponse); i {
+			switch v := v.(*VodQueryDramaRecapTaskResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -13052,7 +13197,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[157].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodGetMediaEntityResponse); i {
+			switch v := v.(*VodQueryDramaScriptTaskResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -13064,7 +13209,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[158].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VodDeleteMediaEntityResponse); i {
+			switch v := v.(*VodGetMediaEntityListResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -13076,6 +13221,30 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			}
 		}
 		file_volcengine_vod_response_response_vod_proto_msgTypes[159].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*VodGetMediaEntityResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_volcengine_vod_response_response_vod_proto_msgTypes[160].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*VodDeleteMediaEntityResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_volcengine_vod_response_response_vod_proto_msgTypes[161].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*VodGetMediaEntityConfigListResponse); i {
 			case 0:
 				return &v.state
@@ -13094,7 +13263,7 @@ func file_volcengine_vod_response_response_vod_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_volcengine_vod_response_response_vod_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   160,
+			NumMessages:   162,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

@@ -266,6 +266,22 @@ var (
 				"Version": []string{"2022-12-01"},
 			},
 		},
+		"RestoreColdArchiveVideo": {
+			Method: http.MethodGet,
+			Path:   "/",
+			Query: url.Values{
+				"Action":  []string{"RestoreColdArchiveVideo"},
+				"Version": []string{"2023-07-01"},
+			},
+		},
+		"GetRestoreVideoStatus": {
+			Method: http.MethodGet,
+			Path:   "/",
+			Query: url.Values{
+				"Action":  []string{"GetRestoreVideoStatus"},
+				"Version": []string{"2023-07-01"},
+			},
+		},
 		"DeleteMaterial": {
 			Method: http.MethodGet,
 			Path:   "/",
@@ -1269,6 +1285,41 @@ var (
 			Query: url.Values{
 				"Action":  []string{"SubmitCloudMigrateJob"},
 				"Version": []string{"2023-07-01"},
+			},
+		},
+		// **********************************************************************
+		// 短剧
+		// **********************************************************************
+		"CreateDramaRecapTask": {
+			Method: http.MethodPost,
+			Path:   "/",
+			Query: url.Values{
+				"Action":  []string{"CreateDramaRecapTask"},
+				"Version": []string{"2025-03-03"},
+			},
+		},
+		"QueryDramaRecapTask": {
+			Method: http.MethodGet,
+			Path:   "/",
+			Query: url.Values{
+				"Action":  []string{"QueryDramaRecapTask"},
+				"Version": []string{"2025-03-03"},
+			},
+		},
+		"CreateDramaScriptTask": {
+			Method: http.MethodPost,
+			Path:   "/",
+			Query: url.Values{
+				"Action":  []string{"CreateDramaScriptTask"},
+				"Version": []string{"2025-03-03"},
+			},
+		},
+		"QueryDramaScriptTask": {
+			Method: http.MethodGet,
+			Path:   "/",
+			Query: url.Values{
+				"Action":  []string{"QueryDramaScriptTask"},
+				"Version": []string{"2025-03-03"},
 			},
 		},
 		// **********************************************************************

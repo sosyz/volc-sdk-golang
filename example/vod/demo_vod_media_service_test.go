@@ -116,6 +116,58 @@ func Test_UpdateMediaStorageClass(t *testing.T) {
 	fmt.Println(resp.String())
 }
 
+func Test_RestoreColdArchiveVideo(t *testing.T) {
+	// Create a VOD instance in the specified region.
+	// instance := vod.NewInstanceWithRegion("cn-north-1")
+	instance := vod.NewInstance()
+
+	// Configure your Access Key ID (AK) and Secret Access Key (SK) in the environment variables or in the local ~/.volc/config file. For detailed instructions, see  https://www.volcengine.com/docs/4/65655.
+	// The SDK will automatically fetch the AK and SK from the environment variables or the ~/.volc/config file as needed.
+	// During testing, you may use the following code snippet. However, do not store the AK and SK directly in your project code to prevent potential leakage and safeguard the security of all resources associated with your account.
+	// instance.SetCredential(base.Credentials{
+	// AccessKeyID:     "your ak",
+	// SecretAccessKey: "your sk",
+	//})
+
+	query := &request.VodRestoreColdArchiveVideoRequest{
+		SpaceName:   "your SpaceName",
+		Vids:        "your Vids",
+		FileIds:     "your FileIds",
+		RestoreTier: "your RestoreTier",
+		Days:        "your Days",
+	}
+
+	resp, status, err := instance.RestoreColdArchiveVideo(query)
+	fmt.Println(status)
+	fmt.Println(err)
+	fmt.Println(resp.String())
+}
+
+func Test_GetRestoreVideoStatus(t *testing.T) {
+	// Create a VOD instance in the specified region.
+	// instance := vod.NewInstanceWithRegion("cn-north-1")
+	instance := vod.NewInstance()
+
+	// Configure your Access Key ID (AK) and Secret Access Key (SK) in the environment variables or in the local ~/.volc/config file. For detailed instructions, see  https://www.volcengine.com/docs/4/65655.
+	// The SDK will automatically fetch the AK and SK from the environment variables or the ~/.volc/config file as needed.
+	// During testing, you may use the following code snippet. However, do not store the AK and SK directly in your project code to prevent potential leakage and safeguard the security of all resources associated with your account.
+	// instance.SetCredential(base.Credentials{
+	// AccessKeyID:     "your ak",
+	// SecretAccessKey: "your sk",
+	//})
+
+	query := &request.VodGetRestoreVideoStatusRequest{
+		SpaceName: "your SpaceName",
+		Vid:       "your Vid",
+		FileId:    "your FileId",
+	}
+
+	resp, status, err := instance.GetRestoreVideoStatus(query)
+	fmt.Println(status)
+	fmt.Println(err)
+	fmt.Println(resp.String())
+}
+
 func Test_GetMediaInfos(t *testing.T) {
 	// Create a VOD instance in the specified region.
 	// instance := vod.NewInstanceWithRegion("cn-north-1")
@@ -854,6 +906,85 @@ func Test_QueryMediaBlockStatus(t *testing.T) {
 	}
 
 	resp, status, err := instance.QueryMediaBlockStatus(query)
+	fmt.Println(status)
+	fmt.Println(err)
+	fmt.Println(resp.String())
+}
+
+func Test_GetMediaEntityList(t *testing.T) {
+	// Create a VOD instance in the specified region.
+	// instance := vod.NewInstanceWithRegion("cn-north-1")
+	instance := vod.NewInstance()
+
+	// Configure your Access Key ID (AK) and Secret Access Key (SK) in the environment variables or in the local ~/.volc/config file. For detailed instructions, see  https://www.volcengine.com/docs/4/65655.
+	// The SDK will automatically fetch the AK and SK from the environment variables or the ~/.volc/config file as needed.
+	// During testing, you may use the following code snippet. However, do not store the AK and SK directly in your project code to prevent potential leakage and safeguard the security of all resources associated with your account.
+	// instance.SetCredential(base.Credentials{
+	// AccessKeyID:     "your ak",
+	// SecretAccessKey: "your sk",
+	//})
+
+	query := &request.VodGetMediaEntityListRequest{
+		Vid:            "your Vid",
+		EntityTypes:    "your EntityTypes",
+		EntityVersions: "your EntityVersions",
+		Sources:        "your Sources",
+		PageNumber:     0,
+		PageSize:       0,
+	}
+
+	resp, status, err := instance.GetMediaEntityList(query)
+	fmt.Println(status)
+	fmt.Println(err)
+	fmt.Println(resp.String())
+}
+
+func Test_GetMediaEntity(t *testing.T) {
+	// Create a VOD instance in the specified region.
+	// instance := vod.NewInstanceWithRegion("cn-north-1")
+	instance := vod.NewInstance()
+
+	// Configure your Access Key ID (AK) and Secret Access Key (SK) in the environment variables or in the local ~/.volc/config file. For detailed instructions, see  https://www.volcengine.com/docs/4/65655.
+	// The SDK will automatically fetch the AK and SK from the environment variables or the ~/.volc/config file as needed.
+	// During testing, you may use the following code snippet. However, do not store the AK and SK directly in your project code to prevent potential leakage and safeguard the security of all resources associated with your account.
+	// instance.SetCredential(base.Credentials{
+	// AccessKeyID:     "your ak",
+	// SecretAccessKey: "your sk",
+	//})
+
+	query := &request.VodGetMediaEntityRequest{
+		Vid:           "your Vid",
+		EntityType:    "your EntityType",
+		EntityVersion: "your EntityVersion",
+		NeedPublicUrl: false,
+	}
+
+	resp, status, err := instance.GetMediaEntity(query)
+	fmt.Println(status)
+	fmt.Println(err)
+	fmt.Println(resp.String())
+}
+
+func Test_DeleteMediaEntity(t *testing.T) {
+	// Create a VOD instance in the specified region.
+	// instance := vod.NewInstanceWithRegion("cn-north-1")
+	instance := vod.NewInstance()
+
+	// Configure your Access Key ID (AK) and Secret Access Key (SK) in the environment variables or in the local ~/.volc/config file. For detailed instructions, see  https://www.volcengine.com/docs/4/65655.
+	// The SDK will automatically fetch the AK and SK from the environment variables or the ~/.volc/config file as needed.
+	// During testing, you may use the following code snippet. However, do not store the AK and SK directly in your project code to prevent potential leakage and safeguard the security of all resources associated with your account.
+	// instance.SetCredential(base.Credentials{
+	// AccessKeyID:     "your ak",
+	// SecretAccessKey: "your sk",
+	//})
+
+	query := &request.VodDeleteMediaEntityRequest{
+		Vid:           "your Vid",
+		EntityType:    "your EntityType",
+		EntityVersion: "your EntityVersion",
+	}
+
+	resp, status, err := instance.DeleteMediaEntity(query)
 	fmt.Println(status)
 	fmt.Println(err)
 	fmt.Println(resp.String())
