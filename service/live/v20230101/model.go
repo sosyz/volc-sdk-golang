@@ -2263,28 +2263,38 @@ type CreateRecordPresetV2ResResult struct {
 
 type CreateRelaySourceV4Body struct {
 
-	// REQUIRED; 应用名称，即直播流地址的AppName字段取值，支持由大小写字母（A - Z、a - z）、数字（0 - 9）、下划线（_）、短横线（-）和句点（.）组成，长度为 1 到 30 个字符。
+	// REQUIRED; 视频直播播放地址中的 AppName。例如播放地址为 rtmp://pull.example.com/live/test?authinfo，则 AppName 为 live。 支持由大小写字母（A - Z、a - z）、数字（0
+	// - 9）、下划线（_）、短横线（-）和句点（.）组成，长度为 1 到 30 个字符。 :::tip 同一 App 不能同时配置播放触发和固定触发的回源配置。您可调用
+	// DescribeRelaySourceV3 [https://docs.volcengine.com/docs/6469/1126874?lang=zh] 查询已有播放触发回源配置的 App 取值。 :::
 	App string `json:"App"`
 
-	// REQUIRED; 拉流域名，您可以调用ListDomainDetail [https://www.volcengine.com/docs/6469/1126815]接口或在视频直播控制台的域名管理 [https://console.volcengine.com/live/main/domain/list]页面，查看直播流使用的拉流域名。
-	Domain string `json:"Domain"`
-
-	// REQUIRED; 回源地址列表，支持输入 RTMP、FLV、HLS 和 SRT 协议的直播推流地址。 :::tip
-	// * 当源站使用了非默认端口时，支持在回源地址中以域名:端口或IP:端口的形式配置端口。
-	// * 最多支持添加 10 个回源地址，回源失败时，将按照您添加的地址顺序轮循尝试。 :::
+	// REQUIRED; 回源地址列表，即视频直播从源站拉取直播流时访问的地址列表。支持 RTMP、RTMPS、FLV 或 HLS 协议。 通常包含协议、源站的域名或 IP 地址，以及源站直播流的 AppName 和 StreamName。如果源站要求回源请求携带额外参数，还需包含查询参数。例如
+	// rtmp://192.*.*.10/live01/test01?token=abc。
+	// :::tip
+	// * 支持配置自有源站或第三方源站的回源地址。触发回源后，视频直播会访问您配置的回源地址，从源站拉取直播流。
+	// * 如果源站使用非默认端口，需在源站的域名或 IP 地址后填写端口，例如 rtmp://192.*.*.10:1936/live01/test01?token=abc，否则系统可能按默认端口访问源站，导致回源失败。
+	// * 最多支持传入 10 个回源地址。系统会按照回源地址在数组中的排列顺序依次尝试回源，数组中越靠前的地址优先级越高。如果当前回源地址回源失败，系统会再尝试下一个回源地址。 :::
 	SrcAddrS []string `json:"SrcAddrS"`
 
-	// REQUIRED; 流名称，即直播流地址的StreamName字段取值，支持由大小写字母（A - Z、a - z）、数字（0 - 9）、字母、下划线（_）、短横线（-）和句点（.）组成，长度为 1 到 100 个字符。
+	// REQUIRED; 视频直播播放地址中的 StreamName。例如播放地址为 rtmp://pull.example.com/live/test?authinfo，则 StreamName 为 test。 支持由大小写字母（A - Z、a
+	// - z）、数字（0 - 9）、下划线（_）和短横线（-）组成，长度为 1 到 100 个字符。 :::tipApp 和 Stream
+	// 的组合不能与已有固定触发回源配置重复。您可调用 ListRelaySourceV4 [https://docs.volcengine.com/docs/6469/1126878?lang=zh] 查询已有固定触发回源配置的 App 和 Stream
+	// 取值。 :::
 	Stream string `json:"Stream"`
 
-	// 回源结束时间，Unix 时间戳，单位为秒。 :::tip
-	// * 回源开始到结束最大时间跨度为 7 天；
-	// * 开始时间与结束时间同时缺省，表示永久回源。 :::
+	// REQUIRED; 域名空间。 通过以下任一方式，获取域名空间：
+	// * 调用ListDomainDetail [https://www.volcengine.com/docs/6469/1126815]接口，通过返回参数Vhost获取。
+	// * 在视频直播控制台的域名管理 [https://console.volcengine.com/live/main/domain/list]页面，通过域名空间字段获取。
+	Vhost string `json:"Vhost"`
+
+	// 回源结束时间。Unix 时间戳，单位为秒。 :::tip
+	// * StartTime 和 EndTime 的时间间隔不可超过 7 天。
+	// * StartTime 和 EndTime 需同时传入或同时不传。传入时，表示添加固定回源类型的回源配置。不传时，表示添加永久回源类型的回源配置。 :::
 	EndTime *int32 `json:"EndTime,omitempty"`
 
-	// 回源开始时间，Unix 时间戳，单位为秒。 :::tip
-	// * 回源开始到结束最大时间跨度为 7 天；
-	// * 开始时间与结束时间同时缺省，表示永久回源。 :::
+	// 回源开始时间。Unix 时间戳，单位为秒。 :::tip
+	// * StartTime 和 EndTime 的时间间隔不可超过 7 天。
+	// * StartTime 和 EndTime 需同时传入或同时不传。传入时，表示添加固定回源类型的回源配置。不传时，表示添加永久回源类型的回源配置。 :::
 	StartTime *int32 `json:"StartTime,omitempty"`
 }
 
@@ -2292,7 +2302,8 @@ type CreateRelaySourceV4Res struct {
 
 	// REQUIRED
 	ResponseMetadata CreateRelaySourceV4ResResponseMetadata `json:"ResponseMetadata"`
-	Result           *CreateRelaySourceV4ResResult          `json:"Result,omitempty"`
+
+	Result *CreateRelaySourceV4ResResult `json:"Result,omitempty"`
 }
 
 type CreateRelaySourceV4ResResponseMetadata struct {
@@ -2325,7 +2336,7 @@ type CreateRelaySourceV4ResResponseMetadataError struct {
 
 type CreateRelaySourceV4ResResult struct {
 
-	// REQUIRED; 固定回源配置的 ID。
+	// REQUIRED; 固定触发回源配置的 ID。
 	TaskID string `json:"TaskId"`
 }
 
@@ -4214,14 +4225,18 @@ type DeleteRelaySourceV3ResResponseMetadataError struct {
 
 type DeleteRelaySourceV4Body struct {
 
-	// REQUIRED; 应用名称，您可以调用ListRelaySourceV4 [https://www.volcengine.com/docs/6469/1126878]接口，获取待删除固定回源配置的 App 取值。
+	// REQUIRED; 视频直播播放地址中的 AppName。您可调用 ListRelaySourceV4 [https://docs.volcengine.com/docs/6469/1126878?lang=zh] 并根据返回参数 App
+	// 获取固定触发回源配置的 AppName。
 	App string `json:"App"`
 
-	// REQUIRED; 拉流域名，您可以调用ListRelaySourceV4 [https://www.volcengine.com/docs/6469/1126878]接口，获取待删除固定回源配置的 Domain 取值。
-	Domain string `json:"Domain"`
-
-	// REQUIRED; 流名称，您可以调用ListRelaySourceV4 [https://www.volcengine.com/docs/6469/1126878]接口，获取待删除固定回源配置的 Stream 取值。
+	// REQUIRED; 视频直播播放地址中的 StreamName。您可调用 ListRelaySourceV4 [https://docs.volcengine.com/docs/6469/1126878?lang=zh] 并根据返回参数
+	// Stream 获取固定触发回源配置的 StreamName。
 	Stream string `json:"Stream"`
+
+	// REQUIRED; 域名空间。 通过以下任一方式，获取域名空间：
+	// * 调用ListDomainDetail [https://www.volcengine.com/docs/6469/1126815]接口，通过返回参数Vhost获取。
+	// * 在视频直播控制台的域名管理 [https://console.volcengine.com/live/main/domain/list]页面，通过域名空间字段获取。
+	Vhost string `json:"Vhost"`
 }
 
 type DeleteRelaySourceV4Res struct {
@@ -15131,7 +15146,8 @@ type ListRelaySourceV4Res struct {
 
 	// REQUIRED
 	ResponseMetadata ListRelaySourceV4ResResponseMetadata `json:"ResponseMetadata"`
-	Result           *ListRelaySourceV4ResResult          `json:"Result,omitempty"`
+
+	Result *ListRelaySourceV4ResResult `json:"Result,omitempty"`
 }
 
 type ListRelaySourceV4ResResponseMetadata struct {
@@ -15173,23 +15189,26 @@ type ListRelaySourceV4ResResult struct {
 
 type ListRelaySourceV4ResResultListItem struct {
 
-	// REQUIRED; 应用名称。
+	// REQUIRED; 视频直播播放地址中的AppName。
 	App string `json:"App"`
 
-	// REQUIRED; 直播流的使用的域名。
-	Domain string `json:"Domain"`
-
-	// REQUIRED; 回源结束时间，StartTime 和 EndTime 同时缺省的情况下，表示永久回源。
+	// REQUIRED; 固定回源类型的回源结束时间。Unix 时间戳，单位为秒。
 	EndTime int32 `json:"EndTime"`
 
-	// REQUIRED; 回源地址列表。
+	// REQUIRED; 回源地址列表，即视频直播从源站拉取直播流时访问的地址列表。
 	SrcAddrS []string `json:"SrcAddrS"`
 
-	// REQUIRED; 回源开始时间，StartTime 和 EndTime 同时缺省的情况下，表示永久回源。
+	// REQUIRED; 固定回源类型的回源开始时间。Unix 时间戳，单位为秒。
 	StartTime int32 `json:"StartTime"`
 
-	// REQUIRED; 流名称。
+	// REQUIRED; 视频直播播放地址中的StreamName。
 	Stream string `json:"Stream"`
+
+	// REQUIRED; 域名空间。
+	Vhost string `json:"Vhost"`
+
+	// 拉流域名。
+	Domain *string `json:"Domain,omitempty"`
 }
 
 // ListRelaySourceV4ResResultPagination - 页码信息。
@@ -18647,29 +18666,35 @@ type UpdateRelaySourceV3ResResponseMetadataError struct {
 
 type UpdateRelaySourceV4Body struct {
 
-	// REQUIRED; 应用名称，拉流域名，您可以调用ListRelaySourceV4 [https://www.volcengine.com/docs/6469/1126878]接口，获取待更新固定回源配置的 App 取值。
+	// REQUIRED; 视频直播播放地址中的 AppName。您可调用 ListRelaySourceV4 [https://docs.volcengine.com/docs/6469/1126878?lang=zh] 并根据返回参数 App
+	// 获取固定触发回源配置的 AppName。
 	App string `json:"App"`
 
-	// REQUIRED; 拉流域名，您可以调用ListRelaySourceV4 [https://www.volcengine.com/docs/6469/1126878]接口，获取待更新固定回源配置的 Domain 取值。
-	Domain string `json:"Domain"`
-
-	// REQUIRED; 回源地址列表，支持 RTMP、FLV、HLS 和 SRT 回源协议。
+	// REQUIRED; 回源地址列表，即视频直播从源站拉取直播流时访问的地址列表。支持 RTMP、RTMPS、FLV 或 HLS 协议。 通常包含协议、源站的域名或 IP 地址，以及源站直播流的 AppName 和 StreamName。如果源站要求回源请求携带额外参数，还需包含查询参数。例如
+	// rtmp://192.*.*.10/live01/test01?token=abc。
 	// :::tip
-	// * 当源站使用了非默认端口时，支持在回源地址中以域名:端口或IP:端口的形式配置端口。
-	// * 最多支持添加 10 个回源地址，回源失败时，将按照您添加的地址顺序轮循尝试。 :::
+	// * 支持配置自有源站或第三方源站的回源地址。触发回源后，视频直播会访问您配置的回源地址，从源站拉取直播流。
+	// * 如果源站使用非默认端口，需在源站的域名或 IP 地址后填写端口，例如 rtmp://192.*.*.10:1936/live01/test01?token=abc，否则系统可能按默认端口访问源站，导致回源失败。
+	// * 最多支持传入 10 个回源地址。系统会按照回源地址在数组中的排列顺序依次尝试回源，数组中越靠前的地址优先级越高。如果当前回源地址回源失败，系统会再尝试下一个回源地址。 :::
 	SrcAddrS []string `json:"SrcAddrS"`
 
-	// REQUIRED; 流名称，您可以调用ListRelaySourceV4 [https://www.volcengine.com/docs/6469/1126878]接口，获取待更新固定回源配置的 Domain 取值。
+	// REQUIRED; 视频直播播放地址中的 StreamName。您可调用 ListRelaySourceV4 [https://docs.volcengine.com/docs/6469/1126878?lang=zh] 并根据返回参数
+	// Stream 获取固定触发回源配置的 StreamName。
 	Stream string `json:"Stream"`
 
-	// 结束时间，Unix 时间戳，单位为秒。 :::tip
-	// * 回源开始到结束最大时间跨度为 7 天；
-	// * 开始时间与结束时间同时缺省，表示永久回源。 :::
+	// REQUIRED; 域名空间。 通过以下任一方式，获取域名空间：
+	// * 调用ListDomainDetail [https://www.volcengine.com/docs/6469/1126815]接口，通过返回参数Vhost获取。
+	// * 在视频直播控制台的域名管理 [https://console.volcengine.com/live/main/domain/list]页面，通过域名空间字段获取。
+	Vhost string `json:"Vhost"`
+
+	// 回源结束时间。Unix 时间戳，单位为秒。 :::tip
+	// * StartTime 和 EndTime 的时间间隔不可超过 7 天。
+	// * StartTime 和 EndTime 需同时传入或同时不传。传入时，表示更新固定回源类型的回源时间，或将永久回源类型变更为固定回源类型并设置回源时间。不传时，表示更新为永久回源类型。 :::
 	EndTime *int32 `json:"EndTime,omitempty"`
 
-	// 开始时间，Unix 时间戳，单位为秒。 :::tip
-	// * 回源开始到结束最大时间跨度为 7 天；
-	// * 开始时间与结束时间同时缺省，表示永久回源。 :::
+	// 回源开始时间。Unix 时间戳，单位为秒。 :::tip
+	// * StartTime 和 EndTime 的时间间隔不可超过 7 天。
+	// * StartTime 和 EndTime 需同时传入或同时不传。传入时，表示更新固定回源类型的回源时间，或将永久回源类型变更为固定回源类型并设置回源时间。不传时，表示更新为永久回源类型。 :::
 	StartTime *int32 `json:"StartTime,omitempty"`
 }
 
